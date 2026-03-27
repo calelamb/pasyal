@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Gamepad2, MessageSquare, Fish, HandCoins, BookOpen, Clock } from 'lucide-react';
+import { Gamepad2, MessageSquare, Fish, HandCoins, BookOpen, Clock, Footprints } from 'lucide-react';
 import { siteContent } from '../data/content';
 
 const fadeInUp = {
@@ -24,6 +24,7 @@ const iconMap = {
   HandCoins,
   BookOpen,
   Clock,
+  Footprints,
 };
 
 export default function HowToPlay() {

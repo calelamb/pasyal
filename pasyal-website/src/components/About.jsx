@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Coffee, MessageCircle, Heart, Home } from 'lucide-react';
+import { Compass, MessageCircle, Heart, Users } from 'lucide-react';
 import { siteContent } from '../data/content';
 
 const fadeInUp = {
@@ -17,14 +17,14 @@ const stagger = {
 };
 
 const iconMap = {
-  Coffee,
+  Compass,
   MessageCircle,
   Heart,
-  Home,
+  Users,
 };
 
 export default function About() {
-  const { sectionTitle, sectionSubtitle, description, descriptionEn, pillars, comparables } =
+  const { sectionTitle, sectionTitleEn, intro, introEn, pillars, comparable } =
     siteContent.about;
 
   return (
@@ -44,13 +44,13 @@ export default function About() {
           <h2 className="font-pixel text-lg text-flag-blue-500 mb-2">
             {sectionTitle}
           </h2>
-          <p className="text-sm text-flag-blue-400 mb-6">{sectionSubtitle}</p>
+          <p className="text-sm text-flag-blue-400 mb-6">{sectionTitleEn}</p>
 
           <p className="text-gray-700 text-base leading-relaxed max-w-2xl mx-auto mb-3">
-            {description}
+            {intro}
           </p>
           <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto italic">
-            {descriptionEn}
+            {introEn}
           </p>
         </motion.div>
 
@@ -94,10 +94,10 @@ export default function About() {
           className="text-center"
         >
           <p className="text-sm text-gray-500 mb-3 font-medium">
-            Kung gusto mo ng ganitong laro:
+            {comparable.label}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2">
-            {comparables.map((game) => (
+            {comparable.games.map((game) => (
               <span
                 key={game}
                 className="bg-flag-blue-100 text-flag-blue-700 px-3 py-1 rounded-full text-sm select-none"

@@ -45,7 +45,7 @@ export default function Zones() {
         animate={inView ? 'visible' : 'hidden'}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
       >
-        {siteContent.zones.map((zone, i) => {
+        {(siteContent.zones.list || []).map((zone, i) => {
           const IconComponent = iconMap[zone.icon] || Home;
 
           return (

@@ -328,8 +328,10 @@ export const siteContent = {
     taglineEn: "Let's go for a stroll.",
     subtitle: 'Isang cozy pixel-art na laro kung saan matutututo ka ng Tagalog sa pamamagitan ng paglalakad, pakikipag-usap, at pamumuhay sa isang maliit na coastal village sa Pilipinas.',
     subtitleEn: 'A cozy pixel-art game where you learn Tagalog through walking, talking, and living in a small Philippine coastal village.',
-    cta: 'Tuklasin ang Bayan',
-    ctaEn: 'Explore the Town',
+    cta: {
+      primary: { label: 'Laruin', labelEn: 'Play', href: '#mga-lugar' },
+      secondary: { label: 'Alamin Pa', labelEn: 'Learn More', href: '#tungkol' },
+    },
   },
 
   about: {
@@ -602,6 +604,12 @@ export const siteContent = {
     sectionTitleEn: 'Pixel Art Gallery',
     intro: 'Mga eksena mula sa laro, rendered sa 320x180 pixel art style.',
     introEn: 'Scenes from the game, rendered in 320x180 pixel art style.',
+    scenes: [
+      { label: 'Bahay Kubo — Umaga' },
+      { label: 'Palengke — Tawad Mode' },
+      { label: 'Dalampasigan — Hapon' },
+      { label: 'Bonfire — Gabi' },
+    ],
   },
 
   credits: {

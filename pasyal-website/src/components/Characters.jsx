@@ -36,7 +36,7 @@ export default function Characters() {
         animate={inView ? 'visible' : 'hidden'}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto"
       >
-        {siteContent.characters.map((npc, i) => (
+        {(siteContent.characters.list || []).map((npc, i) => (
           <motion.div
             key={npc.name}
             custom={i}

@@ -36,7 +36,6 @@ export default function Vocabulary() {
   const [cardsRef, cardsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const active = categories[activeCategory];
-  const IconComponent = iconMap[active?.icon] || Hash;
 
   return (
     <section id="salitaan" className="py-20 px-4 bg-flag-blue-900 text-white">
@@ -77,11 +76,10 @@ export default function Vocabulary() {
         {/* Category Tabs */}
         <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide mb-6">
           {categories.map((cat, i) => {
-            const CatIcon = iconMap[cat.icon] || Hash;
             const isActive = i === activeCategory;
             return (
               <button
-                key={cat.label}
+                key={cat.name}
                 onClick={() => setActiveCategory(i)}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm whitespace-nowrap transition-all ${
                   isActive
@@ -89,8 +87,7 @@ export default function Vocabulary() {
                     : 'bg-white/10 text-white/70 hover:bg-white/20'
                 }`}
               >
-                <CatIcon size={14} />
-                {cat.label}
+                {cat.name}
               </button>
             );
           })}
@@ -107,16 +104,16 @@ export default function Vocabulary() {
               transition={{ duration: 0.25 }}
               className="grid grid-cols-2 sm:grid-cols-3 gap-3"
             >
-              {active?.words?.slice(0, 6).map((word, j) => (
+              {active?.samples?.slice(0, 6).map((word, j) => (
                 <motion.div
-                  key={word.tagalog}
+                  key={word}
                   className="bg-white/10 p-3 rounded-lg hover:bg-white/15 transition-colors"
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: j * 0.05 }}
                 >
-                  <p className="font-pixel text-xs text-flag-gold-500">{word.tagalog}</p>
-                  <p className="text-xs text-white/60 mt-1">{word.english}</p>
+                  <p className="font-pixel text-xs text-flag-gold-500">{word}</p>
+                  <p className="text-xs text-white/60 mt-1">{active.nameEn}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -134,7 +131,7 @@ export default function Vocabulary() {
         </div>
 
         <div className="flex overflow-x-auto gap-4 pb-4 scrollbar-hide">
-          {untranslatable.map((item, i) => (
+          {(untranslatable?.words || []).map((item, i) => (
             <motion.div
               key={item.word}
               className="min-w-[200px] bg-gradient-to-br from-flag-red-500/20 to-flag-blue-500/20 border border-white/10 p-4 rounded-lg flex-shrink-0"

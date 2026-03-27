@@ -12,10 +12,10 @@ const techIconMap = {
 };
 
 const techStack = [
-  { icon: 'Gamepad2', label: 'Phaser 3' },
-  { icon: 'Code', label: 'JavaScript' },
-  { icon: 'Grid3x3', label: 'Pixel Art' },
-  { icon: 'Database', label: 'Tiled Maps' },
+  { icon: 'Gamepad2', label: 'Godot 4.6' },
+  { icon: 'Code', label: 'C# / .NET' },
+  { icon: 'Grid3x3', label: '320x180 Pixel Art' },
+  { icon: 'Database', label: 'JSON-driven Content' },
 ];
 
 export default function Credits() {
@@ -85,7 +85,7 @@ export default function Credits() {
           {/* GitHub Button */}
           <div className="mt-4 flex justify-center">
             <a
-              href={credits.github || 'https://github.com/calelamb'}
+              href={credits.links?.github || 'https://github.com/calelamb/pasyal'}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-colors"
