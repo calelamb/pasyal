@@ -55,7 +55,7 @@ export default function Characters() {
             {/* Colored Accent Bar */}
             <div
               className="h-1.5"
-              style={{ backgroundColor: npc.color }}
+              style={{ backgroundColor: npc.color || '#FCD116' }}
             />
 
             {/* Avatar */}
@@ -103,7 +103,7 @@ export default function Characters() {
                 <div className="bg-gray-50 p-3 rounded-lg relative">
                   <div
                     className="border-l-[3px] pl-3"
-                    style={{ borderColor: npc.color }}
+                    style={{ borderColor: npc.color || '#FCD116' }}
                   >
                     <p className="text-sm font-medium text-gray-700 leading-relaxed">
                       &ldquo;{npc.quote}&rdquo;

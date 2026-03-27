@@ -1,5 +1,5 @@
 export default function PixelArt({ grid, cellSize = 4, className = '' }) {
-  if (!grid || grid.length === 0) return null;
+  if (!grid || !Array.isArray(grid) || grid.length === 0 || !grid[0]) return null;
 
   const cols = grid[0].length;
 

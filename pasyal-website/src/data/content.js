@@ -391,7 +391,7 @@ export const siteContent = {
         description: 'Dito ka nakatira — isang simpleng bahay kubo na puno ng init. Dito mo sinimulan ang araw at dito ka rin bumabalik tuwing gabi.',
         descriptionEn: 'Your home — a simple nipa hut full of warmth. This is where you start each day and return each evening.',
         features: ['Tulog at Gising Cycle', 'Personal Journal', 'Cooking Mini-game'],
-        color: 'flag-gold',
+        color: '#FCD116',
       },
       {
         id: 'sentro',
@@ -400,7 +400,7 @@ export const siteContent = {
         description: 'Ang puso ng bayan — may palengke, simbahan, at plaza. Dito magkikita-kita ang lahat at maraming mapapakinggan na kwento.',
         descriptionEn: 'The heart of town — market, church, and plaza. Where everyone gathers and stories flow freely.',
         features: ['Palengke (Market)', 'Simbahan (Church)', 'Tindahan (Shops)'],
-        color: 'flag-red',
+        color: '#CE1126',
       },
       {
         id: 'dalampasigan',
@@ -409,7 +409,7 @@ export const siteContent = {
         description: 'Ang magandang dalampasigan — kung saan nangingisda ang mga tao at nagpapalipas ng hapon sa buhanginan.',
         descriptionEn: 'The beautiful coastline — where people fish and spend their afternoons on the sand.',
         features: ['Pangingisda (Fishing)', 'Paglangoy (Swimming)', 'Sunset Viewing'],
-        color: 'flag-blue',
+        color: '#0038A8',
       },
       {
         id: 'trike-stop',
@@ -418,7 +418,7 @@ export const siteContent = {
         description: 'Ang trike stop — sentro ng transportasyon ng bayan. Dito mo mahahanap si Manong Boy at makakasakay ng trike papunta sa iba\'t ibang lugar.',
         descriptionEn: 'The trike stop — the town transport hub. Find Manong Boy here and ride to different places.',
         features: ['Fast Travel', 'Mga Chismis (Gossip)', 'Pamasahe (Fare System)'],
-        color: 'flag-gold',
+        color: '#FCD116',
       },
       {
         id: 'bundok-trail',
@@ -427,7 +427,7 @@ export const siteContent = {
         description: 'Ang bundok trail — isang tahimik na landas paakyat sa bundok. Dito makikita ang buong bayan mula sa itaas.',
         descriptionEn: 'The mountain trail — a quiet path up the hill. See the whole town from above.',
         features: ['Nature Walk', 'Mga Halaman (Flora)', 'Mirador (Viewpoint)'],
-        color: 'flag-blue',
+        color: '#0038A8',
       },
     ],
   },
