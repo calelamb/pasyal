@@ -1,0 +1,162 @@
+[
+  {
+    "id": "yelo",
+    "tagalog": "yelo",
+    "english": "ice",
+    "price": 3,
+    "icon": "res://assets/sprites/ui/icons/yelo.png",
+    "description": "Yelo na panlamig. Kailangan pag mainit."
+  },
+  {
+    "id": "kape",
+    "tagalog": "kape",
+    "english": "coffee",
+    "price": 15,
+    "icon": "res://assets/sprites/ui/icons/kape.png",
+    "description": "Mainit na kape. Pampagising sa umaga."
+  },
+  {
+    "id": "pandesal",
+    "tagalog": "pandesal",
+    "english": "bread roll",
+    "price": 5,
+    "icon": "res://assets/sprites/ui/icons/pandesal.png",
+    "description": "Mainit-init na pandesal. Masarap kapag bagong luto."
+  },
+  {
+    "id": "skyflakes",
+    "tagalog": "skyflakes",
+    "english": "crackers",
+    "price": 10,
+    "icon": "res://assets/sprites/ui/icons/skyflakes.png",
+    "description": "Crackers na skyflakes. Pang-meryenda kahit saan."
+  },
+  {
+    "id": "c2",
+    "tagalog": "C2",
+    "english": "iced tea drink",
+    "price": 20,
+    "icon": "res://assets/sprites/ui/icons/c2.png",
+    "description": "Malamig na C2. Pampawala ng uhaw."
+  },
+  {
+    "id": "bangus",
+    "tagalog": "bangus",
+    "english": "milkfish",
+    "price": 40,
+    "icon": "res://assets/sprites/ui/icons/bangus.png",
+    "description": "Sariwang bangus mula sa dagat. Masarap iprito."
+  },
+  {
+    "id": "tilapia",
+    "tagalog": "tilapia",
+    "english": "tilapia",
+    "price": 35,
+    "icon": "res://assets/sprites/ui/icons/tilapia.png",
+    "description": "Sariwang tilapia. Mura at masarap."
+  },
+  {
+    "id": "galunggong",
+    "tagalog": "galunggong",
+    "english": "round scad",
+    "price": 25,
+    "icon": "res://assets/sprites/ui/icons/galunggong.png",
+    "description": "Galunggong na pang-araw-araw. Isda ng masa."
+  },
+  {
+    "id": "lapu_lapu",
+    "tagalog": "lapu-lapu",
+    "english": "grouper",
+    "price": 80,
+    "icon": "res://assets/sprites/ui/icons/lapu_lapu.png",
+    "description": "Lapu-lapu na sariwa. Mahal pero sulit sa lasa."
+  },
+  {
+    "id": "dilis",
+    "tagalog": "dilis",
+    "english": "anchovy",
+    "price": 15,
+    "icon": "res://assets/sprites/ui/icons/dilis.png",
+    "description": "Tuyong dilis. Masarap na pulutan o ulam."
+  },
+  {
+    "id": "mangga",
+    "tagalog": "mangga",
+    "english": "mango",
+    "price": 20,
+    "icon": "res://assets/sprites/ui/icons/mangga.png",
+    "description": "Matamis na mangga. Paborito ng lahat."
+  },
+  {
+    "id": "buko",
+    "tagalog": "buko",
+    "english": "young coconut",
+    "price": 15,
+    "icon": "res://assets/sprites/ui/icons/buko.png",
+    "description": "Sariwang buko. Malamig at masarap ang juice."
+  },
+  {
+    "id": "adobo",
+    "tagalog": "adobo",
+    "english": "adobo",
+    "price": 50,
+    "icon": "res://assets/sprites/ui/icons/adobo.png",
+    "description": "Adobong manok ni Aling Nena. Pambansang pagkain."
+  },
+  {
+    "id": "saging",
+    "tagalog": "saging",
+    "english": "banana",
+    "price": 10,
+    "icon": "res://assets/sprites/ui/icons/saging.png",
+    "description": "Saging na saba. Pwedeng iprito o kainin na lang."
+  },
+  {
+    "id": "kamote",
+    "tagalog": "kamote",
+    "english": "sweet potato",
+    "price": 8,
+    "icon": "res://assets/sprites/ui/icons/kamote.png",
+    "description": "Kamote na nilaga. Masustansya at masarap."
+  },
+  {
+    "id": "suka",
+    "tagalog": "suka",
+    "english": "vinegar",
+    "price": 10,
+    "icon": "res://assets/sprites/ui/icons/suka.png",
+    "description": "Suka para sa sawsawan. Kailangan sa adobo."
+  },
+  {
+    "id": "tsinelas",
+    "tagalog": "tsinelas",
+    "english": "slippers",
+    "price": 30,
+    "icon": "res://assets/sprites/ui/icons/tsinelas.png",
+    "description": "Pares ng tsinelas. Huwag iwanan sa labas."
+  },
+  {
+    "id": "walis",
+    "tagalog": "walis",
+    "english": "broom",
+    "price": 25,
+    "icon": "res://assets/sprites/ui/icons/walis.png",
+    "description": "Walis tambo. Para laging malinis ang bahay."
+  },
+  {
+    "id": "sombrero",
+    "tagalog": "sombrero",
+    "english": "hat",
+    "price": 45,
+    "icon": "res://assets/sprites/ui/icons/sombrero.png",
+    "description": "Sombrero na pangproteksyon sa araw. Kailangan sa dagat."
+  },
+  {
+    "id": "basket",
+    "tagalog": "basket",
+    "english": "basket",
+    "price": 35,
+    "icon": "res://assets/sprites/ui/icons/basket.png",
+    "description": "Basket na yari sa rattan. Pang-bitbit ng paninda."
+  }
+]

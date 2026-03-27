@@ -1,0 +1,347 @@
+{
+  "kapitan_rody_first_meeting": {
+    "lines": [
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Ah, ikaw pala ang bagong dating. Magandang araw. Ako si Kapitan Rody, barangay captain dito sa Baryo Alon.",
+        "english": "Ah, so you're the newcomer. Good day. I'm Kapitan Rody, barangay captain here in Baryo Alon.",
+        "vocab": ["kapitan", "bayan"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Dito sa amin, maliit lang ang barangay pero malakas ang samahan. Lahat tumutulong sa isa't isa.",
+        "english": "Here with us, the barangay is small but the bond is strong. Everyone helps each other.",
+        "vocab": ["bayan"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Pag may kailangan ka, pumunta ka lang sa munisipyo. Nandoon ako madalas — laging may trabaho, alam mo naman.",
+        "english": "If you need anything, just come to the municipal hall. I'm there often — always work to do, you know.",
+        "vocab": ["munisipyo", "punta"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "At isa pa — kung gusto mong makatulong sa barangay, may mga delivery na kailangan gawin. Interested ka ba?",
+        "english": "And one more thing — if you want to help the barangay, there are deliveries that need to be done. Are you interested?",
+        "vocab": [],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Opo, Kapitan! Gusto ko pong tumulong!",
+        "english": "Yes, Captain! I want to help!",
+        "vocab": ["kapitan"],
+        "next": null
+      },
+      {
+        "tagalog": "Salamat po, Kapitan. Iisipin ko po muna.",
+        "english": "Thank you, Captain. Let me think about it first.",
+        "vocab": ["salamat", "kapitan"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  },
+  "kapitan_rody_task_pandesal": {
+    "lines": [
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Mabuti at nandito ka. May kailangan akong ipagawa sa iyo.",
+        "english": "Good that you're here. I have something I need you to do.",
+        "vocab": [],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Si Aling Nena sa bahay kubo — hindi pa siya nakakain ngayong umaga. Abala kasi sa paglilinis.",
+        "english": "Aling Nena at the bahay kubo — she hasn't eaten this morning yet. She's been busy cleaning.",
+        "vocab": ["bahay", "kubo", "umaga"],
+        "emotion": "concerned"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Puwede mo bang dalhin ang pandesal na 'to sa kanya? Bumili ka sa tindahan ni Ate Merly, tapos dalhin mo sa kanya.",
+        "english": "Can you bring this bread to her? Buy it at Ate Merly's store, then bring it to her.",
+        "vocab": ["pandesal", "tindahan", "bili"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Babayaran kita — bente pesos. Maliit lang, pero tulong na rin sa iyo.",
+        "english": "I'll pay you — twenty pesos. It's small, but it helps you too.",
+        "vocab": ["bayad", "dalawampu", "piso"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige po, Kapitan! Dadalhin ko na po.",
+        "english": "Sure, Captain! I'll bring it now.",
+        "vocab": ["sige", "kapitan"],
+        "next": null
+      },
+      {
+        "tagalog": "Opo, Kapitan. Nasaan po ang bahay ni Aling Nena?",
+        "english": "Yes, Captain. Where is Aling Nena's house?",
+        "vocab": ["bahay"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 1
+    }
+  },
+  "kapitan_rody_task_kape": {
+    "lines": [
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Magaling! Naibigay mo na kay Aling Nena. Mabuti 'yan.",
+        "english": "Good! You already gave it to Aling Nena. That's good.",
+        "vocab": [],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Ngayon, may isa pa. Si Padre Miguel sa simbahan — kailangan niya ng kape. Ang tanda na niya, laging inaantok.",
+        "english": "Now, there's one more. Padre Miguel at the church — he needs coffee. He's so old, always sleepy.",
+        "vocab": ["simbahan", "kape", "pari"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Bumili ka ng kape sa tindahan, tapos dalhin mo sa kanya sa plasa. Bayad ko sa iyo: bente-singko pesos.",
+        "english": "Buy coffee at the store, then bring it to him at the plaza. My payment to you: twenty-five pesos.",
+        "vocab": ["kape", "tindahan", "plasa", "bayad"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Opo, Kapitan! Pupunta na po ako sa simbahan.",
+        "english": "Yes, Captain! I'll head to the church now.",
+        "vocab": ["punta", "simbahan"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 2
+    }
+  },
+  "kapitan_rody_task_bangus": {
+    "lines": [
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Napakaparasikap mo naman. Dalawa na ang natapos mo. Mabilis!",
+        "english": "You're so hardworking. You've finished two already. Fast!",
+        "vocab": ["dalawa"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Ngayon, si Ate Merly naman. Kailangan niya ng bangus para sa ulam ngayong gabi. Walang oras bumili, busy sa tindahan.",
+        "english": "Now, it's Ate Merly's turn. She needs milkfish for dinner tonight. No time to buy, busy at the store.",
+        "vocab": ["bangus", "ulam", "gabi", "tindahan"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Bumili ka sa palengke kay Kuya Jojo, tapos dalhin mo sa kanya. Bayad: apatnapung piso.",
+        "english": "Buy it at the market from Kuya Jojo, then bring it to her. Payment: forty pesos.",
+        "vocab": ["palengke", "bayad", "apat"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige po! Sa palengke na po ako!",
+        "english": "Sure! I'm heading to the market!",
+        "vocab": ["sige", "palengke"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 3
+    }
+  },
+  "kapitan_rody_task_suka": {
+    "lines": [
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Tatlo na! Kilala ka na ng buong barangay. Mabuti 'yan.",
+        "english": "Three now! The whole barangay knows you. That's good.",
+        "vocab": ["tatlo", "bayan"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Eto ang susunod: si Kuya Jojo ang nangangailangan ngayon. Kailangan niya ng suka para sa sawsawan.",
+        "english": "Here's the next one: Kuya Jojo needs something now. He needs vinegar for his dipping sauce.",
+        "vocab": ["suka"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Bumili ka sa tindahan, dalhin mo sa palengke. Tatlumpung piso ang bayad.",
+        "english": "Buy it at the store, bring it to the market. Thirty pesos payment.",
+        "vocab": ["tindahan", "palengke", "bayad", "tatlumpu", "piso"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige po, Kapitan! Mabilis lang po 'to.",
+        "english": "Sure, Captain! This will be quick.",
+        "vocab": ["sige", "kapitan"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 4
+    }
+  },
+  "kapitan_rody_task_yelo": {
+    "lines": [
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Huling delivery na, anak. Pinakamalayo 'to, pero pinakamalaki rin ang bayad.",
+        "english": "Last delivery, child. This one is the farthest, but the payment is also the biggest.",
+        "vocab": ["malayo", "bayad"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Si Tatay Andoy sa dalampasigan — kailangan niya ng yelo para sa mga isda niya. Kailangan mapanatiling sariwa.",
+        "english": "Tatay Andoy at the beach — he needs ice for his fish. They need to stay fresh.",
+        "vocab": ["dagat", "yelo", "isda"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Bumili ka ng yelo, dalhin mo sa dagat. Limampung piso ang bayad. Mabilisan ha — matutunaw ang yelo!",
+        "english": "Buy ice, bring it to the beach. Fifty pesos payment. Hurry — the ice will melt!",
+        "vocab": ["yelo", "dagat", "limampu", "piso", "bayad"],
+        "emotion": "concerned"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Opo! Tatakbo na po ako!",
+        "english": "Yes! I'll run now!",
+        "vocab": ["takbo"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 5
+    }
+  },
+  "kapitan_rody_all_tasks_done": {
+    "lines": [
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Natapos mo na lahat. Hindi biro 'yan. Proud ako sa iyo, anak.",
+        "english": "You've finished everything. That's no joke. I'm proud of you, child.",
+        "vocab": [],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Alam mo, ang barangay na 'to — hindi lang tungkol sa lugar. Tungkol sa mga tao. At ikaw, parte ka na nito.",
+        "english": "You know, this barangay — it's not just about the place. It's about the people. And you, you're part of it now.",
+        "vocab": ["bayan", "tao"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Kung may kailangan ka pa, nandito lang ako sa munisipyo. Laging bukas ang pinto para sa iyo.",
+        "english": "If you need anything else, I'm here at the municipal hall. The door is always open for you.",
+        "vocab": ["munisipyo", "pinto"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po, Kapitan Rody. Masaya po akong nandito.",
+        "english": "Thank you, Kapitan Rody. I'm happy to be here.",
+        "vocab": ["salamat", "kapitan", "masaya"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 6
+    }
+  },
+  "kapitan_rody_umaga": {
+    "lines": [
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Magandang umaga. Maaga ka ngayon — maganda 'yan. Ang maaga gumising, maraming nagagawa.",
+        "english": "Good morning. You're early today — that's good. The early riser gets a lot done.",
+        "vocab": ["umaga", "gising"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Pag umaga, gumagala ako sa buong barangay. Tinitingnan kung okay lahat — ang kalsada, ang tulay, ang mga tao.",
+        "english": "In the morning, I walk around the whole barangay. Checking if everything's okay — the roads, the bridge, the people.",
+        "vocab": ["umaga", "kalsada", "tulay", "tao"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Magandang umaga rin po, Kapitan!",
+        "english": "Good morning to you too, Captain!",
+        "vocab": ["umaga", "kapitan"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "umaga",
+      "minVisits": 2
+    }
+  },
+  "kapitan_rody_gabi": {
+    "lines": [
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Gabi na. Ingat ka sa kalsada, madilim dito pag gabi. Konti lang ang poste na may ilaw.",
+        "english": "It's already night. Be careful on the road, it's dark here at night. Only a few poles have lights.",
+        "vocab": ["gabi", "kalsada", "poste", "ilaw"],
+        "emotion": "concerned"
+      },
+      {
+        "speaker": "kapitan_rody",
+        "tagalog": "Uwi ka na, ha? Bukas pa ang lahat ng gagawin. Kailangan mo ng pahinga.",
+        "english": "Go home now, okay? Everything can be done tomorrow. You need rest.",
+        "vocab": ["uwi", "bukas"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Opo, uuwi na po ako. Magandang gabi, Kapitan!",
+        "english": "Yes, I'll head home now. Good night, Captain!",
+        "vocab": ["uwi", "gabi", "kapitan"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "gabi",
+      "minVisits": 2
+    }
+  }
+}

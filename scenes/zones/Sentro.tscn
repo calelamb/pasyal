@@ -1,0 +1,227 @@
+[gd_scene load_steps=15 format=3 uid="uid://sentro_zone"]
+
+[ext_resource type="Script" path="res://scripts/Player/Player.cs" id="1_player"]
+[ext_resource type="Script" path="res://scripts/NPC/NPCBase.cs" id="2_npcbase"]
+[ext_resource type="Script" path="res://scripts/NPC/NPCSchedule.cs" id="3_npcschedule"]
+[ext_resource type="Script" path="res://scripts/World/InteractableObject.cs" id="4_interactable"]
+[ext_resource type="Script" path="res://scripts/World/ZoneTransitionArea.cs" id="5_zonetransition"]
+[ext_resource type="Script" path="res://scripts/UI/DialogueUI.cs" id="6_dialogueui"]
+[ext_resource type="Script" path="res://scripts/UI/VocabNotification.cs" id="7_vocabnotif"]
+[ext_resource type="Script" path="res://scripts/Systems/ShopSystem.cs" id="8_shopsystem"]
+[ext_resource type="Script" path="res://scripts/Systems/TaskManager.cs" id="9_taskmanager"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(12, 8)
+
+[sub_resource type="TileSet" id="TileSet_main"]
+tile_size = Vector2i(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npc"]
+size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_object"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_zone"]
+size = Vector2(16, 48)
+
+[node name="Sentro" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(1, 1, 1, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_main")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(32, 280)
+script = ExtResource("1_player")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Player"]
+
+[node name="Camera" type="Camera2D" parent="Player"]
+
+[node name="InteractRay" type="RayCast2D" parent="Player"]
+target_position = Vector2(0, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_player")
+
+[node name="AteMerly" type="CharacterBody2D" parent="."]
+position = Vector2(160, 160)
+script = ExtResource("2_npcbase")
+NpcId = "ate_merly"
+DisplayName = "Ate Merly"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="AteMerly"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AteMerly"]
+shape = SubResource("RectangleShape2D_npc")
+
+[node name="NPCSchedule" type="Node" parent="AteMerly"]
+script = ExtResource("3_npcschedule")
+
+[node name="KuyaJojo" type="CharacterBody2D" parent="."]
+position = Vector2(400, 400)
+script = ExtResource("2_npcbase")
+NpcId = "kuya_jojo"
+DisplayName = "Kuya Jojo"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="KuyaJojo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KuyaJojo"]
+shape = SubResource("RectangleShape2D_npc")
+
+[node name="NPCSchedule" type="Node" parent="KuyaJojo"]
+script = ExtResource("3_npcschedule")
+
+[node name="KapitanRody" type="CharacterBody2D" parent="."]
+position = Vector2(500, 200)
+script = ExtResource("2_npcbase")
+NpcId = "kapitan_rody"
+DisplayName = "Kapitan Rody"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="KapitanRody"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KapitanRody"]
+shape = SubResource("RectangleShape2D_npc")
+
+[node name="NPCSchedule" type="Node" parent="KapitanRody"]
+script = ExtResource("3_npcschedule")
+
+[node name="PadreMiguel" type="CharacterBody2D" parent="."]
+position = Vector2(320, 280)
+script = ExtResource("2_npcbase")
+NpcId = "padre_miguel"
+DisplayName = "Padre Miguel"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="PadreMiguel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PadreMiguel"]
+shape = SubResource("RectangleShape2D_npc")
+
+[node name="NPCSchedule" type="Node" parent="PadreMiguel"]
+script = ExtResource("3_npcschedule")
+
+[node name="ShopNode" type="Node" parent="."]
+script = ExtResource("8_shopsystem")
+AvailableItems = PackedStringArray("yelo", "kape", "pandesal", "skyflakes", "c2")
+
+[node name="TaskManager" type="Node" parent="."]
+script = ExtResource("9_taskmanager")
+
+[node name="Simbahan" type="StaticBody2D" parent="."]
+position = Vector2(320, 120)
+script = ExtResource("4_interactable")
+ObjectId = "simbahan"
+InteractAction = "clothesline"
+VocabWord = "simbahan"
+InteractTextTagalog = "Ang simbahan ng bayan."
+InteractTextEnglish = "The town church."
+
+[node name="Sprite2D" type="Sprite2D" parent="Simbahan"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Simbahan"]
+shape = SubResource("RectangleShape2D_object")
+
+[node name="ExitToBahayKubo" type="Area2D" parent="."]
+position = Vector2(0, 280)
+script = ExtResource("5_zonetransition")
+TargetZone = "BahayKubo"
+SpawnPosition = Vector2(432, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitToBahayKubo"]
+shape = SubResource("RectangleShape2D_zone")
+
+[node name="ExitToDalampasigan" type="Area2D" parent="."]
+position = Vector2(640, 280)
+script = ExtResource("5_zonetransition")
+TargetZone = "Dalampasigan"
+SpawnPosition = Vector2(32, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitToDalampasigan"]
+shape = SubResource("RectangleShape2D_zone")
+
+[node name="ExitToBundokTrail" type="Area2D" parent="."]
+position = Vector2(320, 0)
+script = ExtResource("5_zonetransition")
+TargetZone = "BundokTrail"
+SpawnPosition = Vector2(80, 224)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitToBundokTrail"]
+shape = SubResource("RectangleShape2D_zone")
+
+[node name="DialogueUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("6_dialogueui")
+
+[node name="Panel" type="Panel" parent="DialogueUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogueUI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueUI/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="DialogueUI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TagalogLabel" type="Label" parent="DialogueUI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="EnglishLabel" type="Label" parent="DialogueUI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="DialogueUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -240.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+visible = false
+
+[node name="Portrait" type="TextureRect" parent="DialogueUI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -200.0
+offset_right = 72.0
+offset_bottom = -128.0
+visible = false
+
+[node name="VocabNotification" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 40.0
+grow_horizontal = 0
+mouse_filter = 2
+script = ExtResource("7_vocabnotif")

@@ -1,0 +1,268 @@
+{
+  "manong_boy_first_meeting": {
+    "lines": [
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Uy, boss! Sakay na! Saan ang punta mo?",
+        "english": "Hey, boss! Hop on! Where are you headed?",
+        "vocab": ["sakay", "punta"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Ako si Manong Boy — ang pinakamagaling na driver ng traysikel sa Baryo Alon! At pinaka-pogi! Haha!",
+        "english": "I'm Manong Boy — the best tricycle driver in Baryo Alon! And the most handsome! Haha!",
+        "vocab": ["manong", "traysikel"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Kahit saan mo gusto — palengke, dagat, sentro — dalhin kita. Mabilis pa sa jeepney ang traysikel ko!",
+        "english": "Anywhere you want — market, beach, town center — I'll take you. My trike is even faster than a jeepney!",
+        "vocab": ["palengke", "dagat", "jeepney", "traysikel"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Pamasahe? Huwag kang mag-alala — mura lang. Tara na!",
+        "english": "Fare? Don't worry — it's cheap. Let's go!",
+        "vocab": ["mura", "tara"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Tara po! Saan-saan po ang puwede naming puntahan?",
+        "english": "Let's go! Where can we go?",
+        "vocab": ["tara", "punta"],
+        "next": null
+      },
+      {
+        "tagalog": "Mamaya na lang po, Manong! Maglalakad muna ako.",
+        "english": "Maybe later, Manong! I'll walk first.",
+        "vocab": ["lakad"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  },
+  "manong_boy_pre_ride": {
+    "lines": [
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Sakay na ulit! Saan natin tatakbuhin ang traysikel ngayon?",
+        "english": "Hop on again! Where shall we drive the trike today?",
+        "vocab": ["sakay", "traysikel"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Alam mo ba, dati akong nananalo sa karera ng traysikel? Totoo 'yan! Pinakamatulin ako sa buong probinsya!",
+        "english": "Did you know, I used to win tricycle races? It's true! I was the fastest in the whole province!",
+        "vocab": ["traysikel", "talaga"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Ngayon, relaxed na lang. Pero pag sinabi mong 'bilisan mo, Manong!' — ay, game na game ako! Haha!",
+        "english": "Now, I take it easy. But if you say 'hurry up, Manong!' — oh, I'm totally game! Haha!",
+        "vocab": ["manong"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige, Manong! Sa palengke po!",
+        "english": "Sure, Manong! To the market!",
+        "vocab": ["sige", "palengke"],
+        "next": null
+      },
+      {
+        "tagalog": "Sa dagat po, Manong!",
+        "english": "To the beach, Manong!",
+        "vocab": ["dagat"],
+        "next": null
+      },
+      {
+        "tagalog": "Sa sentro po, Manong!",
+        "english": "To the town center, Manong!",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 1
+    }
+  },
+  "manong_boy_travel_vocab": {
+    "lines": [
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Oy, habang nakasakay ka, turuan kita ng mga salitang kailangan mo sa kalye!",
+        "english": "Hey, while you're riding, let me teach you the words you need on the road!",
+        "vocab": ["sakay", "kalsada"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Pag gusto mong kumanan, sabihin mo: 'Kanan po!' Pag kaliwa, 'Kaliwa po!' Pag diretso lang, 'Diretso lang po!'",
+        "english": "If you want to turn right, say: 'Right please!' Left, 'Left please!' If straight, 'Straight ahead please!'",
+        "vocab": ["kanan", "kaliwa", "diretso"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Pag gusto mong bumaba, sigaw mo: 'Para po!' o kaya 'Bababa na po!' Huwag mo akong kalimutang bayaran ha! Haha!",
+        "english": "If you want to get off, shout: 'Stop please!' or 'I'm getting off!' Don't forget to pay me okay! Haha!",
+        "vocab": ["baba", "hinto", "bayad"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "At kung malapit na, 'Malapit na po!' Kung malayo pa, 'Malayo pa po ba?' Ganyan lang!",
+        "english": "And if it's near, 'Almost there!' If it's far, 'Is it still far?' Just like that!",
+        "vocab": ["malapit", "malayo"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat, Manong! Dami kong natutunan!",
+        "english": "Thanks, Manong! I'm learning so much!",
+        "vocab": ["salamat", "dami"],
+        "next": null
+      },
+      {
+        "tagalog": "Para po! Bababa na po ako! Haha!",
+        "english": "Stop please! I'm getting off! Haha!",
+        "vocab": ["hinto", "baba"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 2
+    }
+  },
+  "manong_boy_umaga": {
+    "lines": [
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Magandang umaga, boss! Maaga ka ngayon ha — maaga rin ako! Gising na gising ang makina ko!",
+        "english": "Good morning, boss! You're early today — so am I! My engine is wide awake!",
+        "vocab": ["umaga", "gising"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Pag umaga, mabilis ang biyahe — walang traffic, walang tao sa kalsada. Best time para mag-ikot!",
+        "english": "In the morning, trips are fast — no traffic, nobody on the road. Best time to go around!",
+        "vocab": ["umaga", "kalsada", "tao"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Tara, Manong! Mag-ikot tayo!",
+        "english": "Let's go, Manong! Let's go around!",
+        "vocab": ["tara"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "umaga",
+      "minVisits": 1
+    }
+  },
+  "manong_boy_gabi": {
+    "lines": [
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Gabi na, boss! Huling biyahe na 'to, ha. Madilim na sa kalsada.",
+        "english": "It's night, boss! This is the last trip, okay. It's dark on the road already.",
+        "vocab": ["gabi", "kalsada"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Mag-ingat ka pag gabi. Konti lang ang ilaw dito. At mabilis ang traysikel ko — baka hindi mo makita ang bato sa daan! Haha!",
+        "english": "Be careful at night. Few lights here. And my trike is fast — you might not see the rocks on the road! Haha!",
+        "vocab": ["gabi", "ilaw", "traysikel", "bato", "daan"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Sige, ihahatid kita. Pero bukas, maaga ka ulit ha? Mas maganda ang biyahe pag araw!",
+        "english": "Okay, I'll take you. But tomorrow, come early again okay? Trips are better during the day!",
+        "vocab": ["sige", "bukas", "araw"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat, Manong! Ingat din po kayo!",
+        "english": "Thanks, Manong! Take care too!",
+        "vocab": ["salamat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "gabi",
+      "minVisits": 1
+    }
+  },
+  "manong_boy_gossip": {
+    "lines": [
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Oy boss, habang naghihintay ng pasahero — kwento ko sa iyo tungkol sa ibang lugar!",
+        "english": "Hey boss, while waiting for passengers — let me tell you about other places!",
+        "vocab": [],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Sa kabilang baryo, may palengke na mas malaki kaysa sa atin! Pero wala silang Kuya Jojo — kaya walang kwenta! Haha!",
+        "english": "In the next village, there's a market bigger than ours! But they don't have Kuya Jojo — so it's no good! Haha!",
+        "vocab": ["palengke", "bayan"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Tapos sa bayan — 'yung malaking bayan — may ospital, paaralan, at mall pa! Pero malayo. Isang oras sa traysikel.",
+        "english": "Then in town — the big town — there's a hospital, school, even a mall! But it's far. One hour by trike.",
+        "vocab": ["bayan", "ospital", "paaralan", "malayo", "traysikel"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "manong_boy",
+        "tagalog": "Pero alam mo, boss — mas maganda pa rin ang Baryo Alon. Tahimik, mababait ang tao, at malapit sa dagat. Ano pa ang kailangan mo?",
+        "english": "But you know, boss — Baryo Alon is still better. Peaceful, kind people, and near the sea. What more do you need?",
+        "vocab": ["bayan", "tao", "malapit", "dagat"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Tama po, Manong! Dito na lang tayo!",
+        "english": "You're right, Manong! Let's stay here!",
+        "vocab": ["dito"],
+        "next": null
+      },
+      {
+        "tagalog": "Puwede po ba tayong pumunta sa malaking bayan?",
+        "english": "Can we go to the big town?",
+        "vocab": ["punta", "bayan"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 3
+    }
+  }
+}

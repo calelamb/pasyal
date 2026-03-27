@@ -1,0 +1,52 @@
+[
+  {
+    "id": "deliver_pandesal",
+    "giverNpcId": "kapitan_rody",
+    "targetNpcId": "aling_nena",
+    "itemId": "pandesal",
+    "rewardPesos": 20,
+    "tagalogDescription": "Dalhin mo ang pandesal kay Aling Nena sa bahay kubo. Hindi pa siya nakakain ngayong umaga.",
+    "englishDescription": "Bring the pandesal to Aling Nena at the bahay kubo. She hasn't eaten this morning yet.",
+    "requiredPreviousTask": null
+  },
+  {
+    "id": "deliver_kape",
+    "giverNpcId": "kapitan_rody",
+    "targetNpcId": "padre_miguel",
+    "itemId": "kape",
+    "rewardPesos": 25,
+    "tagalogDescription": "Dalhin mo ang kape kay Padre Miguel sa simbahan. Kailangan niya ng pampagising.",
+    "englishDescription": "Bring the coffee to Padre Miguel at the church. He needs something to wake him up.",
+    "requiredPreviousTask": "deliver_pandesal"
+  },
+  {
+    "id": "deliver_bangus",
+    "giverNpcId": "kapitan_rody",
+    "targetNpcId": "ate_merly",
+    "itemId": "bangus",
+    "rewardPesos": 40,
+    "tagalogDescription": "Dalhin mo ang bangus kay Ate Merly sa sari-sari store. Pang-ulam niya iyon ngayong gabi.",
+    "englishDescription": "Bring the milkfish to Ate Merly at the sari-sari store. That's her dinner tonight.",
+    "requiredPreviousTask": "deliver_kape"
+  },
+  {
+    "id": "deliver_suka",
+    "giverNpcId": "kapitan_rody",
+    "targetNpcId": "kuya_jojo",
+    "itemId": "suka",
+    "rewardPesos": 30,
+    "tagalogDescription": "Dalhin mo ang suka kay Kuya Jojo sa palengke. Kailangan niya para sa sawsawan ng isda.",
+    "englishDescription": "Bring the vinegar to Kuya Jojo at the market. He needs it for his fish dipping sauce.",
+    "requiredPreviousTask": "deliver_bangus"
+  },
+  {
+    "id": "deliver_yelo",
+    "giverNpcId": "kapitan_rody",
+    "targetNpcId": "tatay_andoy",
+    "itemId": "yelo",
+    "rewardPesos": 50,
+    "tagalogDescription": "Dalhin mo ang yelo kay Tatay Andoy sa dalampasigan. Para sa mga isda niya, kailangan mapanatiling sariwa.",
+    "englishDescription": "Bring the ice to Tatay Andoy at the beach. It's for his fish, they need to stay fresh.",
+    "requiredPreviousTask": "deliver_suka"
+  }
+]

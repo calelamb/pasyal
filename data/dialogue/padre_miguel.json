@@ -1,0 +1,377 @@
+{
+  "padre_miguel_first_meeting": {
+    "lines": [
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Ah... magandang araw, anak. Halika, upo ka muna dito sa lilim.",
+        "english": "Ah... good day, child. Come, sit here in the shade first.",
+        "vocab": ["araw"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Ako si Padre Miguel. Matagal na akong nandito sa Baryo Alon — mas matagal pa sa mga puno ng niyog na 'yan.",
+        "english": "I'm Padre Miguel. I've been here in Baryo Alon for a long time — longer than those coconut trees there.",
+        "vocab": ["pari"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Dito sa plasa, madalas akong nakaupo. Nagmamasid. Nag-iisip. Ang buhay, anak... parang alon sa dagat. Dumadating, umaalis. Paulit-ulit.",
+        "english": "Here at the plaza, I often sit. Observing. Thinking. Life, child... is like waves in the sea. They come, they go. Over and over.",
+        "vocab": ["plasa", "alon", "dagat"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Kung gusto mo matuto — hindi lang ng salita, kundi ng puso ng mga Pilipino — bumalik ka dito sa akin.",
+        "english": "If you want to learn — not just words, but the heart of the Filipino people — come back to me here.",
+        "vocab": ["tao"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po, Padre. Babalik po ako.",
+        "english": "Thank you, Padre. I'll come back.",
+        "vocab": ["salamat"],
+        "next": null
+      },
+      {
+        "tagalog": "Ano po ang matututunan ko sa inyo?",
+        "english": "What can I learn from you?",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  },
+  "padre_miguel_teach_kilig": {
+    "lines": [
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Anak, alam mo ba kung ano ang 'kilig'?",
+        "english": "Child, do you know what 'kilig' is?",
+        "vocab": [],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Walang katumbas ang kilig sa English. Hindi siya 'happy' lang. Hindi rin 'excited' lang.",
+        "english": "Kilig has no equivalent in English. It's not just 'happy.' Not just 'excited' either.",
+        "vocab": ["masaya"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Kilig... 'yun ang nararamdaman mo pag may hawak ang kamay mo na hindi mo inaasahan. 'Yung biglaang tibok ng puso. 'Yung ngiti na hindi mo mapigilan.",
+        "english": "Kilig... it's what you feel when someone unexpectedly holds your hand. That sudden heartbeat. That smile you can't stop.",
+        "vocab": [],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Ang mga Pilipino, marunong maramdaman ang kilig sa maliliit na bagay. Isang tingin. Isang ngiti. 'Yun lang.",
+        "english": "Filipinos know how to feel kilig in the smallest things. One glance. One smile. That's all it takes.",
+        "vocab": ["tao"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Hindi kailangan ng malaking drama para sa kilig. Minsan, tahimik lang — pero ramdam na ramdam mo sa dibdib.",
+        "english": "You don't need big drama for kilig. Sometimes, it's just quiet — but you feel it deeply in your chest.",
+        "vocab": [],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Ang ganda naman po noon, Padre.",
+        "english": "That's so beautiful, Padre.",
+        "vocab": [],
+        "next": null
+      },
+      {
+        "tagalog": "Parang nararamdaman ko na po ang kilig!",
+        "english": "I think I can feel kilig now!",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 1
+    }
+  },
+  "padre_miguel_teach_utang_na_loob": {
+    "lines": [
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Anak, may gusto akong ituro sa iyo ngayon. Tungkol sa 'utang na loob.'",
+        "english": "Child, there's something I want to teach you today. About 'utang na loob.'",
+        "vocab": [],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Literal na 'utang' — ibig sabihin ay debt. 'Loob' — inside, ang kalooban mo. So 'utang na loob' — isang utang na nasa loob mo. Sa puso.",
+        "english": "Literally 'utang' — meaning debt. 'Loob' — inside, your inner self. So 'utang na loob' — a debt that's inside you. In the heart.",
+        "vocab": ["mahal"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Kapag may tumulong sa iyo — totohanang tulong, 'yung tipong binago ang buhay mo — hindi mo 'yun malilimutan. Dala-dala mo 'yun habang buhay.",
+        "english": "When someone helps you — real help, the kind that changed your life — you can never forget it. You carry it with you for life.",
+        "vocab": [],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Hindi 'yan negatibo, ha? Hindi 'yan parang utang sa bangko. Ito ay... utang ng puso. Isang pagkilala na may nagmahal sa iyo nang walang hinihintay na kapalit.",
+        "english": "It's not negative, okay? It's not like a bank debt. This is... a debt of the heart. An acknowledgment that someone loved you without expecting anything in return.",
+        "vocab": ["mahal", "salamat"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Isipin mo si Aling Nena — pinalain ka niya. Binigyan ng pagkain, ng payo. Hindi niya hinihingi na bayaran mo siya. Pero sa loob mo... alam mong may utang ka. 'Yan ang utang na loob.",
+        "english": "Think of Aling Nena — she took care of you. Gave you food, advice. She doesn't ask you to pay her. But inside... you know you owe something. That's utang na loob.",
+        "vocab": [],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Naiintindihan ko na po, Padre. Ang lalim.",
+        "english": "I understand now, Padre. It's so deep.",
+        "vocab": [],
+        "next": null
+      },
+      {
+        "tagalog": "Ganoon pala 'yun... salamat po sa pagtuturo.",
+        "english": "So that's what it is... thank you for teaching me.",
+        "vocab": ["salamat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 2
+    }
+  },
+  "padre_miguel_teach_bahala_na": {
+    "lines": [
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "May isang expression ang mga Pilipino na ginagamit halos araw-araw: 'Bahala na.'",
+        "english": "There's one expression Filipinos use almost every day: 'Bahala na.'",
+        "vocab": ["araw"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Galing siya sa 'Bathala' — ang lumang salita para sa Diyos. 'Bahala na' — 'Bahala na si Bathala.' Let God take care of it.",
+        "english": "It comes from 'Bathala' — the old word for God. 'Bahala na' — 'Let Bathala handle it.' Let God take care of it.",
+        "vocab": [],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Ang iba nagsasabing tamad 'yan. 'Bahala na' — parang sumuko ka. Pero hindi ko 'yan pinaniniwalaan.",
+        "english": "Some say that's laziness. 'Bahala na' — as if you're giving up. But I don't believe that.",
+        "vocab": [],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Para sa akin, ang 'bahala na' ay tapang. Ginawa mo na ang lahat ng makakaya mo — tapos ipinaubaya mo na sa taas. Hindi surrender 'yan. Tiwala 'yan.",
+        "english": "For me, 'bahala na' is courage. You've done everything you can — then you leave it to the heavens. That's not surrender. That's trust.",
+        "vocab": ["takot"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Kaya pag naririnig mo ang isang Pilipino na nagsabing 'Bahala na!' bago tumalon sa dagat — hindi siya sumusuko. Lumululon siya sa buhay. Buong tapang.",
+        "english": "So when you hear a Filipino say 'Bahala na!' before jumping into the sea — they're not giving up. They're diving into life. With full courage.",
+        "vocab": ["dagat"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Bahala na! Haha. Salamat po, Padre.",
+        "english": "Bahala na! Haha. Thank you, Padre.",
+        "vocab": ["salamat"],
+        "next": null
+      },
+      {
+        "tagalog": "Gusto ko po 'yun — tapang at tiwala.",
+        "english": "I like that — courage and trust.",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 3
+    }
+  },
+  "padre_miguel_generic_wisdom": {
+    "lines": [
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Nandito ka ulit... maganda 'yan. Ang matutong makinig ay mas mahirap kaysa matutong magsalita.",
+        "english": "You're here again... that's good. Learning to listen is harder than learning to speak.",
+        "vocab": [],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Alam mo, anak, ang wika ay hindi lang salita. Ang wika ay buhay. Kapag natutunan mo ang salita ng isang tao, natutunan mo ang mundo niya.",
+        "english": "You know, child, language isn't just words. Language is life. When you learn someone's words, you learn their world.",
+        "vocab": ["tao"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Kaya huwag kang magmadali. Dahan-dahan lang. Ang Tagalog, parang dagat — malalim, pero puno ng buhay.",
+        "english": "So don't rush. Take it slow. Tagalog, like the sea — deep, but full of life.",
+        "vocab": ["dagat"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po sa karunungan, Padre.",
+        "english": "Thank you for the wisdom, Padre.",
+        "vocab": ["salamat"],
+        "next": null
+      },
+      {
+        "tagalog": "Dahan-dahan lang po. Naiintindihan ko.",
+        "english": "Nice and slow. I understand.",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 4
+    }
+  },
+  "padre_miguel_umaga": {
+    "lines": [
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Magandang umaga. Tahimik pa ang plasa... pinakagusto ko 'tong oras. Bago pa gumising ang lahat.",
+        "english": "Good morning. The plaza is still quiet... this is my favorite time. Before everyone wakes up.",
+        "vocab": ["umaga", "plasa", "gising"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Pag umaga, naririnig mo ang dagat mula dito. Ang alon, parang nagdadasal rin.",
+        "english": "In the morning, you can hear the sea from here. The waves, as if they're praying too.",
+        "vocab": ["umaga", "dagat", "alon"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Ang bawat umaga ay bagong simula. Huwag mong kalimutan 'yan, anak.",
+        "english": "Every morning is a new beginning. Don't forget that, child.",
+        "vocab": ["umaga"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Ang tahimik nga po dito, Padre.",
+        "english": "It's really peaceful here, Padre.",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "umaga",
+      "minVisits": 1
+    }
+  },
+  "padre_miguel_gabi": {
+    "lines": [
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Gabi na... nakikita mo ba ang buwan? Malaki ngayong gabi.",
+        "english": "It's night... do you see the moon? It's big tonight.",
+        "vocab": ["gabi", "buwan"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Noong bata pa ako, sinasabi ng lolo ko na pag malaki ang buwan, maganda ang huli bukas. Maswerte raw.",
+        "english": "When I was young, my grandfather said that when the moon is big, the catch tomorrow is good. Lucky, they said.",
+        "vocab": ["bata", "lolo", "buwan", "bukas"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Matulog ka na, anak. Pahinga. Ang mga sagot sa tanong mo — darating din 'yan. Sa tamang oras.",
+        "english": "Go to sleep now, child. Rest. The answers to your questions — they'll come. In the right time.",
+        "vocab": ["tulog"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Magandang gabi po, Padre. Salamat.",
+        "english": "Good night, Padre. Thank you.",
+        "vocab": ["gabi", "salamat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "gabi",
+      "minVisits": 1
+    }
+  },
+  "padre_miguel_post_delivery": {
+    "lines": [
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Ah... kape. Galing kay Kapitan? Salamat, anak. Kailangan ko nga nito.",
+        "english": "Ah... coffee. From the Captain? Thank you, child. I do need this.",
+        "vocab": ["kape", "kapitan", "salamat"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Ang kape, alam mo, parang pag-uusap — mainit sa simula, tapos dahan-dahang lumalamig. Pero masarap hanggang sa huli.",
+        "english": "Coffee, you know, is like a conversation — hot at the start, then slowly cools down. But good until the end.",
+        "vocab": ["kape", "mainit"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "padre_miguel",
+        "tagalog": "Nako, tignan mo ako, nag-pipilosopo na naman. Haha. Salamat, anak. Mabait ka.",
+        "english": "Oh, look at me, philosophizing again. Haha. Thank you, child. You're kind.",
+        "vocab": ["salamat"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Walang anuman po, Padre. Masaya akong tumulong.",
+        "english": "You're welcome, Padre. I'm happy to help.",
+        "vocab": ["masaya"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  }
+}

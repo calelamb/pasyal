@@ -1,0 +1,50 @@
+[
+  {
+    "id": "bangus",
+    "tagalog": "bangus",
+    "english": "milkfish",
+    "time": "umaga",
+    "rarity": "common",
+    "catchDifficulty": 0.3
+  },
+  {
+    "id": "tilapia",
+    "tagalog": "tilapia",
+    "english": "tilapia",
+    "time": "tanghali",
+    "rarity": "common",
+    "catchDifficulty": 0.3
+  },
+  {
+    "id": "galunggong",
+    "tagalog": "galunggong",
+    "english": "round scad",
+    "time": "hapon",
+    "rarity": "common",
+    "catchDifficulty": 0.4
+  },
+  {
+    "id": "lapu_lapu",
+    "tagalog": "lapu-lapu",
+    "english": "grouper",
+    "time": "tanghali",
+    "rarity": "rare",
+    "catchDifficulty": 0.7
+  },
+  {
+    "id": "dilis",
+    "tagalog": "dilis",
+    "english": "anchovy",
+    "time": "umaga",
+    "rarity": "common",
+    "catchDifficulty": 0.2
+  },
+  {
+    "id": "pusit",
+    "tagalog": "pusit",
+    "english": "squid",
+    "time": "gabi",
+    "rarity": "uncommon",
+    "catchDifficulty": 0.5
+  }
+]

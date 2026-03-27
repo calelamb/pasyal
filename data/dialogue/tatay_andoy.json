@@ -1,0 +1,383 @@
+{
+  "tatay_andoy_first_meeting": {
+    "lines": [
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "...ah. Bagong mukha. Magandang araw.",
+        "english": "...ah. A new face. Good day.",
+        "vocab": ["araw"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Ako si Tatay Andoy. Mangingisda. Dito sa dagat na 'to, dito na ako lumaki.",
+        "english": "I'm Tatay Andoy. Fisherman. Here at this sea, this is where I grew up.",
+        "vocab": ["mangingisda", "dagat"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Hindi ako masyadong maingay... tulad ni Kuya Jojo doon sa palengke. Haha. Dahan-dahan lang ang estilo ko.",
+        "english": "I'm not very loud... unlike Kuya Jojo there at the market. Haha. My style is slow and steady.",
+        "vocab": ["palengke"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Pero kung gusto mong matuto tungkol sa dagat — ang isda, ang bangka, ang alon — nandito lang ako.",
+        "english": "But if you want to learn about the sea — the fish, the boat, the waves — I'm right here.",
+        "vocab": ["dagat", "isda", "bangka", "alon"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Gusto ko pong matutong mangisda!",
+        "english": "I want to learn how to fish!",
+        "vocab": ["mangingisda"],
+        "next": null
+      },
+      {
+        "tagalog": "Maganda po ang dagat dito.",
+        "english": "The sea here is beautiful.",
+        "vocab": ["dagat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  },
+  "tatay_andoy_fishing_tutorial": {
+    "lines": [
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Gusto mo bang mangisda? Sige, turuan kita.",
+        "english": "You want to fish? Okay, I'll teach you.",
+        "vocab": ["isda"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Una — ang panahon. Pag umaga, nandito ang bangus at dilis. Mas madali silang hulihin.",
+        "english": "First — the time. In the morning, the milkfish and anchovy are here. They're easier to catch.",
+        "vocab": ["umaga", "bangus", "dilis"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Pag tanghali, lumilitaw ang tilapia. At kung maswerte ka... ang lapu-lapu. Mahirap 'yun, pero sulit.",
+        "english": "At noon, tilapia appear. And if you're lucky... the grouper. That's hard, but worth it.",
+        "vocab": ["tanghali", "tilapia"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Pag hapon, galunggong naman. At pag gabi... pusit. Ang pusit, kailangan mo ng pasensya. Mabilis sila.",
+        "english": "In the afternoon, round scad. And at night... squid. Squid, you need patience. They're fast.",
+        "vocab": ["hapon", "galunggong", "gabi", "pusit", "pasensya"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Pumunta ka sa bangka, tapos maghintay. Kapag may kumakagat — hila mo nang mabilis pero dahan-dahan. Parang buhay — kailangan ng timing.",
+        "english": "Go to the boat, then wait. When something bites — pull quickly but gently. Like life — you need timing.",
+        "vocab": ["bangka"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige po, Tatay! Susubukan ko!",
+        "english": "Okay, Tatay! I'll try!",
+        "vocab": ["sige"],
+        "next": null
+      },
+      {
+        "tagalog": "Ano po ang pinakamahirap hulihin?",
+        "english": "What's the hardest to catch?",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 1
+    }
+  },
+  "tatay_andoy_post_catch": {
+    "lines": [
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Oy, may nahuli ka! Tingnan natin... hindi masama. Hindi masama.",
+        "english": "Hey, you caught something! Let me see... not bad. Not bad.",
+        "vocab": ["isda"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Alam mo, ang dagat ay mapagbigay. Kung respetuhin mo siya, bibigyan ka niya ng pagkain.",
+        "english": "You know, the sea is generous. If you respect her, she'll give you food.",
+        "vocab": ["dagat"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Pero huwag ka ring masakim. Kumuha ka lang ng kailangan mo. 'Yan ang turo ng mga matatanda.",
+        "english": "But don't be greedy either. Take only what you need. That's the teaching of the elders.",
+        "vocab": [],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po sa pagtuturo, Tatay.",
+        "english": "Thank you for teaching me, Tatay.",
+        "vocab": ["salamat", "tatay"],
+        "next": null
+      },
+      {
+        "tagalog": "Sana mas malaki bukas!",
+        "english": "I hope it's bigger tomorrow!",
+        "vocab": ["sana", "bukas"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 2
+    }
+  },
+  "tatay_andoy_gabi_bonfire": {
+    "lines": [
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Upo ka. Mainit ang apoy. May kwento ako para sa iyo.",
+        "english": "Sit down. The fire is warm. I have a story for you.",
+        "vocab": ["mainit"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Noong bata pa ako, may isang gabi... lumabas akong mag-isa sa bangka. Madilim. Ang buwan lang ang ilaw ko.",
+        "english": "When I was young, one night... I went out alone on the boat. Dark. The moon was my only light.",
+        "vocab": ["bata", "gabi", "bangka", "buwan", "ilaw"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Biglang lumakas ang hangin. Lumaki ang alon. Natatakot ako — pero sabi ko sa sarili ko, 'Bahala na.'",
+        "english": "Suddenly the wind picked up. The waves grew. I was scared — but I told myself, 'Bahala na.'",
+        "vocab": ["hangin", "alon", "takot"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Tapos, biglang tumahimik lahat. Ang dagat, parang niyakap ako. At sa tubig... nakita ko ang bituin-dagat. Marami. Nagliliwanag.",
+        "english": "Then, suddenly everything calmed. The sea, as if she hugged me. And in the water... I saw starfish. Many of them. Glowing.",
+        "vocab": ["dagat", "bituin-dagat"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Simula noon, hindi na ako natakot sa dagat. Kasi alam ko na — kapag nirespeto mo siya, iingatan ka niya.",
+        "english": "From then on, I was never afraid of the sea again. Because I knew — when you respect her, she'll keep you safe.",
+        "vocab": ["dagat", "takot"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Ang ganda po ng kwento, Tatay.",
+        "english": "That's a beautiful story, Tatay.",
+        "vocab": ["tatay"],
+        "next": null
+      },
+      {
+        "tagalog": "Hindi po ba kayo natatakot ngayon?",
+        "english": "Aren't you scared anymore now?",
+        "vocab": ["takot"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "gabi",
+      "minVisits": 2
+    }
+  },
+  "tatay_andoy_umaga": {
+    "lines": [
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Magandang umaga. Tingnan mo ang dagat — kalmado ngayon. Maganda para mangisda.",
+        "english": "Good morning. Look at the sea — calm today. Good for fishing.",
+        "vocab": ["umaga", "dagat"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Pag ganito ang alon — maliit, dahan-dahan — ibig sabihin, masaya ang dagat. Maraming isda.",
+        "english": "When the waves are like this — small, slow — it means the sea is happy. Lots of fish.",
+        "vocab": ["alon", "masaya", "dagat", "isda"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Tara, sumakay ka sa bangka. Maaga pa — maganda ang huli pag maaga.",
+        "english": "Come on, get on the boat. It's still early — the catch is good when it's early.",
+        "vocab": ["tara", "sakay", "bangka"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Tara po, Tatay! Mangisda tayo!",
+        "english": "Let's go, Tatay! Let's fish!",
+        "vocab": ["tara"],
+        "next": null
+      },
+      {
+        "tagalog": "Mamaya na lang po, pagmamasdan ko muna ang dagat.",
+        "english": "Maybe later, I'll watch the sea first.",
+        "vocab": ["dagat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "umaga",
+      "minVisits": 1
+    }
+  },
+  "tatay_andoy_hapon": {
+    "lines": [
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Hapon na. Inaayos ko ang lambat. Sira-sira na eh. Kailangan ng pasensya.",
+        "english": "It's afternoon. I'm fixing the net. It's all torn up. It takes patience.",
+        "vocab": ["hapon", "lambat", "pasensya"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Alam mo, ang buhangin dito... puti. Pero noong bata pa ako, mas puti pa. Nagbabago ang lahat, anak.",
+        "english": "You know, the sand here... it's white. But when I was young, it was even whiter. Everything changes, child.",
+        "vocab": ["buhangin", "bata"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Pag hapon, minsan namumulot ako ng kabibe. Tingnan mo — maganda 'tong isa. Para sa iyo.",
+        "english": "In the afternoon, sometimes I pick up seashells. Look — this one's pretty. It's for you.",
+        "vocab": ["hapon", "kabibe"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po, Tatay! Ang ganda!",
+        "english": "Thank you, Tatay! It's beautiful!",
+        "vocab": ["salamat"],
+        "next": null
+      },
+      {
+        "tagalog": "Puwede po ba akong tumulong sa lambat?",
+        "english": "Can I help with the net?",
+        "vocab": ["lambat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "hapon",
+      "minVisits": 1
+    }
+  },
+  "tatay_andoy_teach_dagat_vocab": {
+    "lines": [
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Halika, ituturo ko sa iyo ang mga salita ng dagat.",
+        "english": "Come, I'll teach you the words of the sea.",
+        "vocab": ["dagat"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "'Yan ang buhangin — ang tinatapakan mo. 'Yung malalaking gray, 'yun ang bato. Mag-ingat ka, madulas pag may lumot.",
+        "english": "That's the sand — what you're stepping on. Those big gray things, those are rocks. Be careful, slippery when there's moss.",
+        "vocab": ["buhangin", "bato", "lumot"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Ang tubig dito, tubig-alat. Huwag mong inumin. Tapos 'yang pang-huli namin, 'yan ang lambat.",
+        "english": "The water here is saltwater. Don't drink it. Then our catching tool, that's the net.",
+        "vocab": ["tubig-alat", "lambat"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "'Yang sa gilid ng bangka, 'yan ang katig — 'yun ang nagpapabalanse. At 'yung pinagdadaunan ng bangka, 'yun ang daungan.",
+        "english": "That on the side of the boat, that's the outrigger — it keeps the balance. And where the boat docks, that's the port.",
+        "vocab": ["bangka", "daungan"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Madami pang matututunan. Pero 'yan muna — kailangan mo munang makilala ang dagat bago ka niya makilala.",
+        "english": "There's still a lot to learn. But that's it for now — you need to know the sea first before she knows you.",
+        "vocab": ["dagat"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po, Tatay. Dahan-dahan ko pong matututunan.",
+        "english": "Thank you, Tatay. I'll learn slowly.",
+        "vocab": ["salamat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 3
+    }
+  },
+  "tatay_andoy_post_delivery": {
+    "lines": [
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "...yelo? Ah, galing kay Kapitan. Salamat. Kailangan na kailangan ko 'to.",
+        "english": "...ice? Ah, from the Captain. Thank you. I really, really need this.",
+        "vocab": ["yelo", "kapitan", "salamat"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Kung walang yelo, masisira ang isda. Sayang ang huli ng buong araw.",
+        "english": "Without ice, the fish will spoil. A whole day's catch wasted.",
+        "vocab": ["yelo", "isda", "araw"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "tatay_andoy",
+        "tagalog": "Malayo ang nilakad mo para dalhin 'to. 'Yan ang totoong tulong. Hindi salita — gawa. Salamat, anak.",
+        "english": "You walked far to bring this. That's real help. Not words — action. Thank you, child.",
+        "vocab": ["malayo", "lakad", "salamat"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Walang anuman po, Tatay. Masaya akong tumulong.",
+        "english": "You're welcome, Tatay. I'm happy to help.",
+        "vocab": ["masaya"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "aling_nena_morning_first": {
+    "lines": [
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Oy! Naku, bagong mukha! Magandang umaga, anak!",
+        "english": "Oh! A new face! Good morning, child!",
+        "vocab": ["umaga"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Ako si Aling Nena, kapitbahay mo dito sa tabi-tabi. Welcome sa Baryo Alon!",
+        "english": "I'm Aling Nena, your neighbor right next door. Welcome to Baryo Alon!",
+        "vocab": ["kapitbahay", "bahay"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Dito sa amin, lahat magkakilala. Parang isang malaking pamilya lang, ha?",
+        "english": "Here with us, everyone knows each other. Like one big family, okay?",
+        "vocab": [],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Kumain ka na ba? Naku, hindi puwedeng walang almusal! Teka, may kanin pa ako dito at bangus.",
+        "english": "Have you eaten yet? You can't skip breakfast! Wait, I still have rice and milkfish here.",
+        "vocab": ["kanin", "bangus"],
+        "emotion": "concerned"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Kung kailangan mo ng kahit ano — tubig, pagkain, tulong — kumatok ka lang sa pinto ko, ha? Huwag kang mahiya.",
+        "english": "If you need anything — water, food, help — just knock on my door, okay? Don't be shy.",
+        "vocab": ["tubig", "pinto"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po, Aling Nena! Ang bait niyo po.",
+        "english": "Thank you, Aling Nena! You're so kind.",
+        "vocab": ["salamat"],
+        "next": null
+      },
+      {
+        "tagalog": "Hindi pa po ako kumain... gutom na ako.",
+        "english": "I haven't eaten yet... I'm hungry.",
+        "vocab": ["gutom"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "umaga",
+      "minVisits": 0
+    }
+  },
+  "aling_nena_morning_return": {
+    "lines": [
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Oy, magandang umaga ulit! Nandito ka na naman, ha? Mabuti naman!",
+        "english": "Hey, good morning again! Here you are again, huh? That's good!",
+        "vocab": ["umaga"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Kumain ka na ba? Naku, sabihin mo sa akin ng totoo.",
+        "english": "Have you eaten yet? Oh, tell me the truth.",
+        "vocab": ["kanin"],
+        "emotion": "concerned"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Kung hindi pa, upo ka muna sa upuan. May mainit na kape at pandesal dito.",
+        "english": "If not yet, sit down on the chair first. There's hot coffee and bread here.",
+        "vocab": ["upuan", "kape", "pandesal"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Kung gusto mo pang bumili, puntahan mo si Ate Merly sa sari-sari store sa Sentro. Mabait 'yon, pero chismosa rin. Hehe.",
+        "english": "If you want to buy more, visit Ate Merly at the sari-sari store in the town center. She's nice, but gossipy too. Hehe.",
+        "vocab": ["tindahan"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Opo, kakain na po ako! Salamat!",
+        "english": "Yes, I'll eat now! Thank you!",
+        "vocab": ["salamat"],
+        "next": null
+      },
+      {
+        "tagalog": "Saan po ang sari-sari store?",
+        "english": "Where is the sari-sari store?",
+        "vocab": ["tindahan"],
+        "next": null
+      },
+      {
+        "tagalog": "Magkano po ang kape?",
+        "english": "How much is the coffee?",
+        "vocab": ["magkano", "kape"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "umaga",
+      "minVisits": 1
+    }
+  },
+  "aling_nena_tanghali_scold": {
+    "lines": [
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Anak! Tanghali na! Ang init-init sa labas — bakit ka naglalakad pa?",
+        "english": "Child! It's already noon! It's so hot outside — why are you still walking around?",
+        "vocab": ["tanghali", "mainit"],
+        "emotion": "concerned"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Halika muna dito sa loob. May ulam pa ako — sinigang. Kain muna tayo.",
+        "english": "Come inside first. I still have a dish — sinigang. Let's eat first.",
+        "vocab": ["ulam", "sinigang"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Dito sa amin, hindi ka puwedeng lumakad nang walang laman ang tiyan. Ang kain ang pinaka-importante!",
+        "english": "Here with us, you can't go around on an empty stomach. Eating is the most important!",
+        "vocab": ["gutom"],
+        "emotion": "stern"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Tapos doon sa lamesa, kumuha ka ng tubig. Baka ma-dehydrate ka pa diyan.",
+        "english": "Then over at the table, get some water. You might get dehydrated.",
+        "vocab": ["lamesa", "tubig"],
+        "emotion": "concerned"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Opo, Aling Nena. Kakain na po ako.",
+        "english": "Yes, Aling Nena. I'll eat now.",
+        "vocab": [],
+        "next": null
+      },
+      {
+        "tagalog": "Busog pa po ako, salamat!",
+        "english": "I'm still full, thank you!",
+        "vocab": ["busog", "salamat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "tanghali",
+      "minVisits": 0
+    }
+  },
+  "aling_nena_hapon_cooking": {
+    "lines": [
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Oy, magandang hapon! Nagluluto ako ng adobo. Halika, turuan kita!",
+        "english": "Hey, good afternoon! I'm cooking adobo. Come, I'll teach you!",
+        "vocab": ["hapon", "adobo"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Una, kailangan mo ng kawali — yan, yung malaking pan na 'yan. Pang-gisa.",
+        "english": "First, you need a kawali — that, that big pan. For sauteing.",
+        "vocab": ["kawali"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Tapos igisa mo ang bawang at sibuyas. Naamoy mo na ba? 'Yan ang amoy ng Pilipinas!",
+        "english": "Then saute the garlic and onions. Can you smell it? That's the smell of the Philippines!",
+        "vocab": ["bawang", "sibuyas"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Lagyan mo ng toyo at suka. Huwag kalimutan! At sili, kung gusto mo ng anghang.",
+        "english": "Add soy sauce and vinegar. Don't forget! And chili, if you want it spicy.",
+        "vocab": ["toyo", "suka", "sili"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Tapos lutuin mo sa palayok nang matagal. Dahan-dahan lang. Ang luto, parang buhay — kailangan ng pasensya.",
+        "english": "Then cook it in the pot for a long time. Nice and slow. Cooking, like life — it needs patience.",
+        "vocab": ["palayok", "pasensya"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po sa pagtuturo! Susubukan ko po!",
+        "english": "Thank you for teaching me! I'll try it!",
+        "vocab": ["salamat"],
+        "next": null
+      },
+      {
+        "tagalog": "Ang sarap naman po ng amoy!",
+        "english": "It smells so good!",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "hapon",
+      "minVisits": 0
+    }
+  },
+  "aling_nena_gabi_stories": {
+    "lines": [
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Anak, magandang gabi. Upo ka muna, kwentuhan tayo.",
+        "english": "Child, good evening. Sit down first, let's share stories.",
+        "vocab": ["gabi"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Noong bata pa ako, dito na ako sa barangay na 'to. Walang kuryente noon, ilaw lang ng kandila.",
+        "english": "When I was young, I was already here in this barangay. No electricity back then, just candlelight.",
+        "vocab": ["ilaw", "bata"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Ang tatay ko, mangingisda rin, tulad ni Tatay Andoy. Gabi-gabi, dala niya ang isda, tapos magluluto ang nanay ko.",
+        "english": "My father was also a fisherman, like Tatay Andoy. Every night, he'd bring fish, then my mother would cook.",
+        "vocab": ["mangingisda", "isda", "nanay", "tatay"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Ang buhay dito, simple lang. Kanin, ulam, pamilya. 'Yan lang ang kailangan mo.",
+        "english": "Life here is simple. Rice, a dish, family. That's all you need.",
+        "vocab": ["kanin", "ulam"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Sige, matulog ka na. Kumuha ka ng kumot, malamig ngayong gabi. Bukas ulit, ha?",
+        "english": "Alright, go to sleep now. Get a blanket, it's cold tonight. See you tomorrow, okay?",
+        "vocab": ["kumot", "malamig", "bukas", "tulog"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Magandang gabi po, Aling Nena. Salamat sa kwento.",
+        "english": "Good night, Aling Nena. Thank you for the story.",
+        "vocab": ["gabi", "salamat"],
+        "next": null
+      },
+      {
+        "tagalog": "May kwento pa po ba kayo?",
+        "english": "Do you have more stories?",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "gabi",
+      "minVisits": 0
+    }
+  },
+  "aling_nena_generic": {
+    "lines": [
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Oy, nandito ka pala! Kumusta ka naman?",
+        "english": "Oh, you're here! How are you?",
+        "vocab": [],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Huwag mong kalimutan kumain, ha? At uminom ng tubig. Importante 'yan.",
+        "english": "Don't forget to eat, okay? And drink water. That's important.",
+        "vocab": ["tubig"],
+        "emotion": "concerned"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Kung gusto mong mag-explore, puntahan mo si Kapitan Rody sa munisipyo. Baka may trabaho siya para sa iyo.",
+        "english": "If you want to explore, visit Kapitan Rody at the municipal hall. He might have work for you.",
+        "vocab": ["munisipyo", "kapitan"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige po, pupunta po ako.",
+        "english": "Okay, I'll go there.",
+        "vocab": ["sige", "punta"],
+        "next": null
+      },
+      {
+        "tagalog": "Salamat po, Aling Nena!",
+        "english": "Thank you, Aling Nena!",
+        "vocab": ["salamat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 3
+    }
+  },
+  "aling_nena_post_delivery": {
+    "lines": [
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Ay, para sa akin 'yan? Naku, ikaw talaga! Salamat, anak!",
+        "english": "Oh, that's for me? Oh, you! Thank you, child!",
+        "vocab": ["salamat"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Si Kapitan Rody ba ang nagpadala? Ay, mabait talaga 'yun kahit mukhang seryoso lagi.",
+        "english": "Did Kapitan Rody send you? He's really kind even though he always looks serious.",
+        "vocab": ["kapitan"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Teka, huwag kang umalis nang walang dala. Eto, dalhin mo 'tong pandesal pabalik. Para sa iyo 'yan.",
+        "english": "Wait, don't leave empty-handed. Here, take this bread back. That's for you.",
+        "vocab": ["pandesal"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Ganyan kami dito sa Baryo Alon — walang pumupunta nang walang pasalubong, walang umaalis nang walang dala!",
+        "english": "That's how we are here in Baryo Alon — nobody comes without a gift, nobody leaves empty-handed!",
+        "vocab": [],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po! Ang bait niyo talaga.",
+        "english": "Thank you! You're really so kind.",
+        "vocab": ["salamat", "talaga"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  },
+  "aling_nena_teach_bahay_vocab": {
+    "lines": [
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Alam mo ba, turuan na kita ng mga salita tungkol sa bahay. Importante 'yan!",
+        "english": "You know what, let me teach you words about the house. That's important!",
+        "vocab": ["bahay"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Yan ang pinto — 'yung pinupasukan mo. Tapos 'yung nandoon sa taas, 'yun ang bubong.",
+        "english": "That's the door — what you enter through. Then the one up there, that's the roof.",
+        "vocab": ["pinto", "bubong"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Ang sahig ang tinatapakan mo. Ang pader, 'yung nasa gilid. At 'yung liwanag, 'yun ang ilaw.",
+        "english": "The floor is what you step on. The wall, that's on the side. And the brightness, that's the light.",
+        "vocab": ["sahig", "pader", "ilaw"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Tapos, ang bintana — buksan mo 'yan para pumasok ang hangin. Lalo na pag mainit!",
+        "english": "Then, the window — open it to let the wind in. Especially when it's hot!",
+        "vocab": ["bintana", "hangin", "mainit"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "At 'yung pinatutulugan mo? Kama 'yun. May unan at kumot para matulog nang mahimbing.",
+        "english": "And what you sleep on? That's the bed. With a pillow and blanket to sleep soundly.",
+        "vocab": ["kama", "unan", "kumot"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Ha? Marami na ba? Huwag kang mag-alala, mauulit-ulit din natin 'yan. Dahan-dahan lang!",
+        "english": "Huh? Too many already? Don't worry, we'll keep repeating those. Take it slow!",
+        "vocab": [],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po! Marami akong natutunan!",
+        "english": "Thank you! I'm learning a lot!",
+        "vocab": ["salamat"],
+        "next": null
+      },
+      {
+        "tagalog": "Puwede po bang ulitin?",
+        "english": "Can you repeat that?",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 2
+    }
+  },
+  "aling_nena_hapon_return": {
+    "lines": [
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Magandang hapon! Nag-iinit na naman ng walis. Ang dumi-dumi sa labas, grabe.",
+        "english": "Good afternoon! I'm wielding the broom again. It's so dirty outside, unbelievable.",
+        "vocab": ["hapon", "walis"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Alam mo, ang walis at sabon, 'yun ang armas ng isang maayos na bahay!",
+        "english": "You know, the broom and soap, those are the weapons of a proper household!",
+        "vocab": ["walis", "sabon", "bahay"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Pagkatapos maglinis, ilagay mo ang basura sa tamang lugar. 'Yan ang turo sa amin ni Nanay ko.",
+        "english": "After cleaning, put the trash in the right place. That's what my mother taught us.",
+        "vocab": ["basura", "nanay"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "aling_nena",
+        "tagalog": "Tapos, 'pag tapos na ang lahat, magpahinga ka. Kumuha ka ng tuwalya at maligo ka. Kailangan mo 'yan pagkatapos ng mahabang araw!",
+        "english": "Then, when everything's done, rest. Get a towel and take a bath. You need that after a long day!",
+        "vocab": ["tuwalya", "pagod"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Opo, maglilinis din po ako!",
+        "english": "Yes, I'll clean too!",
+        "vocab": [],
+        "next": null
+      },
+      {
+        "tagalog": "Pagod na po ako, Aling Nena...",
+        "english": "I'm already tired, Aling Nena...",
+        "vocab": ["pagod"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "hapon",
+      "minVisits": 2
+    }
+  }
+}

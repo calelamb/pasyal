@@ -1,0 +1,305 @@
+{
+  "kuya_jojo_first_meeting": {
+    "lines": [
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "OY! PARE! Halika, halika! Tingin ka lang, libre ang tingin!",
+        "english": "HEY! BUDDY! Come, come! Just look, looking is free!",
+        "vocab": [],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Ako si Kuya Jojo — ang PINAKAMAGALING na tindera ng isda sa buong Baryo Alon! At sa kabilang baryo! At sa buong Pilipinas!",
+        "english": "I'm Kuya Jojo — the BEST fish vendor in all of Baryo Alon! And the next village! And all of the Philippines!",
+        "vocab": ["isda"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Bangus, tilapia, galunggong, lapu-lapu — lahat meron ako! Sariwang-sariwa, galing sa dagat kaninang umaga!",
+        "english": "Milkfish, tilapia, round scad, grouper — I have them all! Super fresh, from the sea this morning!",
+        "vocab": ["bangus", "tilapia", "galunggong", "dagat"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "At sa iyo, dahil bago ka — ESPESYAL na presyo! Magkano? Tanungin mo na lang! Haha!",
+        "english": "And for you, since you're new — SPECIAL price! How much? Just ask! Haha!",
+        "vocab": ["presyo", "magkano"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Magkano po ang bangus?",
+        "english": "How much is the milkfish?",
+        "vocab": ["magkano", "bangus"],
+        "next": null
+      },
+      {
+        "tagalog": "Ang lakas naman po ng boses niyo, Kuya!",
+        "english": "Your voice is so loud, Kuya!",
+        "vocab": ["kuya"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  },
+  "kuya_jojo_bargain_intro": {
+    "lines": [
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Aha! Gusto mo bang bumili? Sige, pero dito sa palengke, kailangan mo marunong TUMAWAD!",
+        "english": "Aha! You want to buy? Sure, but here at the market, you need to know how to BARGAIN!",
+        "vocab": ["bili", "palengke", "tawad"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Ganito 'yan — sasabihin ko ang presyo, tapos tatawad ka. 'Kuya, masyado pong mahal! Puwede bang tawad?'",
+        "english": "Here's how it goes — I'll say the price, then you bargain. 'Kuya, that's too expensive! Can I get a discount?'",
+        "vocab": ["presyo", "mahal", "tawad"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Sasabihin ko, 'Ay, hindi puwede, lugi na ako!' Tapos tatawad ka ulit. Ganun 'yun! Parang sayaw!",
+        "english": "I'll say, 'Oh, that won't work, I'll be at a loss!' Then you bargain again. That's how it goes! Like a dance!",
+        "vocab": ["mura"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Tara, subukan natin! Isa, dalawa, tatlo — BILI NA!",
+        "english": "Come on, let's try it! One, two, three — BUY!",
+        "vocab": ["isa", "dalawa", "tatlo", "bili"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige po, Kuya! Tatawad ako!",
+        "english": "Sure, Kuya! I'll bargain!",
+        "vocab": ["sige", "tawad"],
+        "next": null
+      },
+      {
+        "tagalog": "Magkano po ang pinakamura?",
+        "english": "How much is the cheapest?",
+        "vocab": ["magkano", "mura"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 1
+    }
+  },
+  "kuya_jojo_post_bargain_win": {
+    "lines": [
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "AY NAKO! Talo na naman ako! Grabe ka talaga mag-tawad, ha!",
+        "english": "OH NO! I lost again! You're really something at bargaining, huh!",
+        "vocab": ["tawad", "grabe", "talaga"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Sige, sige, sa iyo na 'yan. Pero sa susunod, hindi na 'ko magpapatalo! Haha!",
+        "english": "Fine, fine, it's yours. But next time, I won't lose! Haha!",
+        "vocab": ["sige"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Eto ang sukli mo. Timbang ko muna, ha — isa, dalawa... tama na 'yan, isang kilo!",
+        "english": "Here's your change. Let me weigh it first, okay — one, two... that's right, one kilo!",
+        "vocab": ["sukli", "timbang", "isa", "dalawa", "kilo"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat, Kuya Jojo! Masarap naman ang isda mo!",
+        "english": "Thanks, Kuya Jojo! Your fish is really good!",
+        "vocab": ["salamat", "isda"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 2
+    }
+  },
+  "kuya_jojo_umaga": {
+    "lines": [
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "MAGANDANG UMAGA! Bago pa lang ang isda! Kakarating lang galing sa bangka ni Tatay Andoy!",
+        "english": "GOOD MORNING! The fish is brand new! Just arrived from Tatay Andoy's boat!",
+        "vocab": ["umaga", "isda", "bangka"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Pag umaga, 'yan ang best na bumili — sariwa pa lahat! Bangus, dilis, galunggong!",
+        "english": "In the morning, that's the best time to buy — everything's still fresh! Milkfish, anchovy, round scad!",
+        "vocab": ["umaga", "bangus", "dilis", "galunggong"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Tara, bumili ka na! Mauubusan ka pag tinagal-tagal mo pa!",
+        "english": "Come on, buy now! You'll miss out if you wait too long!",
+        "vocab": ["tara", "bili"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Magkano po ang bangus ngayon?",
+        "english": "How much is the milkfish today?",
+        "vocab": ["magkano", "bangus"],
+        "next": null
+      },
+      {
+        "tagalog": "Mamaya na lang po, Kuya!",
+        "english": "Maybe later, Kuya!",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "umaga",
+      "minVisits": 1
+    }
+  },
+  "kuya_jojo_tanghali": {
+    "lines": [
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Oy, tanghali na! Konti na lang ang natitira, ha! Mauubusan ka!",
+        "english": "Hey, it's noon! Only a few left, okay! You'll miss out!",
+        "vocab": ["tanghali"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Pag tanghali, baba na ang presyo kasi mainit na — kailangan mabenta agad!",
+        "english": "At noon, prices go down because it's hot — need to sell fast!",
+        "vocab": ["tanghali", "presyo", "mainit", "benta"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "So ngayon ang best time mo tumawad! Mura na — pero puwede pang mas mura! Haha!",
+        "english": "So now is your best time to bargain! It's cheap — but it can be even cheaper! Haha!",
+        "vocab": ["tawad", "mura"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Tawad po, Kuya! Bente na lang!",
+        "english": "Discount please, Kuya! Twenty only!",
+        "vocab": ["tawad", "dalawampu"],
+        "next": null
+      },
+      {
+        "tagalog": "Sige po, bibili na ako bago maubusan!",
+        "english": "Okay, I'll buy now before they're all gone!",
+        "vocab": ["sige", "bili"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "tanghali",
+      "minVisits": 1
+    }
+  },
+  "kuya_jojo_hapon": {
+    "lines": [
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Hapon na! Naglilinis na ako ng stall. Ubos na ang isda ko!",
+        "english": "It's afternoon! I'm cleaning my stall already. My fish is all sold out!",
+        "vocab": ["hapon", "isda"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Maganda ang benta ngayon, salamat sa mga suki! Bukas ulit!",
+        "english": "Sales were good today, thanks to the regulars! Come back tomorrow!",
+        "vocab": ["benta", "suki", "bukas"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Kung gusto mo ng isda bukas, pumunta ka nang maaga. Pag limang umaga, nandito na ako!",
+        "english": "If you want fish tomorrow, come early. By five in the morning, I'm already here!",
+        "vocab": ["isda", "bukas", "lima", "umaga"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige po, bukas ulit, Kuya!",
+        "english": "Sure, see you tomorrow, Kuya!",
+        "vocab": ["sige", "bukas"],
+        "next": null
+      },
+      {
+        "tagalog": "Grabe, ang aga naman!",
+        "english": "Wow, that's so early!",
+        "vocab": ["grabe"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "hapon",
+      "minVisits": 1
+    }
+  },
+  "kuya_jojo_post_delivery": {
+    "lines": [
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Oy! Suka! Galing kay Kapitan? Naku, salamat, pare!",
+        "english": "Hey! Vinegar! From the Captain? Oh, thanks, buddy!",
+        "vocab": ["suka", "kapitan", "salamat"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Alam mo ba, hindi kumpleto ang isda kung walang sawsawan? Suka at sili — 'yan ang secret!",
+        "english": "You know, fish isn't complete without dipping sauce? Vinegar and chili — that's the secret!",
+        "vocab": ["isda", "suka", "sili"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "kuya_jojo",
+        "tagalog": "Teka, eto — libre na, isang supot ng dilis. Pasalubong mo na lang sa sarili mo! Haha!",
+        "english": "Wait, here — free, one bag of anchovy. A gift to yourself! Haha!",
+        "vocab": ["supot", "dilis"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat, Kuya Jojo! Ang bait mo!",
+        "english": "Thanks, Kuya Jojo! You're so kind!",
+        "vocab": ["salamat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  }
+}

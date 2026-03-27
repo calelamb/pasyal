@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://tawad_game"]
+
+[ext_resource type="Script" path="res://scripts/Minigames/TawadGame.cs" id="1_script"]
+
+[node name="Tawad" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0.91, 0.835, 0.718, 1)
+
+[node name="VendorLabel" type="RichTextLabel" parent="."]
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 50.0
+bbcode_enabled = true
+text = ""
+
+[node name="PriceLabel" type="Label" parent="."]
+offset_left = 110.0
+offset_top = 55.0
+offset_right = 210.0
+offset_bottom = 75.0
+text = "₱0"
+horizontal_alignment = 1
+
+[node name="RoundLabel" type="Label" parent="."]
+offset_left = 240.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 30.0
+text = "Round 1/3"
+
+[node name="ChoicesPanel" type="VBoxContainer" parent="."]
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 280.0
+offset_bottom = 160.0
+
+[node name="ChoiceButton1" type="Button" parent="ChoicesPanel"]
+layout_mode = 2
+text = ""
+
+[node name="ChoiceButton2" type="Button" parent="ChoicesPanel"]
+layout_mode = 2
+text = ""
+
+[node name="ChoiceButton3" type="Button" parent="ChoicesPanel"]
+layout_mode = 2
+text = ""
+
+[node name="OutcomeLabel" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 85.0
+offset_right = 260.0
+offset_bottom = 105.0
+text = ""
+horizontal_alignment = 1
+visible = false
+
+[node name="ReturnButton" type="Button" parent="."]
+offset_left = 120.0
+offset_top = 155.0
+offset_right = 200.0
+offset_bottom = 175.0
+text = "Bumalik"
+visible = false

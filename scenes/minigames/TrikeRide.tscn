@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://trike_ride"]
+
+[ext_resource type="Script" path="res://scripts/Minigames/TrikeRide.cs" id="1_script"]
+
+[node name="TrikeRide" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0.42, 0.561, 0.235, 1)
+
+[node name="Road" type="ColorRect" parent="."]
+anchor_top = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0.361, 0.239, 0.18, 1)
+
+[node name="Trike" type="Sprite2D" parent="."]
+position = Vector2(-40, 120)
+
+[node name="ChatterLabel" type="RichTextLabel" parent="."]
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 280.0
+offset_bottom = 60.0
+bbcode_enabled = true
+text = ""

@@ -1,0 +1,28 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# .NET / C#
+bin/
+obj/
+*.user
+*.suo
+*.cache
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Godot mono app (bundled editor)
+Godot_mono.app/
+
+# IDE
+.idea/
+.vscode/
+
+# Claude Code memory
+memory/
+
+# Large binaries / downloads
+*.zip
+*.import

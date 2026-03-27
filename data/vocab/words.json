@@ -1,0 +1,1802 @@
+[
+  {
+    "tagalog": "bahay",
+    "english": "house",
+    "pronunciation": "bah-HAI",
+    "example": "Maganda ang bahay nila sa tabi ng dagat.",
+    "exampleEnglish": "Their house by the sea is beautiful.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "kubo",
+    "english": "hut / nipa hut",
+    "pronunciation": "KOO-boh",
+    "example": "Nakatira kami sa kubo noong bata pa ako.",
+    "exampleEnglish": "We lived in a nipa hut when I was young.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "pinto",
+    "english": "door",
+    "pronunciation": "pin-TOH",
+    "example": "Kumatok ka muna bago buksan ang pinto.",
+    "exampleEnglish": "Knock first before opening the door.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "bintana",
+    "english": "window",
+    "pronunciation": "bin-TAH-nah",
+    "example": "Buksan mo ang bintana, mainit eh.",
+    "exampleEnglish": "Open the window, it's hot.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "bubong",
+    "english": "roof",
+    "pronunciation": "BOO-bong",
+    "example": "Kailangan nang palitan ang bubong, tumutulo na.",
+    "exampleEnglish": "The roof needs replacing, it's already leaking.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "sahig",
+    "english": "floor",
+    "pronunciation": "SAH-hig",
+    "example": "Wag kang tumakbo sa sahig, madulas!",
+    "exampleEnglish": "Don't run on the floor, it's slippery!",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "pader",
+    "english": "wall",
+    "pronunciation": "pah-DER",
+    "example": "Pintura mo na lang ang pader para maganda.",
+    "exampleEnglish": "Just paint the wall so it looks nice.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "kama",
+    "english": "bed",
+    "pronunciation": "KAH-mah",
+    "example": "Matulog ka na, higa ka na sa kama.",
+    "exampleEnglish": "Go to sleep now, lie down on the bed.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "unan",
+    "english": "pillow",
+    "pronunciation": "OO-nan",
+    "example": "Ang lambot ng unan mo, bagong bili ba?",
+    "exampleEnglish": "Your pillow is so soft, did you just buy it?",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "kumot",
+    "english": "blanket",
+    "pronunciation": "koo-MOT",
+    "example": "Kumuha ka ng kumot, malamig ngayong gabi.",
+    "exampleEnglish": "Get a blanket, it's cold tonight.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "lamesa",
+    "english": "table",
+    "pronunciation": "lah-MEH-sah",
+    "example": "Ilagay mo ang pagkain sa lamesa.",
+    "exampleEnglish": "Put the food on the table.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "upuan",
+    "english": "chair",
+    "pronunciation": "oo-POO-an",
+    "example": "Upo ka muna dito sa upuan, anak.",
+    "exampleEnglish": "Sit down here on the chair, child.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "kawali",
+    "english": "frying pan / wok",
+    "pronunciation": "kah-WAH-lee",
+    "example": "Initin mo muna ang kawali bago magprito.",
+    "exampleEnglish": "Heat the pan first before frying.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "palayok",
+    "english": "cooking pot",
+    "pronunciation": "pah-LAH-yok",
+    "example": "Nagluluto si Nanay ng sinigang sa palayok.",
+    "exampleEnglish": "Mom is cooking sinigang in the pot.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "walis",
+    "english": "broom",
+    "pronunciation": "WAH-lis",
+    "example": "Kunin mo ang walis at magwalis ka sa labas.",
+    "exampleEnglish": "Get the broom and sweep outside.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "basura",
+    "english": "garbage / trash",
+    "pronunciation": "bah-SOO-rah",
+    "example": "Itapon mo ang basura sa tamang lugar.",
+    "exampleEnglish": "Throw the garbage in the right place.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "ilaw",
+    "english": "light",
+    "pronunciation": "ee-LAW",
+    "example": "Patayin mo ang ilaw, matutulog na tayo.",
+    "exampleEnglish": "Turn off the light, we're going to sleep.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "tubig",
+    "english": "water",
+    "pronunciation": "TOO-big",
+    "example": "Paki-abot ng tubig, uhaw na uhaw na ako.",
+    "exampleEnglish": "Please pass the water, I'm really thirsty.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "sabon",
+    "english": "soap",
+    "pronunciation": "sah-BON",
+    "example": "Maghugas ka ng kamay gamit ang sabon.",
+    "exampleEnglish": "Wash your hands with soap.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "tuwalya",
+    "english": "towel",
+    "pronunciation": "too-WAHL-yah",
+    "example": "Nasaan ang tuwalya ko? Naligo na ako eh.",
+    "exampleEnglish": "Where's my towel? I already took a bath.",
+    "category": "Bahay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "palengke",
+    "english": "wet market",
+    "pronunciation": "pah-LENG-keh",
+    "example": "Pumunta kami sa palengke kaninang umaga.",
+    "exampleEnglish": "We went to the market this morning.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "tawad",
+    "english": "bargain / discount",
+    "pronunciation": "TAH-wad",
+    "example": "Puwede po bang tawad? Masyado pong mahal.",
+    "exampleEnglish": "Can I get a discount? It's too expensive.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "magkano",
+    "english": "how much",
+    "pronunciation": "mag-KAH-no",
+    "example": "Magkano po ang isang kilo ng bangus?",
+    "exampleEnglish": "How much is one kilo of milkfish?",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "bili",
+    "english": "buy",
+    "pronunciation": "BEE-lee",
+    "example": "Bili ka na, mura na yan!",
+    "exampleEnglish": "Buy it already, that's cheap!",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "bayad",
+    "english": "payment / pay",
+    "pronunciation": "BAH-yad",
+    "example": "Eto po ang bayad ko, tama po ba?",
+    "exampleEnglish": "Here's my payment, is it correct?",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "presyo",
+    "english": "price",
+    "pronunciation": "PRES-yoh",
+    "example": "Ang taas ng presyo ngayon, grabe.",
+    "exampleEnglish": "Prices are so high today, unbelievable.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "sukli",
+    "english": "change (money)",
+    "pronunciation": "SOOK-lee",
+    "example": "Sandali lang po, kukunin ko lang ang sukli niyo.",
+    "exampleEnglish": "Just a moment, I'll get your change.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "mahal",
+    "english": "expensive / love",
+    "pronunciation": "mah-HAL",
+    "example": "Ang mahal naman! Wala bang mas mura?",
+    "exampleEnglish": "That's so expensive! Is there anything cheaper?",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "mura",
+    "english": "cheap / affordable",
+    "pronunciation": "MOO-rah",
+    "example": "Mura lang yan, bente pesos lang!",
+    "exampleEnglish": "That's cheap, only twenty pesos!",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "tindahan",
+    "english": "store / shop",
+    "pronunciation": "tin-DAH-han",
+    "example": "Puntahan mo ang tindahan ni Ate Merly.",
+    "exampleEnglish": "Go to Ate Merly's store.",
+    "category": "Palengke",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "tindera",
+    "english": "female vendor / shopkeeper",
+    "pronunciation": "tin-DEH-rah",
+    "example": "Si Ate Merly ang tindera sa sari-sari store.",
+    "exampleEnglish": "Ate Merly is the shopkeeper at the sari-sari store.",
+    "category": "Palengke",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "suki",
+    "english": "regular customer",
+    "pronunciation": "SOO-kee",
+    "example": "Suki na kita, bibigyan kita ng diskwento.",
+    "exampleEnglish": "You're a regular now, I'll give you a discount.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "kilo",
+    "english": "kilogram",
+    "pronunciation": "KEE-loh",
+    "example": "Isang kilo nga po ng bigas.",
+    "exampleEnglish": "One kilo of rice, please.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "timbang",
+    "english": "weigh / weight",
+    "pronunciation": "tim-BANG",
+    "example": "Timbang mo muna bago mo bayaran.",
+    "exampleEnglish": "Weigh it first before you pay.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "supot",
+    "english": "plastic bag",
+    "pronunciation": "SOO-pot",
+    "example": "Lagyan mo ng supot yung isda.",
+    "exampleEnglish": "Put the fish in a plastic bag.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "bayong",
+    "english": "woven basket bag",
+    "pronunciation": "BAH-yong",
+    "example": "Dala ka ng bayong para sa palengke.",
+    "exampleEnglish": "Bring a bayong for the market.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "pamilihan",
+    "english": "marketplace",
+    "pronunciation": "pah-mee-LEE-han",
+    "example": "Malaki ang pamilihan sa kabilang bayan.",
+    "exampleEnglish": "The marketplace in the next town is big.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "benta",
+    "english": "sell / sale",
+    "pronunciation": "BEN-tah",
+    "example": "Maganda ang benta ngayong araw.",
+    "exampleEnglish": "Sales are good today.",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "diskwento",
+    "english": "discount",
+    "pronunciation": "dis-KWEN-toh",
+    "example": "May diskwento ba kayo para sa suki?",
+    "exampleEnglish": "Do you have a discount for regulars?",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "barya",
+    "english": "coins / loose change",
+    "pronunciation": "BAR-yah",
+    "example": "Wala akong barya, puwede bang singkwenta?",
+    "exampleEnglish": "I don't have coins, can I use fifty?",
+    "category": "Palengke",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "dagat",
+    "english": "sea / ocean",
+    "pronunciation": "DAH-gat",
+    "example": "Ang ganda ng dagat pag tanghali.",
+    "exampleEnglish": "The sea is beautiful at noon.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "isda",
+    "english": "fish",
+    "pronunciation": "is-DAH",
+    "example": "Maraming isda ang nahuli namin kahapon.",
+    "exampleEnglish": "We caught a lot of fish yesterday.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "bangka",
+    "english": "boat",
+    "pronunciation": "BANG-kah",
+    "example": "Sumakay kami sa bangka ni Tatay Andoy.",
+    "exampleEnglish": "We rode Tatay Andoy's boat.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "alon",
+    "english": "wave",
+    "pronunciation": "AH-lon",
+    "example": "Malalaki ang alon ngayon, delikado.",
+    "exampleEnglish": "The waves are big today, it's dangerous.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "buhangin",
+    "english": "sand",
+    "pronunciation": "boo-HANG-in",
+    "example": "Puti ang buhangin dito sa amin.",
+    "exampleEnglish": "The sand here is white.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "bato",
+    "english": "rock / stone",
+    "pronunciation": "BAH-toh",
+    "example": "Mag-ingat ka sa bato sa ilalim ng tubig.",
+    "exampleEnglish": "Be careful of the rocks underwater.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "talaba",
+    "english": "oyster",
+    "pronunciation": "tah-LAH-bah",
+    "example": "Masarap ang talaba pag sariwa.",
+    "exampleEnglish": "Oysters are delicious when fresh.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "hipon",
+    "english": "shrimp",
+    "pronunciation": "HEE-pon",
+    "example": "Maliit lang ang hipon pero masarap.",
+    "exampleEnglish": "The shrimp is small but delicious.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "pusit",
+    "english": "squid",
+    "pronunciation": "POO-sit",
+    "example": "Nahuli ko ang pusit kagabi sa dagat.",
+    "exampleEnglish": "I caught a squid last night at sea.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "alimango",
+    "english": "crab",
+    "pronunciation": "ah-lee-MANG-oh",
+    "example": "Ang laki ng alimango na nahuli ni Tatay!",
+    "exampleEnglish": "The crab Dad caught is huge!",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "lambat",
+    "english": "fishing net",
+    "pronunciation": "LAM-bat",
+    "example": "Itinapon ni Tatay ang lambat sa dagat.",
+    "exampleEnglish": "Dad threw the net into the sea.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "katig",
+    "english": "outrigger (of a boat)",
+    "pronunciation": "KAH-tig",
+    "example": "Kailangan ayusin ang katig ng bangka.",
+    "exampleEnglish": "The outrigger of the boat needs fixing.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "tubig-alat",
+    "english": "saltwater",
+    "pronunciation": "TOO-big AH-lat",
+    "example": "Huwag kang uminom ng tubig-alat, masama sa katawan.",
+    "exampleEnglish": "Don't drink saltwater, it's bad for you.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "daungan",
+    "english": "dock / port",
+    "pronunciation": "da-OO-ngan",
+    "example": "Nandoon ang bangka sa daungan.",
+    "exampleEnglish": "The boat is there at the dock.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "mangingisda",
+    "english": "fisherman",
+    "pronunciation": "mang-ee-ngis-DAH",
+    "example": "Mangingisda ang tatay ko simula pa noon.",
+    "exampleEnglish": "My father has been a fisherman since way back.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "sisid",
+    "english": "dive",
+    "pronunciation": "SEE-sid",
+    "example": "Marunong ka bang sumisid sa malalim?",
+    "exampleEnglish": "Do you know how to dive in deep water?",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "lumot",
+    "english": "seaweed / moss",
+    "pronunciation": "LOO-mot",
+    "example": "Madulas ang bato dahil sa lumot.",
+    "exampleEnglish": "The rock is slippery because of the moss.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "kabibe",
+    "english": "seashell",
+    "pronunciation": "kah-BEE-beh",
+    "example": "Namulot ako ng kabibe sa dalampasigan.",
+    "exampleEnglish": "I picked up seashells on the shore.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "bituin-dagat",
+    "english": "starfish",
+    "pronunciation": "bee-TOO-in DAH-gat",
+    "example": "May nakita akong bituin-dagat sa mababaw na tubig.",
+    "exampleEnglish": "I saw a starfish in the shallow water.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "sugpo",
+    "english": "prawn",
+    "pronunciation": "SOOG-poh",
+    "example": "Mahal ang sugpo pero masarap talaga.",
+    "exampleEnglish": "Prawns are expensive but really delicious.",
+    "category": "Dagat",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "bayan",
+    "english": "town / country",
+    "pronunciation": "BAH-yan",
+    "example": "Maganda ang bayan namin, tahimik at payapa.",
+    "exampleEnglish": "Our town is beautiful, quiet and peaceful.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "simbahan",
+    "english": "church",
+    "pronunciation": "sim-BAH-han",
+    "example": "Pumupunta kami sa simbahan tuwing Linggo.",
+    "exampleEnglish": "We go to church every Sunday.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "plasa",
+    "english": "plaza / town square",
+    "pronunciation": "PLAH-sah",
+    "example": "Naglalaro ang mga bata sa plasa.",
+    "exampleEnglish": "The children are playing in the plaza.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "munisipyo",
+    "english": "municipal hall",
+    "pronunciation": "moo-nee-SIP-yoh",
+    "example": "Nasa munisipyo si Kapitan para sa meeting.",
+    "exampleEnglish": "The Captain is at the municipal hall for a meeting.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "paaralan",
+    "english": "school",
+    "pronunciation": "pah-ah-RAH-lan",
+    "example": "Malapit lang ang paaralan sa bahay namin.",
+    "exampleEnglish": "The school is close to our house.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "ospital",
+    "english": "hospital",
+    "pronunciation": "os-PEE-tal",
+    "example": "Malayo ang ospital, kailangan sumakay ng trike.",
+    "exampleEnglish": "The hospital is far, you need to ride a trike.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "kalsada",
+    "english": "road / street",
+    "pronunciation": "kal-SAH-dah",
+    "example": "Mag-ingat ka sa kalsada, maraming traysikel.",
+    "exampleEnglish": "Be careful on the road, there are many tricycles.",
+    "category": "Bayan",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "daan",
+    "english": "road / path / way",
+    "pronunciation": "DAH-an",
+    "example": "Ito ang daan papunta sa dagat.",
+    "exampleEnglish": "This is the road going to the sea.",
+    "category": "Bayan",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "tulay",
+    "english": "bridge",
+    "pronunciation": "TOO-lai",
+    "example": "Tumawid ka sa tulay para makarating doon.",
+    "exampleEnglish": "Cross the bridge to get there.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "poste",
+    "english": "post / pole",
+    "pronunciation": "POS-teh",
+    "example": "Nandoon ang pusa sa taas ng poste.",
+    "exampleEnglish": "The cat is up there on top of the pole.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "barbero",
+    "english": "barber",
+    "pronunciation": "bar-BEH-roh",
+    "example": "Nagpagupit ako sa barbero kahapon.",
+    "exampleEnglish": "I got a haircut at the barber yesterday.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "panadero",
+    "english": "baker",
+    "pronunciation": "pah-nah-DEH-roh",
+    "example": "Gumigising ng madaling-araw ang panadero.",
+    "exampleEnglish": "The baker wakes up at dawn.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "traysikel",
+    "english": "tricycle",
+    "pronunciation": "trai-SEE-kel",
+    "example": "Sumakay ka ng traysikel papuntang palengke.",
+    "exampleEnglish": "Ride a tricycle going to the market.",
+    "category": "Bayan",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "jeepney",
+    "english": "jeepney",
+    "pronunciation": "JEEP-nee",
+    "example": "Puno na ang jeepney, hintay tayo ng susunod.",
+    "exampleEnglish": "The jeepney is full, let's wait for the next one.",
+    "category": "Bayan",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "kalesa",
+    "english": "horse-drawn carriage",
+    "pronunciation": "kah-LEH-sah",
+    "example": "Wala nang kalesa dito, traysikel na lang.",
+    "exampleEnglish": "There are no more carriages here, just tricycles.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "kanto",
+    "english": "corner",
+    "pronunciation": "KAN-toh",
+    "example": "Doon sa kanto ang tindahan ni Ate Merly.",
+    "exampleEnglish": "Ate Merly's store is there at the corner.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "eskinita",
+    "english": "alley / narrow street",
+    "pronunciation": "es-kee-NEE-tah",
+    "example": "Dumaan ka sa eskinita, mas malapit.",
+    "exampleEnglish": "Go through the alley, it's closer.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "liwasan",
+    "english": "open space / clearing",
+    "pronunciation": "lee-WAH-san",
+    "example": "Nagtitipon ang mga tao sa liwasan tuwing piyesta.",
+    "exampleEnglish": "People gather at the clearing during fiesta.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "kanin",
+    "english": "cooked rice",
+    "pronunciation": "KAH-nin",
+    "example": "Hindi kumpleto ang kain kung walang kanin.",
+    "exampleEnglish": "A meal isn't complete without rice.",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "ulam",
+    "english": "viand / dish (eaten with rice)",
+    "pronunciation": "OO-lam",
+    "example": "Ano ang ulam natin ngayong gabi?",
+    "exampleEnglish": "What's our viand tonight?",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "adobo",
+    "english": "adobo (braised meat dish)",
+    "pronunciation": "ah-DOH-boh",
+    "example": "Ang sarap ng adobo ni Nanay, laging masarap.",
+    "exampleEnglish": "Mom's adobo is delicious, always tasty.",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "sinigang",
+    "english": "sinigang (sour soup)",
+    "pronunciation": "see-nee-GANG",
+    "example": "Mainit na sinigang, perpekto pag maulan.",
+    "exampleEnglish": "Hot sinigang, perfect when it's rainy.",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "bangus",
+    "english": "milkfish",
+    "pronunciation": "bah-NGOOS",
+    "example": "Prito na bangus ang almusal namin.",
+    "exampleEnglish": "Fried milkfish is our breakfast.",
+    "category": "Pagkain",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "tilapia",
+    "english": "tilapia",
+    "pronunciation": "tee-LAH-pyah",
+    "example": "Mura ang tilapia kaya madalas namin lutuin.",
+    "exampleEnglish": "Tilapia is cheap so we cook it often.",
+    "category": "Pagkain",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "mangga",
+    "english": "mango",
+    "pronunciation": "mang-GAH",
+    "example": "Ang tamis ng mangga, hinog na hinog!",
+    "exampleEnglish": "The mango is so sweet, really ripe!",
+    "category": "Pagkain",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "saging",
+    "english": "banana",
+    "pronunciation": "SAH-ging",
+    "example": "Kinain ko ang saging na saba, pang-meryenda.",
+    "exampleEnglish": "I ate the cooking banana, for a snack.",
+    "category": "Pagkain",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "kamote",
+    "english": "sweet potato",
+    "pronunciation": "kah-MOH-teh",
+    "example": "Nilaga namin ang kamote para sa meryenda.",
+    "exampleEnglish": "We boiled sweet potatoes for a snack.",
+    "category": "Pagkain",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "mais",
+    "english": "corn",
+    "pronunciation": "MAH-is",
+    "example": "Masarap ang nilagang mais na may mantikiya.",
+    "exampleEnglish": "Boiled corn with butter is delicious.",
+    "category": "Pagkain",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "pandesal",
+    "english": "bread roll",
+    "pronunciation": "pan-deh-SAL",
+    "example": "Mainit na pandesal tuwing umaga, sarap!",
+    "exampleEnglish": "Hot bread rolls every morning, delicious!",
+    "category": "Pagkain",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "kape",
+    "english": "coffee",
+    "pronunciation": "KAH-peh",
+    "example": "Kailangan ko ng kape bago magtrabaho.",
+    "exampleEnglish": "I need coffee before working.",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "yelo",
+    "english": "ice",
+    "pronunciation": "YEH-loh",
+    "example": "Lagyan mo ng yelo ang juice, mainit eh.",
+    "exampleEnglish": "Put ice in the juice, it's hot.",
+    "category": "Pagkain",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "gatas",
+    "english": "milk",
+    "pronunciation": "GAH-tas",
+    "example": "Uminom ka ng gatas para lumaki ka.",
+    "exampleEnglish": "Drink milk so you'll grow.",
+    "category": "Pagkain",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "asukal",
+    "english": "sugar",
+    "pronunciation": "ah-SOO-kal",
+    "example": "Dalawang kutsara ng asukal sa kape ko.",
+    "exampleEnglish": "Two spoonfuls of sugar in my coffee.",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "suka",
+    "english": "vinegar",
+    "pronunciation": "SOO-kah",
+    "example": "Sawsawan mo sa suka ang isda.",
+    "exampleEnglish": "Dip the fish in vinegar.",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "toyo",
+    "english": "soy sauce",
+    "pronunciation": "TOH-yoh",
+    "example": "Lagyan mo ng toyo at kalamansi yung adobo.",
+    "exampleEnglish": "Put soy sauce and calamansi on the adobo.",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "bawang",
+    "english": "garlic",
+    "pronunciation": "BAH-wang",
+    "example": "Igisa mo muna ang bawang bago ang sibuyas.",
+    "exampleEnglish": "Saute the garlic first before the onions.",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "sibuyas",
+    "english": "onion",
+    "pronunciation": "see-BOO-yas",
+    "example": "Lumuha ako dahil sa paghiwa ng sibuyas.",
+    "exampleEnglish": "I cried because of cutting onions.",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "sili",
+    "english": "chili pepper",
+    "pronunciation": "SEE-lee",
+    "example": "Ang anghang ng sili! Tubig, tubig!",
+    "exampleEnglish": "The chili is so spicy! Water, water!",
+    "category": "Pagkain",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "tao",
+    "english": "person / people",
+    "pronunciation": "TAH-oh",
+    "example": "Mabait ang mga tao dito sa amin.",
+    "exampleEnglish": "The people here are kind.",
+    "category": "Tao",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "babae",
+    "english": "woman",
+    "pronunciation": "bah-BAH-eh",
+    "example": "Sino ang babaeng iyon? Hindi ko siya kilala.",
+    "exampleEnglish": "Who is that woman? I don't know her.",
+    "category": "Tao",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "lalaki",
+    "english": "man",
+    "pronunciation": "lah-LAH-kee",
+    "example": "Ang lalaking iyon ay si Manong Boy.",
+    "exampleEnglish": "That man is Manong Boy.",
+    "category": "Tao",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "bata",
+    "english": "child",
+    "pronunciation": "BAH-tah",
+    "example": "Naglalaro ang mga bata sa plasa.",
+    "exampleEnglish": "The children are playing in the plaza.",
+    "category": "Tao",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "lola",
+    "english": "grandmother",
+    "pronunciation": "LOH-lah",
+    "example": "Maalaga ang lola ko, laging may pasalubong.",
+    "exampleEnglish": "My grandmother is caring, she always has treats.",
+    "category": "Tao",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "lolo",
+    "english": "grandfather",
+    "pronunciation": "LOH-loh",
+    "example": "Kwento nang kwento ang lolo ko tungkol sa dati.",
+    "exampleEnglish": "My grandfather always tells stories about the past.",
+    "category": "Tao",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "nanay",
+    "english": "mother / mom",
+    "pronunciation": "NAH-nai",
+    "example": "Si Nanay ang nagluluto sa bahay namin.",
+    "exampleEnglish": "Mom is the one who cooks at our house.",
+    "category": "Tao",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "tatay",
+    "english": "father / dad",
+    "pronunciation": "TAH-tai",
+    "example": "Mangingisda ang tatay ko, araw-araw sa dagat.",
+    "exampleEnglish": "My father is a fisherman, at the sea every day.",
+    "category": "Tao",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "ate",
+    "english": "older sister (respectful term)",
+    "pronunciation": "AH-teh",
+    "example": "Si Ate Merly ang may-ari ng tindahan.",
+    "exampleEnglish": "Ate Merly owns the store.",
+    "category": "Tao",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "kuya",
+    "english": "older brother (respectful term)",
+    "pronunciation": "KOO-yah",
+    "example": "Si Kuya Jojo ang nagtitinda ng isda sa palengke.",
+    "exampleEnglish": "Kuya Jojo sells fish at the market.",
+    "category": "Tao",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "kapitbahay",
+    "english": "neighbor",
+    "pronunciation": "kah-pit-BAH-hai",
+    "example": "Mabait ang kapitbahay namin, laging tumutulong.",
+    "exampleEnglish": "Our neighbor is kind, always helping.",
+    "category": "Tao",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "kaibigan",
+    "english": "friend",
+    "pronunciation": "ka-ee-BEE-gan",
+    "example": "Kaibigan ko si Kuya Jojo simula pagkabata.",
+    "exampleEnglish": "Kuya Jojo has been my friend since childhood.",
+    "category": "Tao",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "kasama",
+    "english": "companion / together",
+    "pronunciation": "kah-SAH-mah",
+    "example": "Kasama ko si Tatay sa pangingisda.",
+    "exampleEnglish": "I'm with Dad for the fishing.",
+    "category": "Tao",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "guro",
+    "english": "teacher",
+    "pronunciation": "GOO-roh",
+    "example": "Mabait ang guro namin sa paaralan.",
+    "exampleEnglish": "Our teacher at school is kind.",
+    "category": "Tao",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "doktor",
+    "english": "doctor",
+    "pronunciation": "dok-TOR",
+    "example": "Pumunta ka sa doktor kung may sakit ka.",
+    "exampleEnglish": "Go to the doctor if you're sick.",
+    "category": "Tao",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "pari",
+    "english": "priest",
+    "pronunciation": "PAH-ree",
+    "example": "Nandoon si Padre Miguel sa simbahan.",
+    "exampleEnglish": "Padre Miguel is there at the church.",
+    "category": "Tao",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "kapitan",
+    "english": "barangay captain / village chief",
+    "pronunciation": "kah-pee-TAN",
+    "example": "Si Kapitan Rody ang lider ng barangay namin.",
+    "exampleEnglish": "Kapitan Rody is the leader of our barangay.",
+    "category": "Tao",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "manong",
+    "english": "older man (respectful term)",
+    "pronunciation": "mah-NONG",
+    "example": "Si Manong Boy ang driver ng traysikel.",
+    "exampleEnglish": "Manong Boy is the tricycle driver.",
+    "category": "Tao",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "isa",
+    "english": "one",
+    "pronunciation": "ee-SAH",
+    "example": "Isa lang ang bangka ni Tatay.",
+    "exampleEnglish": "Dad only has one boat.",
+    "category": "Bilang",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "dalawa",
+    "english": "two",
+    "pronunciation": "dah-lah-WAH",
+    "example": "Dalawang kilo ng bigas, please.",
+    "exampleEnglish": "Two kilos of rice, please.",
+    "category": "Bilang",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "tatlo",
+    "english": "three",
+    "pronunciation": "tat-LOH",
+    "example": "Tatlong pandesal ang binili ko.",
+    "exampleEnglish": "I bought three bread rolls.",
+    "category": "Bilang",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "apat",
+    "english": "four",
+    "pronunciation": "AH-pat",
+    "example": "Apat na tao ang kasya sa traysikel.",
+    "exampleEnglish": "Four people fit in the tricycle.",
+    "category": "Bilang",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "lima",
+    "english": "five",
+    "pronunciation": "LEE-mah",
+    "example": "Limang piso lang ang pamasahe.",
+    "exampleEnglish": "The fare is only five pesos.",
+    "category": "Bilang",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "anim",
+    "english": "six",
+    "pronunciation": "AH-nim",
+    "example": "Anim na isda ang nahuli namin ngayon.",
+    "exampleEnglish": "We caught six fish today.",
+    "category": "Bilang",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "pito",
+    "english": "seven",
+    "pronunciation": "pee-TOH",
+    "example": "Pito ang araw sa isang linggo.",
+    "exampleEnglish": "There are seven days in a week.",
+    "category": "Bilang",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "walo",
+    "english": "eight",
+    "pronunciation": "WAH-loh",
+    "example": "Walong oras akong natulog kagabi.",
+    "exampleEnglish": "I slept eight hours last night.",
+    "category": "Bilang",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "siyam",
+    "english": "nine",
+    "pronunciation": "SHAH-yam",
+    "example": "Siyam na bangka ang nandoon sa daungan.",
+    "exampleEnglish": "There are nine boats at the dock.",
+    "category": "Bilang",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "sampu",
+    "english": "ten",
+    "pronunciation": "sam-POO",
+    "example": "Sampu ang presyo ng isang pandesal.",
+    "exampleEnglish": "The price of one bread roll is ten.",
+    "category": "Bilang",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "labing-isa",
+    "english": "eleven",
+    "pronunciation": "lah-bing ee-SAH",
+    "example": "Labing-isa na ang oras, matulog ka na.",
+    "exampleEnglish": "It's already eleven o'clock, go to sleep.",
+    "category": "Bilang",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "dalawampu",
+    "english": "twenty",
+    "pronunciation": "dah-lah-wam-POO",
+    "example": "Dalawampung piso ang isang buko.",
+    "exampleEnglish": "One coconut is twenty pesos.",
+    "category": "Bilang",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "tatlumpu",
+    "english": "thirty",
+    "pronunciation": "tat-loom-POO",
+    "example": "Tatlumpung piso ang pamasahe papuntang bayan.",
+    "exampleEnglish": "The fare to town is thirty pesos.",
+    "category": "Bilang",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "limampu",
+    "english": "fifty",
+    "pronunciation": "lee-mam-POO",
+    "example": "Limampung piso ang isang kilo ng bangus.",
+    "exampleEnglish": "One kilo of milkfish is fifty pesos.",
+    "category": "Bilang",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "isang daan",
+    "english": "one hundred",
+    "pronunciation": "ee-SANG DAH-an",
+    "example": "Isang daan lang ang dala kong pera.",
+    "exampleEnglish": "I only have one hundred pesos with me.",
+    "category": "Bilang",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "libo",
+    "english": "thousand",
+    "pronunciation": "LEE-boh",
+    "example": "Isang libong piso ang kinita niya sa isang araw.",
+    "exampleEnglish": "He earned one thousand pesos in a day.",
+    "category": "Bilang",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "piso",
+    "english": "peso (Philippine currency)",
+    "pronunciation": "PEE-soh",
+    "example": "Wala na akong piso, ubos na ang pera ko.",
+    "exampleEnglish": "I don't have a peso left, my money is all gone.",
+    "category": "Bilang",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "ilang",
+    "english": "how many",
+    "pronunciation": "EE-lang",
+    "example": "Ilang araw ka pa dito sa amin?",
+    "exampleEnglish": "How many more days are you staying here?",
+    "category": "Bilang",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "dami",
+    "english": "a lot / amount",
+    "pronunciation": "DAH-mee",
+    "example": "Ang dami ng isda ngayon, swerte!",
+    "exampleEnglish": "So many fish today, lucky!",
+    "category": "Bilang",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "umaga",
+    "english": "morning",
+    "pronunciation": "oo-MAH-gah",
+    "example": "Magandang umaga po! Kumusta kayo?",
+    "exampleEnglish": "Good morning! How are you?",
+    "category": "Panahon",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "tanghali",
+    "english": "noon / midday",
+    "pronunciation": "tang-HAH-lee",
+    "example": "Mainit pag tanghali, huwag kang lumabas.",
+    "exampleEnglish": "It's hot at noon, don't go out.",
+    "category": "Panahon",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "hapon",
+    "english": "afternoon",
+    "pronunciation": "HAH-pon",
+    "example": "Maglalaro kami sa hapon pagkatapos ng klase.",
+    "exampleEnglish": "We'll play in the afternoon after class.",
+    "category": "Panahon",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "gabi",
+    "english": "night / evening",
+    "pronunciation": "GAH-bee",
+    "example": "Tahimik ang bayan pag gabi.",
+    "exampleEnglish": "The town is quiet at night.",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "araw",
+    "english": "day / sun",
+    "pronunciation": "AH-raw",
+    "example": "Maganda ang araw ngayon, walang ulap.",
+    "exampleEnglish": "The day is beautiful today, no clouds.",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "buwan",
+    "english": "month / moon",
+    "pronunciation": "BOO-wan",
+    "example": "Malaki ang buwan ngayong gabi, maganda.",
+    "exampleEnglish": "The moon is big tonight, beautiful.",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "taon",
+    "english": "year",
+    "pronunciation": "TAH-on",
+    "example": "Ilang taon ka na sa barangay?",
+    "exampleEnglish": "How many years have you been in the barangay?",
+    "category": "Panahon",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "linggo",
+    "english": "week / Sunday",
+    "pronunciation": "LING-goh",
+    "example": "Isang linggo pa lang ako dito pero masaya na.",
+    "exampleEnglish": "I've only been here a week but I'm already happy.",
+    "category": "Panahon",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "kahapon",
+    "english": "yesterday",
+    "pronunciation": "kah-HAH-pon",
+    "example": "Umulan kahapon kaya hindi kami nakapangisda.",
+    "exampleEnglish": "It rained yesterday so we couldn't fish.",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "bukas",
+    "english": "tomorrow",
+    "pronunciation": "BOO-kas",
+    "example": "Bukas na lang tayo pupunta sa palengke.",
+    "exampleEnglish": "Let's just go to the market tomorrow.",
+    "category": "Panahon",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "ngayon",
+    "english": "now / today",
+    "pronunciation": "ngah-YON",
+    "example": "Ngayon na, tara sa dagat!",
+    "exampleEnglish": "Right now, let's go to the sea!",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "tag-araw",
+    "english": "summer / dry season",
+    "pronunciation": "tag-AH-raw",
+    "example": "Mainit talaga pag tag-araw dito sa amin.",
+    "exampleEnglish": "It's really hot during summer here.",
+    "category": "Panahon",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "tag-ulan",
+    "english": "rainy season",
+    "pronunciation": "tag-OO-lan",
+    "example": "Pag tag-ulan, bumabaha minsan sa bayan.",
+    "exampleEnglish": "During rainy season, it sometimes floods in town.",
+    "category": "Panahon",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "mainit",
+    "english": "hot",
+    "pronunciation": "mah-ee-NIT",
+    "example": "Ang init ngayon! Kailangan ko ng yelo.",
+    "exampleEnglish": "It's so hot today! I need ice.",
+    "category": "Panahon",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "malamig",
+    "english": "cold",
+    "pronunciation": "mah-lah-MIG",
+    "example": "Malamig ang hangin sa gabi dito sa tabing-dagat.",
+    "exampleEnglish": "The wind at the coast is cold at night.",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "maulan",
+    "english": "rainy",
+    "pronunciation": "mah-OO-lan",
+    "example": "Maulan ngayon, dala ka ng payong.",
+    "exampleEnglish": "It's rainy today, bring an umbrella.",
+    "category": "Panahon",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "maaraw",
+    "english": "sunny",
+    "pronunciation": "mah-AH-raw",
+    "example": "Maaraw ngayon, maganda para magpunta sa dagat.",
+    "exampleEnglish": "It's sunny today, good for going to the sea.",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "hangin",
+    "english": "wind",
+    "pronunciation": "HAH-ngin",
+    "example": "Malakas ang hangin, baka bumagsak ang bubong.",
+    "exampleEnglish": "The wind is strong, the roof might fall.",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "ulap",
+    "english": "cloud",
+    "pronunciation": "OO-lap",
+    "example": "Madaming ulap, mukhang uulan.",
+    "exampleEnglish": "There are many clouds, it looks like it will rain.",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "bahaghari",
+    "english": "rainbow",
+    "pronunciation": "bah-hag-HAH-ree",
+    "example": "May bahaghari pagkatapos ng ulan, ang ganda!",
+    "exampleEnglish": "There's a rainbow after the rain, how beautiful!",
+    "category": "Panahon",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "lakad",
+    "english": "walk",
+    "pronunciation": "LAH-kad",
+    "example": "Maglakad tayo papunta sa palengke.",
+    "exampleEnglish": "Let's walk going to the market.",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "takbo",
+    "english": "run",
+    "pronunciation": "tak-BOH",
+    "example": "Tumakbo ka, mauubusan ka ng pandesal!",
+    "exampleEnglish": "Run, you'll miss the bread rolls!",
+    "category": "Paglalakbay",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "sakay",
+    "english": "ride / board",
+    "pronunciation": "SAH-kai",
+    "example": "Sumakay ka na sa traysikel, aalis na.",
+    "exampleEnglish": "Get on the tricycle, it's leaving.",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "baba",
+    "english": "get off / go down",
+    "pronunciation": "BAH-bah",
+    "example": "Bababa na ako dito sa kanto.",
+    "exampleEnglish": "I'll get off here at the corner.",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "punta",
+    "english": "go (to)",
+    "pronunciation": "POON-tah",
+    "example": "Saan ka pupunta ngayong hapon?",
+    "exampleEnglish": "Where are you going this afternoon?",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "uwi",
+    "english": "go home",
+    "pronunciation": "OO-wee",
+    "example": "Uwi na tayo, madilim na eh.",
+    "exampleEnglish": "Let's go home, it's getting dark.",
+    "category": "Paglalakbay",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "dito",
+    "english": "here",
+    "pronunciation": "DEE-toh",
+    "example": "Halika dito, may ipapakita ako sa iyo.",
+    "exampleEnglish": "Come here, I'll show you something.",
+    "category": "Paglalakbay",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "doon",
+    "english": "there",
+    "pronunciation": "doh-ON",
+    "example": "Nandoon ang simbahan, sa dulo ng kalsada.",
+    "exampleEnglish": "The church is there, at the end of the road.",
+    "category": "Paglalakbay",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "malapit",
+    "english": "near / close",
+    "pronunciation": "mah-lah-PIT",
+    "example": "Malapit lang ang palengke, lakarin na lang natin.",
+    "exampleEnglish": "The market is near, let's just walk.",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "malayo",
+    "english": "far",
+    "pronunciation": "mah-lah-YOH",
+    "example": "Malayo ang dagat mula dito, sumakay ka na lang.",
+    "exampleEnglish": "The sea is far from here, just take a ride.",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "kanan",
+    "english": "right (direction)",
+    "pronunciation": "kah-NAN",
+    "example": "Kumanan ka sa kanto, nandoon ang tindahan.",
+    "exampleEnglish": "Turn right at the corner, the store is there.",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "kaliwa",
+    "english": "left (direction)",
+    "pronunciation": "kah-LEE-wah",
+    "example": "Kumaliwa ka, nandoon ang plasa.",
+    "exampleEnglish": "Turn left, the plaza is there.",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "diretso",
+    "english": "straight ahead",
+    "pronunciation": "dee-RET-soh",
+    "example": "Diretso lang, makikita mo ang simbahan.",
+    "exampleEnglish": "Go straight, you'll see the church.",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "likod",
+    "english": "back / behind",
+    "pronunciation": "lee-KOD",
+    "example": "Nasa likod ng bahay ang puno ng mangga.",
+    "exampleEnglish": "The mango tree is behind the house.",
+    "category": "Paglalakbay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "harap",
+    "english": "front / in front",
+    "pronunciation": "HAH-rap",
+    "example": "Hintayin mo ako sa harap ng tindahan.",
+    "exampleEnglish": "Wait for me in front of the store.",
+    "category": "Paglalakbay",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "taas",
+    "english": "up / above",
+    "pronunciation": "TAH-as",
+    "example": "Nasa taas ang kwarto, umakyat ka.",
+    "exampleEnglish": "The room is upstairs, go up.",
+    "category": "Paglalakbay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "pasok",
+    "english": "enter / go inside",
+    "pronunciation": "PAH-sok",
+    "example": "Pasok ka, huwag kang mahiya!",
+    "exampleEnglish": "Come in, don't be shy!",
+    "category": "Paglalakbay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "labas",
+    "english": "outside / go out",
+    "pronunciation": "LAH-bas",
+    "example": "Lumabas ka muna, mainit sa loob.",
+    "exampleEnglish": "Go outside for now, it's hot inside.",
+    "category": "Paglalakbay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "hinto",
+    "english": "stop",
+    "pronunciation": "HIN-toh",
+    "example": "Hinto muna, may tawiran dito.",
+    "exampleEnglish": "Stop for now, there's a crossing here.",
+    "category": "Paglalakbay",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "masaya",
+    "english": "happy",
+    "pronunciation": "mah-SAH-yah",
+    "example": "Masaya ako dito, mababait ang mga tao.",
+    "exampleEnglish": "I'm happy here, the people are kind.",
+    "category": "Damdamin",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "malungkot",
+    "english": "sad",
+    "pronunciation": "mah-loong-KOT",
+    "example": "Malungkot siya kasi umalis ang kaibigan niya.",
+    "exampleEnglish": "She's sad because her friend left.",
+    "category": "Damdamin",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "galit",
+    "english": "angry",
+    "pronunciation": "GAH-lit",
+    "example": "Huwag kang magalit, hindi naman sinasadya.",
+    "exampleEnglish": "Don't be angry, it wasn't on purpose.",
+    "category": "Damdamin",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "takot",
+    "english": "afraid / scared",
+    "pronunciation": "TAH-kot",
+    "example": "Natatakot ako sa dilim, lalo na sa gabi.",
+    "exampleEnglish": "I'm scared of the dark, especially at night.",
+    "category": "Damdamin",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "gutom",
+    "english": "hungry",
+    "pronunciation": "GOO-tom",
+    "example": "Gutom na gutom na ako, kailan ang almusal?",
+    "exampleEnglish": "I'm really hungry, when is breakfast?",
+    "category": "Damdamin",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "busog",
+    "english": "full (from eating)",
+    "pronunciation": "BOO-sog",
+    "example": "Busog na busog na ako, sobra ang kain ko.",
+    "exampleEnglish": "I'm so full, I ate too much.",
+    "category": "Damdamin",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "pagod",
+    "english": "tired",
+    "pronunciation": "PAH-god",
+    "example": "Pagod na ako, magpahinga muna tayo.",
+    "exampleEnglish": "I'm tired, let's rest first.",
+    "category": "Damdamin",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "gising",
+    "english": "awake",
+    "pronunciation": "GEE-sing",
+    "example": "Gising na ba kayo? Almusal na!",
+    "exampleEnglish": "Are you awake? Time for breakfast!",
+    "category": "Damdamin",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "tulog",
+    "english": "asleep / sleep",
+    "pronunciation": "TOO-log",
+    "example": "Tulog na ang mga bata, wag nang maingay.",
+    "exampleEnglish": "The children are asleep, don't be noisy.",
+    "category": "Damdamin",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  },
+  {
+    "tagalog": "mahal",
+    "english": "love / dear",
+    "pronunciation": "mah-HAL",
+    "example": "Mahal ko ang pamilya ko, sila ang buhay ko.",
+    "exampleEnglish": "I love my family, they are my life.",
+    "category": "Damdamin",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "salamat",
+    "english": "thank you",
+    "pronunciation": "sah-LAH-mat",
+    "example": "Salamat po sa tulong niyo, ang bait niyo.",
+    "exampleEnglish": "Thank you for your help, you're so kind.",
+    "category": "Damdamin",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "pasensya",
+    "english": "patience / sorry (asking forbearance)",
+    "pronunciation": "pah-SEN-shah",
+    "example": "Pasensya na po, hindi ko sinasadya.",
+    "exampleEnglish": "I'm sorry, I didn't mean it.",
+    "category": "Damdamin",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "sana",
+    "english": "hopefully / I wish",
+    "pronunciation": "SAH-nah",
+    "example": "Sana hindi umulan bukas, may lakad tayo.",
+    "exampleEnglish": "I hope it doesn't rain tomorrow, we have plans.",
+    "category": "Damdamin",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "sige",
+    "english": "okay / go ahead / sure",
+    "pronunciation": "SEE-geh",
+    "example": "Sige, samahan na kita sa palengke.",
+    "exampleEnglish": "Okay, I'll go with you to the market.",
+    "category": "Damdamin",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "tara",
+    "english": "let's go",
+    "pronunciation": "TAH-rah",
+    "example": "Tara na, baka maubusan tayo ng isda!",
+    "exampleEnglish": "Let's go, we might run out of fish!",
+    "category": "Damdamin",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "ayos",
+    "english": "fine / okay / nice",
+    "pronunciation": "AH-yos",
+    "example": "Ayos lang, walang problema.",
+    "exampleEnglish": "It's fine, no problem.",
+    "category": "Damdamin",
+    "locationLearned": "Trike Stop — Manong Boy"
+  },
+  {
+    "tagalog": "grabe",
+    "english": "wow / extreme / unbelievable",
+    "pronunciation": "GRAH-beh",
+    "example": "Grabe ang init ngayon, parang kawali!",
+    "exampleEnglish": "The heat today is extreme, like a frying pan!",
+    "category": "Damdamin",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "naman",
+    "english": "(softening particle / emphasis)",
+    "pronunciation": "nah-MAN",
+    "example": "Ang ganda naman dito, ang tahimik.",
+    "exampleEnglish": "It's so beautiful here, so peaceful.",
+    "category": "Damdamin",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "talaga",
+    "english": "really / truly",
+    "pronunciation": "tah-lah-GAH",
+    "example": "Masaya talaga dito, hindi ako nagsisisi.",
+    "exampleEnglish": "It's really fun here, I don't regret it.",
+    "category": "Damdamin",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "saya",
+    "english": "joy / happiness",
+    "pronunciation": "SAH-yah",
+    "example": "Ang saya-saya ko ngayon, salamat sa inyong lahat!",
+    "exampleEnglish": "I'm so happy right now, thank you all!",
+    "category": "Damdamin",
+    "locationLearned": "Sentro — Padre Miguel"
+  },
+  {
+    "tagalog": "palengke",
+    "english": "market (town feature)",
+    "pronunciation": "pah-LENG-keh",
+    "example": "Malapit ang palengke sa munisipyo, kaya madaling pumunta.",
+    "exampleEnglish": "The market is close to the municipal hall, so it's easy to go.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "tindahan",
+    "english": "shop (town feature)",
+    "pronunciation": "tin-DAH-han",
+    "example": "Maraming tindahan sa bayan, pero ang paborito ko ay ang sari-sari store.",
+    "exampleEnglish": "There are many shops in town, but my favorite is the sari-sari store.",
+    "category": "Bayan",
+    "locationLearned": "Sentro — Kapitan Rody"
+  },
+  {
+    "tagalog": "tindera",
+    "english": "female vendor (person)",
+    "pronunciation": "tin-DEH-rah",
+    "example": "Magaling na tindera si Ate Merly, kilala ng lahat.",
+    "exampleEnglish": "Ate Merly is a great vendor, known by everyone.",
+    "category": "Tao",
+    "locationLearned": "Sentro — Ate Merly"
+  },
+  {
+    "tagalog": "mangingisda",
+    "english": "fisherman (person)",
+    "pronunciation": "mang-ee-ngis-DAH",
+    "example": "Maraming mangingisda sa barangay namin, kasama si Tatay Andoy.",
+    "exampleEnglish": "There are many fishermen in our barangay, including Tatay Andoy.",
+    "category": "Tao",
+    "locationLearned": "Dagat — Tatay Andoy"
+  },
+  {
+    "tagalog": "magkano",
+    "english": "how much (number question)",
+    "pronunciation": "mag-KAH-no",
+    "example": "Magkano ang lahat-lahat? Bilangin natin.",
+    "exampleEnglish": "How much is it all together? Let's count.",
+    "category": "Bilang",
+    "locationLearned": "Palengke — Kuya Jojo"
+  },
+  {
+    "tagalog": "ibaba",
+    "english": "below / lower / put down",
+    "pronunciation": "ee-BAH-bah",
+    "example": "Ibaba mo ang gamit sa sahig muna.",
+    "exampleEnglish": "Put your things down on the floor first.",
+    "category": "Paglalakbay",
+    "locationLearned": "Bahay Kubo — Aling Nena"
+  }
+]

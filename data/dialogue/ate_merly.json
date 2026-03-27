@@ -1,0 +1,325 @@
+{
+  "ate_merly_first_meeting": {
+    "lines": [
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Uy! Ikaw pala 'yung bago dito! Welcome sa tindahan ko!",
+        "english": "Hey! So you're the new one here! Welcome to my store!",
+        "vocab": ["tindahan"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Ako si Ate Merly, ang tindera ng sari-sari store na 'to. Kung kailangan mo — nandito 'yan!",
+        "english": "I'm Ate Merly, the shopkeeper of this sari-sari store. If you need it — it's here!",
+        "vocab": ["tindera"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Pandesal, kape, skyflakes, C2 — lahat meron. Basta sabihin mo lang, ha?",
+        "english": "Bread rolls, coffee, crackers, iced tea — I have everything. Just tell me, okay?",
+        "vocab": ["pandesal", "kape"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "At siyempre, pag bumili ka nang madalas, magiging suki ka! May diskwento para sa suki. Hehe.",
+        "english": "And of course, if you buy often, you'll become a regular! There's a discount for regulars. Hehe.",
+        "vocab": ["suki", "diskwento", "bili"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat, Ate Merly! Magkano po ang pandesal?",
+        "english": "Thanks, Ate Merly! How much is the bread?",
+        "vocab": ["salamat", "magkano", "pandesal"],
+        "next": null
+      },
+      {
+        "tagalog": "Ano-ano po ang meron kayo?",
+        "english": "What do you have?",
+        "vocab": [],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  },
+  "ate_merly_shopping_intro": {
+    "lines": [
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Ah, gusto mo bang mamili? Sige, turo ko sa iyo!",
+        "english": "Oh, you want to shop? Sure, I'll teach you!",
+        "vocab": ["bili"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Una, tanungin mo: 'Magkano po?' — 'yan ang pinaka-importanteng salita sa palengke at tindahan!",
+        "english": "First, ask: 'How much?' — that's the most important word at the market and shop!",
+        "vocab": ["magkano", "palengke", "tindahan"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Tapos, kung gusto mo bumili, sabihin mo ang bayad mo. 'Eto po ang bayad ko.'",
+        "english": "Then, if you want to buy, say your payment. 'Here is my payment.'",
+        "vocab": ["bayad"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Kapag may sukli, ibibigay ko sa iyo. Huwag mong kalimutan ang sukli! Importante 'yan!",
+        "english": "If there's change, I'll give it to you. Don't forget your change! That's important!",
+        "vocab": ["sukli"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "At kung wala kang barya — ay nako, hirap 'yan. Magdala ka lagi ng barya, ha?",
+        "english": "And if you don't have coins — oh boy, that's tough. Always bring coins, okay?",
+        "vocab": ["barya"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige po, bibili na po ako!",
+        "english": "Okay, I'll buy now!",
+        "vocab": ["sige", "bili"],
+        "next": null
+      },
+      {
+        "tagalog": "Magkano po ang lahat?",
+        "english": "How much is everything?",
+        "vocab": ["magkano"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 1
+    }
+  },
+  "ate_merly_gossip": {
+    "lines": [
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Psst, halika muna dito. May chika ako sa iyo.",
+        "english": "Psst, come here first. I have gossip for you.",
+        "vocab": [],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Alam mo ba na si Kuya Jojo sa palengke, dati siyang nag-audition para sa singing contest? Grabe ang boses! Pero mas pinili niya ang isda. Haha!",
+        "english": "Did you know Kuya Jojo at the market used to audition for singing contests? Amazing voice! But he chose fish instead. Haha!",
+        "vocab": ["palengke", "isda", "grabe"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Tapos si Padre Miguel, 'yung nasa plasa? Dati siyang teacher bago naging pari. Matalino talaga 'yun.",
+        "english": "Then Padre Miguel, the one at the plaza? He used to be a teacher before becoming a priest. He's really smart.",
+        "vocab": ["plasa", "pari", "guro", "talaga"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "At si Manong Boy naman, ang sabi niya dati siyang racer ng traysikel. Pero wag mo nang tanungin — mahaba ang kwento!",
+        "english": "And Manong Boy, he says he used to be a tricycle racer. But don't ask him about it — it's a long story!",
+        "vocab": ["traysikel", "manong"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Talaga po? Grabe naman!",
+        "english": "Really? That's wild!",
+        "vocab": ["talaga", "grabe"],
+        "next": null
+      },
+      {
+        "tagalog": "Ate Merly, chismosa talaga kayo! Hehe.",
+        "english": "Ate Merly, you're really a gossip! Hehe.",
+        "vocab": ["talaga"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 3
+    }
+  },
+  "ate_merly_umaga": {
+    "lines": [
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Magandang umaga! Bagong bukas pa lang ang tindahan. Ang sariwa ng pandesal ngayon!",
+        "english": "Good morning! The store just opened. The bread is so fresh today!",
+        "vocab": ["umaga", "pandesal", "tindahan"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Kapag umaga, 'yan ang best time bumili ng pandesal. Mainit-init pa, galing sa panadero.",
+        "english": "In the morning, that's the best time to buy bread. Still hot, fresh from the baker.",
+        "vocab": ["pandesal", "panadero", "umaga"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Kape at pandesal — 'yan ang combo ng mga Pilipino. Classic!",
+        "english": "Coffee and bread — that's the Filipino combo. Classic!",
+        "vocab": ["kape", "pandesal"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Bibli po ako ng pandesal at kape!",
+        "english": "I'll buy bread and coffee!",
+        "vocab": ["bili", "pandesal", "kape"],
+        "next": null
+      },
+      {
+        "tagalog": "Magkano po ang combo?",
+        "english": "How much is the combo?",
+        "vocab": ["magkano"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "umaga",
+      "minVisits": 1
+    }
+  },
+  "ate_merly_hapon": {
+    "lines": [
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Magandang hapon! Medyo tahimik ngayon, mainit kasi sa labas.",
+        "english": "Good afternoon! It's a bit quiet now, it's hot outside.",
+        "vocab": ["hapon", "mainit"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Pag hapon, C2 ang best-seller ko. Malamig at masarap — pampawala ng init!",
+        "english": "In the afternoon, C2 is my best-seller. Cold and tasty — beats the heat!",
+        "vocab": ["hapon", "malamig"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "O kaya saging o kamote, kung gusto mo ng meryenda na Pinoy talaga.",
+        "english": "Or banana or sweet potato, if you want a truly Pinoy snack.",
+        "vocab": ["saging", "kamote"],
+        "emotion": "neutral"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Isa pong C2! Uhaw na uhaw na ako.",
+        "english": "One C2 please! I'm so thirsty.",
+        "vocab": ["isa"],
+        "next": null
+      },
+      {
+        "tagalog": "Saging na lang po, salamat!",
+        "english": "Just banana please, thanks!",
+        "vocab": ["saging", "salamat"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "hapon",
+      "minVisits": 1
+    }
+  },
+  "ate_merly_gabi": {
+    "lines": [
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Uy, gabi na! Magsasara na ako ng tindahan, pero sige, bilisan mo lang!",
+        "english": "Hey, it's already night! I'm closing up shop, but sure, make it quick!",
+        "vocab": ["gabi", "tindahan"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Pag gabi, yelo na lang at skyflakes ang madalas bilhin. Pang-handa sa gabi.",
+        "english": "At night, just ice and crackers are often bought. Preparation for the evening.",
+        "vocab": ["gabi", "yelo"],
+        "emotion": "neutral"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Bukas ulit, ha? Mas maganda ang presyo ko pag umaga. Hehe. Ingat ka pauwi!",
+        "english": "Come back tomorrow, okay? My prices are better in the morning. Hehe. Be safe going home!",
+        "vocab": ["bukas", "presyo", "umaga"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Sige po, ingat din po kayo!",
+        "english": "Okay, take care too!",
+        "vocab": ["sige"],
+        "next": null
+      },
+      {
+        "tagalog": "Isa pong yelo, bilisan ko!",
+        "english": "One ice please, I'll be quick!",
+        "vocab": ["isa", "yelo"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": "gabi",
+      "minVisits": 1
+    }
+  },
+  "ate_merly_post_delivery": {
+    "lines": [
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Ay, galing kay Kapitan 'to? Bangus! Naku, salamat naman!",
+        "english": "Oh, this is from the Captain? Milkfish! Oh my, thank you!",
+        "vocab": ["bangus", "salamat", "kapitan"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Perfect timing — wala na akong ulam para mamaya. Ipriprito ko na lang 'to!",
+        "english": "Perfect timing — I don't have a dish for later. I'll just fry this!",
+        "vocab": ["ulam"],
+        "emotion": "happy"
+      },
+      {
+        "speaker": "ate_merly",
+        "tagalog": "Nako, mabait ka pala. Alam mo, bibigyan kita ng diskwento next time bumili ka. Suki na kita!",
+        "english": "Oh, you're so kind. You know what, I'll give you a discount next time you buy. You're a regular now!",
+        "vocab": ["diskwento", "suki", "bili"],
+        "emotion": "happy"
+      }
+    ],
+    "choices": [
+      {
+        "tagalog": "Salamat po, Ate Merly! Suki na talaga!",
+        "english": "Thank you, Ate Merly! I'm really a regular now!",
+        "vocab": ["salamat", "suki", "talaga"],
+        "next": null
+      }
+    ],
+    "conditions": {
+      "time": null,
+      "minVisits": 0
+    }
+  }
+}
