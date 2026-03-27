@@ -18,7 +18,24 @@ public partial class NPCBase : CharacterBody2D
     {
         AddToGroup("interactable");
         _sprite = GetNode<AnimatedSprite2D>("Sprite");
-        _sprite.Play("idle_down");
+
+        if (_sprite.SpriteFrames == null)
+        {
+            // Create a visible placeholder colored by NPC id hash
+            var rect = new ColorRect();
+            rect.Size = new Vector2(16, 32);
+            rect.Position = new Vector2(-8, -32);
+            // Derive a color from NpcId so different NPCs look distinct
+            uint hash = (uint)(NpcId ?? "npc").GetHashCode();
+            float h = (hash % 360) / 360f;
+            rect.Color = Color.FromHsv(h, 0.6f, 0.8f);
+            AddChild(rect);
+        }
+
+        if (_sprite.SpriteFrames != null && _sprite.SpriteFrames.HasAnimation("idle_down"))
+        {
+            _sprite.Play("idle_down");
+        }
     }
 
     /// <summary>
@@ -52,7 +69,10 @@ public partial class NPCBase : CharacterBody2D
             _ => "idle_down"
         };
 
-        _sprite.Play(animation);
+        if (_sprite.SpriteFrames != null && _sprite.SpriteFrames.HasAnimation(animation))
+        {
+            _sprite.Play(animation);
+        }
     }
 
     /// <summary>

@@ -38,6 +38,16 @@ public partial class Player : CharacterBody2D
         _isMoving = false;
         _moveLerp = 1.0f;
 
+        if (_sprite.SpriteFrames == null)
+        {
+            // Create a visible placeholder so the player isn't invisible
+            var rect = new ColorRect();
+            rect.Size = new Vector2(16, 32);
+            rect.Position = new Vector2(-8, -32);
+            rect.Color = new Color(0.2f, 0.4f, 0.9f); // Blue player
+            AddChild(rect);
+        }
+
         UpdateAnimation();
     }
 
@@ -212,9 +222,10 @@ public partial class Player : CharacterBody2D
         string prefix = _isMoving ? "walk" : "idle";
         string animationName = $"{prefix}_{directionSuffix}";
 
-        if (_sprite.Animation != animationName)
+        if (_sprite.SpriteFrames != null && _sprite.SpriteFrames.HasAnimation(animationName))
         {
-            _sprite.Play(animationName);
+            if (_sprite.Animation != animationName)
+                _sprite.Play(animationName);
         }
     }
 

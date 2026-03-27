@@ -37,8 +37,8 @@ public partial class NPCWander : Node
     public override void _PhysicsProcess(double delta)
     {
         // Pause movement while a dialogue is active.
-        var dialogueManager = GetNode<Node>("/root/DialogueManager");
-        bool dialogueActive = dialogueManager.Get("IsActive").AsBool();
+        var dialogueManager = GetNodeOrNull<Node>("/root/DialogueManager");
+        bool dialogueActive = dialogueManager?.Get("IsActive").AsBool() ?? false;
         if (dialogueActive)
         {
             _isMoving = false;
@@ -70,8 +70,8 @@ public partial class NPCWander : Node
     private void OnWanderTimeout()
     {
         // Pause wandering while a dialogue is active.
-        var dialogueManager = GetNode<Node>("/root/DialogueManager");
-        if (dialogueManager.Get("IsActive").AsBool())
+        var dialogueManager = GetNodeOrNull<Node>("/root/DialogueManager");
+        if (dialogueManager?.Get("IsActive").AsBool() ?? false)
             return;
 
         // 40% chance to stay idle instead of moving.
