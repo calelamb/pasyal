@@ -16,6 +16,9 @@ public partial class SettingsMenu : Control
 
     public override void _Ready()
     {
+        ProcessMode = ProcessModeEnum.Always;
+        GetTree().Paused = true;
+
         _englishToggle = GetNode<CheckButton>("EnglishToggle");
         _musicSlider = GetNode<HSlider>("MusicSlider");
         _sfxSlider = GetNode<HSlider>("SfxSlider");
@@ -81,6 +84,7 @@ public partial class SettingsMenu : Control
 
     private void OnBackPressed()
     {
+        GetTree().Paused = false;
         QueueFree();
     }
 }

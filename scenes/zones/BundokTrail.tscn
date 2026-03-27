@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://bundoktrail_zone"]
+[gd_scene load_steps=12 format=3 uid="uid://bundoktrail_zone"]
 
+[ext_resource type="Script" path="res://scripts/World/ZoneSceneController.cs" id="6_zonecontroller"]
 [ext_resource type="Script" path="res://scripts/Player/Player.cs" id="1_player"]
 [ext_resource type="Script" path="res://scripts/World/InteractableObject.cs" id="2_interactable"]
 [ext_resource type="Script" path="res://scripts/World/ZoneTransitionArea.cs" id="3_zonetransition"]
@@ -22,6 +23,7 @@ size = Vector2(16, 48)
 size = Vector2(160, 16)
 
 [node name="BundokTrail" type="Node2D"]
+script = ExtResource("6_zonecontroller")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(1, 1, 1, 1)
@@ -47,7 +49,7 @@ shape = SubResource("RectangleShape2D_player")
 position = Vector2(80, 80)
 script = ExtResource("2_interactable")
 ObjectId = "blocked_sign"
-InteractAction = "clothesline"
+InteractAction = "show_text"
 VocabWord = "bundok"
 InteractTextTagalog = "Sarado ang daan. Babalik tayo sa susunod!"
 InteractTextEnglish = "The path is closed. We'll come back next time!"

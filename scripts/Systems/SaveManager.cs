@@ -49,7 +49,7 @@ public partial class SaveManager : Node
 
         var saveData = new SaveData
         {
-            Zone = zoneManager.CurrentZone,
+            Zone = string.IsNullOrEmpty(zoneManager.CurrentZone) ? "BahayKubo" : zoneManager.CurrentZone,
             TimePeriod = timeManager.CurrentPeriod,
             Vocab = new List<string>(vocabManager.GetAllDiscovered()),
             Inventory = inventoryManager.GetItems(),
@@ -126,8 +126,11 @@ public partial class SaveManager : Node
             inventoryManager.AddItem(item);
         }
 
-        var spawnPos = new Vector2(saveData.PlayerPositionX, saveData.PlayerPositionY);
-        zoneManager.TransitionToZone(saveData.Zone, spawnPos);
+        string zoneName = string.IsNullOrEmpty(saveData.Zone) ? "BahayKubo" : saveData.Zone;
+        Vector2 spawnPos = saveData.PlayerPositionX == 0f && saveData.PlayerPositionY == 0f
+            ? GetDefaultSpawn(zoneName)
+            : new Vector2(saveData.PlayerPositionX, saveData.PlayerPositionY);
+        zoneManager.TransitionToZone(zoneName, spawnPos);
 
         GD.Print("SaveManager: Game loaded");
         return true;
@@ -145,5 +148,17 @@ public partial class SaveManager : Node
             DirAccess.RemoveAbsolute(SavePath);
             GD.Print("SaveManager: Save deleted");
         }
+    }
+
+    private static Vector2 GetDefaultSpawn(string zoneName)
+    {
+        return zoneName switch
+        {
+            "Sentro" => new Vector2(32, 280),
+            "Dalampasigan" => new Vector2(32, 160),
+            "TrikeStop" => new Vector2(120, 32),
+            "BundokTrail" => new Vector2(80, 224),
+            _ => new Vector2(128, 160)
+        };
     }
 }

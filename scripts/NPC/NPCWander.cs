@@ -1,4 +1,5 @@
 using Godot;
+using Pasyal.Systems;
 
 namespace Pasyal.NPC;
 
@@ -37,8 +38,8 @@ public partial class NPCWander : Node
     public override void _PhysicsProcess(double delta)
     {
         // Pause movement while a dialogue is active.
-        var dialogueManager = GetNodeOrNull<Node>("/root/DialogueManager");
-        bool dialogueActive = dialogueManager?.Get("IsActive").AsBool() ?? false;
+        var dialogueManager = GetNodeOrNull<DialogueManager>("/root/DialogueManager");
+        bool dialogueActive = dialogueManager?.IsActive ?? false;
         if (dialogueActive)
         {
             _isMoving = false;
@@ -70,8 +71,8 @@ public partial class NPCWander : Node
     private void OnWanderTimeout()
     {
         // Pause wandering while a dialogue is active.
-        var dialogueManager = GetNodeOrNull<Node>("/root/DialogueManager");
-        if (dialogueManager?.Get("IsActive").AsBool() ?? false)
+        var dialogueManager = GetNodeOrNull<DialogueManager>("/root/DialogueManager");
+        if (dialogueManager?.IsActive ?? false)
             return;
 
         // 40% chance to stay idle instead of moving.

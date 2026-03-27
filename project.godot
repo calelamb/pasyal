@@ -27,6 +27,7 @@ SaveManager="*res://scripts/Systems/SaveManager.cs"
 ZoneManager="*res://scripts/Systems/ZoneManager.cs"
 InventoryManager="*res://scripts/Systems/InventoryManager.cs"
 TaskManager="*res://scripts/Systems/TaskManager.cs"
+ShopSystem="*res://scripts/Systems/ShopSystem.cs"
 
 [display]
 

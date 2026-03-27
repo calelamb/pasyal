@@ -1,6 +1,5 @@
 using Godot;
-using System;
-using System.Collections.Generic;
+using Pasyal.Systems;
 
 namespace Pasyal.Minigames;
 
@@ -9,12 +8,12 @@ public partial class TrikeRide : Node2D
     [Signal]
     public delegate void RideCompleteEventHandler();
 
-    [Export] public string DestinationZone { get; set; } = "";
-    [Export] public Vector2 DestinationSpawn { get; set; }
+    [Export] public string DestinationZone { get; set; } = "Sentro";
+    [Export] public Vector2 DestinationSpawn { get; set; } = new(320, 280);
     [Export] public float RideDuration { get; set; } = 3.0f;
 
     private Sprite2D _trike = null!;
-    private Label _chatterLabel = null!;
+    private RichTextLabel _chatterLabel = null!;
     private RandomNumberGenerator _rng = new();
 
     private static readonly string[] ManongBoyPhrases =
@@ -32,7 +31,7 @@ public partial class TrikeRide : Node2D
     public override void _Ready()
     {
         _trike = GetNode<Sprite2D>("Trike");
-        _chatterLabel = GetNode<Label>("ChatterLabel");
+        _chatterLabel = GetNode<RichTextLabel>("ChatterLabel");
         _rng.Randomize();
 
         DiscoverTravelVocab();
@@ -80,10 +79,10 @@ public partial class TrikeRide : Node2D
 
     private void DiscoverTravelVocab()
     {
-        var vocabManager = GetNode<Node>("/root/VocabManager");
+        var vocabManager = GetNode<VocabManager>("/root/VocabManager");
         foreach (string word in TravelVocab)
         {
-            vocabManager.Call("DiscoverWord", word);
+            vocabManager.DiscoverWord(word);
         }
     }
 
@@ -91,7 +90,7 @@ public partial class TrikeRide : Node2D
     {
         EmitSignal(SignalName.RideComplete);
 
-        var zoneManager = GetNode<Node>("/root/ZoneManager");
-        zoneManager.Call("TransitionToZone", DestinationZone, DestinationSpawn);
+        var zoneManager = GetNode<ZoneManager>("/root/ZoneManager");
+        zoneManager.TransitionToZone(DestinationZone, DestinationSpawn);
     }
 }

@@ -29,11 +29,11 @@ public partial class PauseMenu : Control
         ProcessMode = ProcessModeEnum.Always;
 
         _panel = GetNode<PanelContainer>("Panel");
-        _resumeButton = GetNode<Button>("Panel/VBox/ResumeButton");
-        _journalButton = GetNode<Button>("Panel/VBox/JournalButton");
-        _inventoryButton = GetNode<Button>("Panel/VBox/InventoryButton");
-        _settingsButton = GetNode<Button>("Panel/VBox/SettingsButton");
-        _saveQuitButton = GetNode<Button>("Panel/VBox/SaveQuitButton");
+        _resumeButton = GetNode<Button>("Panel/MarginContainer/VBoxContainer/ResumeButton");
+        _journalButton = GetNode<Button>("Panel/MarginContainer/VBoxContainer/JournalButton");
+        _inventoryButton = GetNode<Button>("Panel/MarginContainer/VBoxContainer/InventoryButton");
+        _settingsButton = GetNode<Button>("Panel/MarginContainer/VBoxContainer/SettingsButton");
+        _saveQuitButton = GetNode<Button>("Panel/MarginContainer/VBoxContainer/SaveQuitButton");
 
         _saveManager = GetNode("/root/SaveManager");
 
@@ -56,6 +56,13 @@ public partial class PauseMenu : Control
     {
         if (@event.IsActionPressed("pause"))
         {
+            var currentScene = GetTree().CurrentScene;
+            if (currentScene?.HasMethod("IsBlockingUiOpen") == true
+                && (bool)currentScene.Call("IsBlockingUiOpen"))
+            {
+                return;
+            }
+
             if (_isPaused)
                 Resume();
             else
@@ -93,6 +100,7 @@ public partial class PauseMenu : Control
 
     private void OnSettingsPressed()
     {
+        Resume();
         EmitSignal(SignalName.OpenSettingsRequested);
     }
 

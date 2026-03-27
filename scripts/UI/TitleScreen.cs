@@ -17,10 +17,10 @@ public partial class TitleScreen : Control
 
     public override void _Ready()
     {
-        _titleLabel = GetNode<Label>("TitleLabel");
-        _taglineLabel = GetNode<Label>("TaglineLabel");
-        _startButton = GetNode<Button>("StartButton");
-        _settingsButton = GetNode<Button>("SettingsButton");
+        _titleLabel = GetNode<Label>("CenterContainer/VBoxContainer/TitleLabel");
+        _taglineLabel = GetNode<Label>("CenterContainer/VBoxContainer/TaglineLabel");
+        _startButton = GetNode<Button>("CenterContainer/VBoxContainer/StartButton");
+        _settingsButton = GetNode<Button>("CenterContainer/VBoxContainer/SettingsButton");
 
         _saveManager = GetNode("/root/SaveManager");
         _zoneManager = GetNode("/root/ZoneManager");
@@ -41,7 +41,11 @@ public partial class TitleScreen : Control
 
         if (hasSave)
         {
-            _saveManager.Call("LoadGame");
+            bool loaded = (bool)_saveManager.Call("LoadGame");
+            if (!loaded)
+            {
+                _zoneManager.Call("TransitionToZone", "BahayKubo", new Vector2(128, 160));
+            }
         }
         else
         {
@@ -51,9 +55,10 @@ public partial class TitleScreen : Control
 
     private void OnSettingsPressed()
     {
-        if (SettingsMenuScene is not null)
+        var settingsScene = SettingsMenuScene ?? GD.Load<PackedScene>("res://scenes/ui/SettingsMenu.tscn");
+        if (settingsScene is not null)
         {
-            var settings = SettingsMenuScene.Instantiate<Control>();
+            var settings = settingsScene.Instantiate<Control>();
             AddChild(settings);
         }
     }

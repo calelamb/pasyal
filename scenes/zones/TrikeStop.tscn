@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://trikestop_zone"]
+[gd_scene load_steps=13 format=3 uid="uid://trikestop_zone"]
 
+[ext_resource type="Script" path="res://scripts/World/ZoneSceneController.cs" id="8_zonecontroller"]
 [ext_resource type="Script" path="res://scripts/Player/Player.cs" id="1_player"]
 [ext_resource type="Script" path="res://scripts/NPC/NPCBase.cs" id="2_npcbase"]
 [ext_resource type="Script" path="res://scripts/NPC/NPCSchedule.cs" id="3_npcschedule"]
@@ -24,6 +25,7 @@ size = Vector2(14, 14)
 size = Vector2(16, 48)
 
 [node name="TrikeStop" type="Node2D"]
+script = ExtResource("8_zonecontroller")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(1, 1, 1, 1)
@@ -50,6 +52,7 @@ position = Vector2(120, 80)
 script = ExtResource("2_npcbase")
 NpcId = "manong_boy"
 DisplayName = "Manong Boy"
+InteractMode = "trike"
 
 [node name="Sprite" type="AnimatedSprite2D" parent="ManongBoy"]
 
@@ -63,7 +66,7 @@ script = ExtResource("3_npcschedule")
 position = Vector2(80, 48)
 script = ExtResource("4_interactable")
 ObjectId = "fare_sign"
-InteractAction = "clothesline"
+InteractAction = "show_text"
 VocabWord = "pamasahe"
 InteractTextTagalog = "Presyo ng pamasahe: \u20b120"
 InteractTextEnglish = "Fare price: \u20b120"

@@ -1,5 +1,6 @@
 using Godot;
 using System.Collections.Generic;
+using Pasyal.Systems;
 
 namespace Pasyal.UI;
 
@@ -8,20 +9,30 @@ public partial class VocabNotification : Control
     private PanelContainer _notifPanel = null!;
     private Label _wordLabel = null!;
 
-    private Node _vocabManager = null!;
+    private VocabManager _vocabManager = null!;
     private readonly Queue<string> _pendingWords = new();
     private bool _isShowing;
 
     public override void _Ready()
     {
-        _notifPanel = GetNode<PanelContainer>("NotifPanel");
-        _wordLabel = GetNode<Label>("NotifPanel/WordLabel");
+        ProcessMode = ProcessModeEnum.Always;
 
-        _vocabManager = GetNode("/root/VocabManager");
-        _vocabManager.Connect("VocabDiscovered", Callable.From<string>(OnVocabDiscovered));
+        _notifPanel = GetNodeOrNull<PanelContainer>("NotifPanel") ?? CreateNotificationPanel();
+        _wordLabel = GetNodeOrNull<Label>("NotifPanel/WordLabel") ?? CreateWordLabel();
+
+        _vocabManager = GetNode<VocabManager>("/root/VocabManager");
+        _vocabManager.VocabDiscovered += OnVocabDiscovered;
 
         _notifPanel.Modulate = new Color(1, 1, 1, 0);
         _notifPanel.Position = new Vector2(_notifPanel.Position.X, -30);
+    }
+
+    public override void _ExitTree()
+    {
+        if (_vocabManager is not null)
+        {
+            _vocabManager.VocabDiscovered -= OnVocabDiscovered;
+        }
     }
 
     private void OnVocabDiscovered(string tagalogWord)
@@ -45,7 +56,7 @@ public partial class VocabNotification : Control
         _isShowing = true;
         string word = _pendingWords.Dequeue();
 
-        _wordLabel.Text = $"Bagong salita! \u2605 {word}";
+        _wordLabel.Text = $"Bagong salita: {word}";
         _wordLabel.AddThemeColorOverride("font_color", new Color("E8A838"));
 
         float startY = -30.0f;
@@ -69,5 +80,30 @@ public partial class VocabNotification : Control
         tween.TweenProperty(_notifPanel, "modulate:a", 0.0f, 0.4f);
 
         tween.Finished += ShowNext;
+    }
+
+    private PanelContainer CreateNotificationPanel()
+    {
+        var panel = new PanelContainer
+        {
+            Name = "NotifPanel",
+            Size = new Vector2(180, 28),
+            Position = new Vector2(8, -30)
+        };
+        AddChild(panel);
+        return panel;
+    }
+
+    private Label CreateWordLabel()
+    {
+        var label = new Label
+        {
+            Name = "WordLabel",
+            HorizontalAlignment = HorizontalAlignment.Center,
+            VerticalAlignment = VerticalAlignment.Center,
+            AutowrapMode = TextServer.AutowrapMode.WordSmart
+        };
+        _notifPanel.AddChild(label);
+        return label;
     }
 }

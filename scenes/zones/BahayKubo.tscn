@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://bahay_kubo_zone"]
+[gd_scene load_steps=15 format=3 uid="uid://bahay_kubo_zone"]
 
+[ext_resource type="Script" path="res://scripts/World/ZoneSceneController.cs" id="9_zonecontroller"]
 [ext_resource type="Script" path="res://scripts/Player/Player.cs" id="1_player"]
 [ext_resource type="Script" path="res://scripts/NPC/NPCBase.cs" id="2_npcbase"]
 [ext_resource type="Script" path="res://scripts/NPC/NPCSchedule.cs" id="3_npcschedule"]
@@ -25,6 +26,7 @@ size = Vector2(14, 14)
 size = Vector2(16, 48)
 
 [node name="BahayKubo" type="Node2D"]
+script = ExtResource("9_zonecontroller")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(1, 1, 1, 1)
@@ -121,7 +123,7 @@ shape = SubResource("RectangleShape2D_object")
 position = Vector2(240, 80)
 script = ExtResource("5_interactable")
 ObjectId = "sampayan"
-InteractAction = "clothesline"
+InteractAction = "show_text"
 VocabWord = "sampayan"
 InteractTextTagalog = "Nagsasampay ng damit."
 InteractTextEnglish = "Clothes are drying on the line."

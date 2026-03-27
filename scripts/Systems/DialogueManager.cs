@@ -67,7 +67,9 @@ public partial class DialogueManager : Node
             {
                 if (conditions.TryGetProperty("time", out var timeCondition))
                 {
-                    string requiredTime = timeCondition.GetString() ?? "";
+                    string requiredTime = timeCondition.ValueKind == JsonValueKind.String
+                        ? timeCondition.GetString() ?? ""
+                        : "";
                     if (requiredTime != "" && timeManager.CurrentPeriod != requiredTime)
                     {
                         conditionsMet = false;

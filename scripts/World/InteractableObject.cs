@@ -14,7 +14,7 @@ public partial class InteractableObject : StaticBody2D
 
     [Export] public string ObjectId { get; set; } = "";
 
-    [Export(PropertyHint.Enum, "sleep,shake_tree,rest,bonfire_story,toggle_music,learn_animal,clothesline")]
+    [Export(PropertyHint.Enum, "sleep,shake_tree,rest,bonfire_story,toggle_music,learn_animal,show_text,start_fishing")]
     public string InteractAction { get; set; } = "";
 
     [Export] public string ItemReward { get; set; } = "";
@@ -22,7 +22,7 @@ public partial class InteractableObject : StaticBody2D
     [Export] public string InteractTextTagalog { get; set; } = "";
     [Export] public string InteractTextEnglish { get; set; } = "";
 
-    private bool _musicPlaying = true;
+    private bool _musicPlaying;
 
     public override void _Ready()
     {
@@ -54,8 +54,11 @@ public partial class InteractableObject : StaticBody2D
             case "learn_animal":
                 HandleLearnAnimal();
                 break;
-            case "clothesline":
-                HandleClothesline();
+            case "show_text":
+                HandleShowText();
+                break;
+            case "start_fishing":
+                HandleStartFishing();
                 break;
             default:
                 GD.PushWarning($"InteractableObject '{ObjectId}': unknown action '{InteractAction}'");
@@ -124,25 +127,24 @@ public partial class InteractableObject : StaticBody2D
             return;
         }
 
-        var dialogueManager = GetNode<Node>("/root/DialogueManager");
-        dialogueManager.Call("StartDialogue", "bonfire", "story");
+        var currentScene = GetTree().CurrentScene;
+        if (currentScene?.HasMethod("StartBonfireStory") == true)
+        {
+            currentScene.Call("StartBonfireStory");
+        }
     }
 
     private void HandleToggleMusic()
     {
-        var audioManager = GetNode<Node>("/root/AudioManager");
-
         _musicPlaying = !_musicPlaying;
         if (_musicPlaying)
         {
-            audioManager.Call("PlaySfx", "res://assets/audio/sfx/radio_on.ogg");
             EmitSignal(SignalName.ObjectInteracted,
                 "Tumutugtog ang radyo.",
                 "The radio is playing.");
         }
         else
         {
-            audioManager.Call("StopMusic");
             EmitSignal(SignalName.ObjectInteracted,
                 "Pinatay ang radyo.",
                 "Turned off the radio.");
@@ -162,10 +164,15 @@ public partial class InteractableObject : StaticBody2D
             InteractTextEnglish);
     }
 
-    private void HandleClothesline()
+    private void HandleShowText()
     {
         EmitSignal(SignalName.ObjectInteracted,
             InteractTextTagalog,
             InteractTextEnglish);
+    }
+
+    private void HandleStartFishing()
+    {
+        GetTree().ChangeSceneToFile("res://scenes/minigames/Fishing.tscn");
     }
 }

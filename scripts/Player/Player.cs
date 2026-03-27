@@ -29,6 +29,8 @@ public partial class Player : CharacterBody2D
 
     public override void _Ready()
     {
+        AddToGroup("player");
+
         _sprite = GetNode<AnimatedSprite2D>("Sprite");
         _camera = GetNode<Camera2D>("Camera");
         _interactRay = GetNode<RayCast2D>("InteractRay");
@@ -243,18 +245,7 @@ public partial class Player : CharacterBody2D
 
     private bool IsDialogueActive()
     {
-        var dialogueManager = GetNodeOrNull<Node>("/root/DialogueManager");
-
-        if (dialogueManager is null)
-        {
-            return false;
-        }
-
-        if (dialogueManager.HasMethod("IsActive"))
-        {
-            return (bool)dialogueManager.Call("IsActive");
-        }
-
-        return false;
+        var dialogueManager = GetNodeOrNull<Pasyal.Systems.DialogueManager>("/root/DialogueManager");
+        return dialogueManager?.IsActive ?? false;
     }
 }

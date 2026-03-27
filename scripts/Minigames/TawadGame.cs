@@ -2,6 +2,8 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.Text.Json;
+using System.Text.Json.Serialization;
+using Pasyal.Systems;
 
 namespace Pasyal.Minigames;
 
@@ -40,6 +42,7 @@ public partial class TawadGame : Node2D
     private Button _choiceButton3 = null!;
     private Label _roundLabel = null!;
     private Label _outcomeLabel = null!;
+    private Button _returnButton = null!;
 
     // Number vocab to discover
     private static readonly Dictionary<int, string> NumberWords = new()
@@ -62,15 +65,17 @@ public partial class TawadGame : Node2D
     {
         _vendorLabel = GetNode<RichTextLabel>("VendorLabel");
         _priceLabel = GetNode<Label>("PriceLabel");
-        _choiceButton1 = GetNode<Button>("ChoiceButton1");
-        _choiceButton2 = GetNode<Button>("ChoiceButton2");
-        _choiceButton3 = GetNode<Button>("ChoiceButton3");
+        _choiceButton1 = GetNode<Button>("ChoicesPanel/ChoiceButton1");
+        _choiceButton2 = GetNode<Button>("ChoicesPanel/ChoiceButton2");
+        _choiceButton3 = GetNode<Button>("ChoicesPanel/ChoiceButton3");
         _roundLabel = GetNode<Label>("RoundLabel");
         _outcomeLabel = GetNode<Label>("OutcomeLabel");
+        _returnButton = GetNode<Button>("ReturnButton");
 
         _choiceButton1.Pressed += () => OnChoiceSelected(0);
         _choiceButton2.Pressed += () => OnChoiceSelected(1);
         _choiceButton3.Pressed += () => OnChoiceSelected(2);
+        _returnButton.Pressed += ReturnToZone;
 
         _rng.Randomize();
         LoadItemData();
@@ -103,6 +108,7 @@ public partial class TawadGame : Node2D
     private void ShowSelectItem()
     {
         _outcomeLabel.Visible = false;
+        _returnButton.Visible = false;
         _vendorLabel.Text = "[center]Ano po ang gusto ninyo?\n[i]What would you like?[/i][/center]";
         _priceLabel.Text = "";
         _roundLabel.Text = "";
@@ -272,8 +278,8 @@ public partial class TawadGame : Node2D
         if (index == 0)
         {
             // Purchase
-            var playerData = GetNode<Node>("/root/PlayerData");
-            int pesos = (int)playerData.Get("Pesos");
+            var playerData = GetNode<PlayerData>("/root/PlayerData");
+            int pesos = playerData.Pesos;
 
             if (pesos < _currentPrice)
             {
@@ -281,19 +287,20 @@ public partial class TawadGame : Node2D
                 return;
             }
 
-            playerData.Call("SpendPesos", _currentPrice);
+            playerData.SpendPesos(_currentPrice);
 
-            var inventoryManager = GetNode<Node>("/root/InventoryManager");
-            inventoryManager.Call("AddItem", _selectedItemId);
+            var inventoryManager = GetNode<InventoryManager>("/root/InventoryManager");
+            inventoryManager.AddItem(_selectedItemId);
 
             // Discover transactional vocab
-            var vocabManager = GetNode<Node>("/root/VocabManager");
-            vocabManager.Call("DiscoverWord", "bili");
-            vocabManager.Call("DiscoverWord", "bayad");
-            vocabManager.Call("DiscoverWord", "presyo");
-            vocabManager.Call("DiscoverWord", "sukli");
+            var vocabManager = GetNode<VocabManager>("/root/VocabManager");
+            vocabManager.DiscoverWord("bili");
+            vocabManager.DiscoverWord("bayad");
+            vocabManager.DiscoverWord("presyo");
+            vocabManager.DiscoverWord("sukli");
 
             EmitSignal(SignalName.TawadComplete, true, _selectedItemId, _currentPrice);
+            _vendorLabel.Text = "[center]Salamat sa pagbili!\n[i]Thanks for your purchase![/i][/center]";
         }
         else
         {
@@ -301,6 +308,9 @@ public partial class TawadGame : Node2D
             _outcomeLabel.Text = "Sige, hindi na. / I'll pass.";
             EmitSignal(SignalName.TawadComplete, false, _selectedItemId, 0);
         }
+
+        SetButtonsVisible(false);
+        _returnButton.Visible = true;
     }
 
     private List<CounterOffer> GenerateCounterOffers()
@@ -339,12 +349,12 @@ public partial class TawadGame : Node2D
 
     private void DiscoverNumberVocab(int price)
     {
-        var vocabManager = GetNode<Node>("/root/VocabManager");
+        var vocabManager = GetNode<VocabManager>("/root/VocabManager");
         foreach (var kvp in NumberWords)
         {
             if (price >= kvp.Key)
             {
-                vocabManager.Call("DiscoverWord", kvp.Value);
+                vocabManager.DiscoverWord(kvp.Value);
             }
         }
     }
@@ -388,8 +398,16 @@ public partial class TawadGame : Node2D
     private class ShopItemData
     {
         public string Id { get; set; } = "";
+        [JsonPropertyName("tagalog")]
         public string TagalogName { get; set; } = "";
+        [JsonPropertyName("english")]
         public string EnglishName { get; set; } = "";
         public int Price { get; set; }
+    }
+
+    private void ReturnToZone()
+    {
+        var zoneManager = GetNode<ZoneManager>("/root/ZoneManager");
+        zoneManager.TransitionToZone("Sentro", new Vector2(400, 368));
     }
 }

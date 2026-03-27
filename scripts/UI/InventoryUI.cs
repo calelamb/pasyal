@@ -1,6 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 using System.Text.Json;
+using Pasyal.Systems;
 
 namespace Pasyal.UI;
 
@@ -16,24 +17,26 @@ public partial class InventoryUI : Control
     private Label _pesosLabel = null!;
     private Button _closeButton = null!;
 
-    private Node _inventoryManager = null!;
-    private Node _playerData = null!;
+    private InventoryManager _inventoryManager = null!;
+    private PlayerData _playerData = null!;
 
     private Dictionary<string, string> _itemDisplayNames = new();
 
     public override void _Ready()
     {
-        _grid = GetNode<GridContainer>("Grid");
-        _pesosLabel = GetNode<Label>("PesosLabel");
+        ProcessMode = ProcessModeEnum.Always;
+
+        _grid = GetNode<GridContainer>("Panel/VBoxContainer/Grid");
+        _pesosLabel = GetNode<Label>("Panel/VBoxContainer/PesosLabel");
         _closeButton = GetNode<Button>("CloseButton");
 
         _grid.Columns = Columns;
 
-        _inventoryManager = GetNode("/root/InventoryManager");
-        _playerData = GetNode("/root/PlayerData");
+        _inventoryManager = GetNode<InventoryManager>("/root/InventoryManager");
+        _playerData = GetNode<PlayerData>("/root/PlayerData");
 
-        _inventoryManager.Connect("InventoryChanged", Callable.From(() => Refresh()));
-        _playerData.Connect("PesosChanged", Callable.From(() => UpdatePesos()));
+        _inventoryManager.InventoryChanged += Refresh;
+        _playerData.PesosChanged += OnPesosChanged;
 
         _closeButton.Pressed += Close;
 
@@ -45,6 +48,13 @@ public partial class InventoryUI : Control
     {
         if (@event.IsActionPressed("inventory"))
         {
+            var currentScene = GetTree().CurrentScene;
+            bool blockingUiOpen = currentScene?.HasMethod("IsBlockingUiOpen") == true
+                && (bool)currentScene.Call("IsBlockingUiOpen");
+
+            if (!Visible && blockingUiOpen)
+                return;
+
             if (Visible)
                 Close();
             else
@@ -54,8 +64,17 @@ public partial class InventoryUI : Control
         }
     }
 
+    public override void _ExitTree()
+    {
+        if (_inventoryManager is not null)
+            _inventoryManager.InventoryChanged -= Refresh;
+        if (_playerData is not null)
+            _playerData.PesosChanged -= OnPesosChanged;
+    }
+
     public void Open()
     {
+        GetTree().Paused = true;
         Visible = true;
         Refresh();
     }
@@ -63,12 +82,13 @@ public partial class InventoryUI : Control
     public void Close()
     {
         Visible = false;
+        GetTree().Paused = false;
         EmitSignal(SignalName.InventoryClosed);
     }
 
     private void LoadItemData()
     {
-        string path = "res://data/items.json";
+        string path = "res://data/items/items.json";
         if (!FileAccess.FileExists(path))
             return;
 
@@ -97,8 +117,7 @@ public partial class InventoryUI : Control
             child.QueueFree();
         }
 
-        var itemsVariant = _inventoryManager.Call("GetItems");
-        var items = itemsVariant.AsGodotArray();
+        var items = _inventoryManager.GetItems();
 
         for (int i = 0; i < SlotCount; i++)
         {
@@ -115,7 +134,7 @@ public partial class InventoryUI : Control
 
             if (i < items.Count)
             {
-                string itemId = items[i].AsString();
+                string itemId = items[i];
                 label.Text = _itemDisplayNames.TryGetValue(itemId, out string? displayName)
                     ? displayName
                     : itemId;
@@ -134,7 +153,12 @@ public partial class InventoryUI : Control
 
     private void UpdatePesos()
     {
-        int pesos = (int)_playerData.Get("Pesos");
+        int pesos = _playerData.Pesos;
         _pesosLabel.Text = $"\u20b1{pesos}";
+    }
+
+    private void OnPesosChanged(int _)
+    {
+        UpdatePesos();
     }
 }

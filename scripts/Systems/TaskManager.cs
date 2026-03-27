@@ -52,6 +52,11 @@ public partial class TaskManager : Node
         return _allTasks.Find(t => t.Id == _activeTaskId);
     }
 
+    public TaskData? GetTaskById(string taskId)
+    {
+        return _allTasks.Find(t => t.Id == taskId);
+    }
+
     public bool IsTaskActive()
     {
         return !string.IsNullOrEmpty(_activeTaskId);
@@ -92,8 +97,15 @@ public partial class TaskManager : Node
         // Add the delivery item to inventory
         if (!string.IsNullOrEmpty(task.ItemId))
         {
-            var inventoryManager = GetNode<Node>("/root/InventoryManager");
-            inventoryManager.Call("AddItem", task.ItemId);
+            var inventoryManager = GetNode<InventoryManager>("/root/InventoryManager");
+            if (inventoryManager.IsFull())
+            {
+                GD.Print("TaskManager: Inventory is full");
+                _activeTaskId = "";
+                return false;
+            }
+
+            inventoryManager.AddItem(task.ItemId);
         }
 
         EmitSignal(SignalName.TaskAccepted, taskId);

@@ -1,6 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 using System.Text.Json;
+using Pasyal.Systems;
 
 namespace Pasyal.UI;
 
@@ -28,21 +29,23 @@ public partial class SalitaanUI : Control
     private Label _detailExampleEnglish = null!;
     private Label _detailLocation = null!;
 
-    private Node _vocabManager = null!;
+    private VocabManager _vocabManager = null!;
     private string _selectedCategory = "Bahay";
 
     public override void _Ready()
     {
-        _categoryList = GetNode<VBoxContainer>("CategoryList");
-        _wordList = GetNode<ScrollContainer>("ScrollContainer").GetNode<VBoxContainer>("WordList");
+        ProcessMode = ProcessModeEnum.Always;
+
+        _categoryList = GetNode<VBoxContainer>("HBoxContainer/CategoryList");
+        _wordList = GetNode<ScrollContainer>("HBoxContainer/ScrollContainer").GetNode<VBoxContainer>("WordList");
         _detailPanel = GetNode<PanelContainer>("DetailPanel");
         _counterLabel = GetNode<Label>("CounterLabel");
         _closeButton = GetNode<Button>("CloseButton");
 
         SetupDetailPanel();
 
-        _vocabManager = GetNode("/root/VocabManager");
-        _vocabManager.Connect("VocabDiscovered", Callable.From(() => RefreshUI()));
+        _vocabManager = GetNode<VocabManager>("/root/VocabManager");
+        _vocabManager.VocabDiscovered += OnVocabDiscovered;
 
         _closeButton.Pressed += Close;
 
@@ -57,6 +60,13 @@ public partial class SalitaanUI : Control
     {
         if (@event.IsActionPressed("journal"))
         {
+            var currentScene = GetTree().CurrentScene;
+            bool blockingUiOpen = currentScene?.HasMethod("IsBlockingUiOpen") == true
+                && (bool)currentScene.Call("IsBlockingUiOpen");
+
+            if (!Visible && blockingUiOpen)
+                return;
+
             if (Visible)
                 Close();
             else
@@ -66,8 +76,15 @@ public partial class SalitaanUI : Control
         }
     }
 
+    public override void _ExitTree()
+    {
+        if (_vocabManager is not null)
+            _vocabManager.VocabDiscovered -= OnVocabDiscovered;
+    }
+
     public void Open()
     {
+        GetTree().Paused = true;
         Visible = true;
         _detailPanel.Visible = false;
         RefreshUI();
@@ -76,11 +93,17 @@ public partial class SalitaanUI : Control
     public void Close()
     {
         Visible = false;
+        GetTree().Paused = false;
         EmitSignal(SignalName.JournalClosed);
     }
 
     private void SetupDetailPanel()
     {
+        foreach (Node child in _detailPanel.GetChildren())
+        {
+            child.QueueFree();
+        }
+
         var vbox = new VBoxContainer();
         vbox.Name = "DetailVBox";
 
@@ -148,8 +171,8 @@ public partial class SalitaanUI : Control
 
     private void RefreshUI()
     {
-        int discovered = (int)_vocabManager.Call("GetDiscoveryCount");
-        int total = (int)_vocabManager.Call("GetTotalCount");
+        int discovered = _vocabManager.GetDiscoveryCount();
+        int total = _vocabManager.GetTotalCount();
         _counterLabel.Text = $"{discovered} / {total} salita";
 
         PopulateWordList();
@@ -162,19 +185,18 @@ public partial class SalitaanUI : Control
             child.QueueFree();
         }
 
-        var wordsVariant = _vocabManager.Call("GetWordsByCategory", _selectedCategory);
-        var words = wordsVariant.AsGodotArray();
+        var words = _vocabManager.GetWordsByCategory(_selectedCategory);
 
         foreach (var wordVariant in words)
         {
-            string jsonStr = wordVariant.AsString();
+            string jsonStr = wordVariant.GetRawText();
             using var doc = JsonDocument.Parse(jsonStr);
             var word = doc.RootElement;
 
             string tagalog = word.GetProperty("tagalog").GetString() ?? "???";
             string english = word.GetProperty("english").GetString() ?? "";
             string pronunciation = word.GetProperty("pronunciation").GetString() ?? "";
-            bool isDiscovered = (bool)_vocabManager.Call("IsDiscovered", tagalog);
+            bool isDiscovered = _vocabManager.IsDiscovered(tagalog);
 
             var entry = new Button
             {
@@ -221,5 +243,10 @@ public partial class SalitaanUI : Control
             : "";
 
         _detailPanel.Visible = true;
+    }
+
+    private void OnVocabDiscovered(string _)
+    {
+        RefreshUI();
     }
 }

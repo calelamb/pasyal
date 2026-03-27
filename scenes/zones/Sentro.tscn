@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://sentro_zone"]
+[gd_scene load_steps=16 format=3 uid="uid://sentro_zone"]
 
+[ext_resource type="Script" path="res://scripts/World/ZoneSceneController.cs" id="10_zonecontroller"]
 [ext_resource type="Script" path="res://scripts/Player/Player.cs" id="1_player"]
 [ext_resource type="Script" path="res://scripts/NPC/NPCBase.cs" id="2_npcbase"]
 [ext_resource type="Script" path="res://scripts/NPC/NPCSchedule.cs" id="3_npcschedule"]
@@ -26,6 +27,7 @@ size = Vector2(14, 14)
 size = Vector2(16, 48)
 
 [node name="Sentro" type="Node2D"]
+script = ExtResource("10_zonecontroller")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(1, 1, 1, 1)
@@ -52,6 +54,7 @@ position = Vector2(160, 160)
 script = ExtResource("2_npcbase")
 NpcId = "ate_merly"
 DisplayName = "Ate Merly"
+InteractMode = "shop"
 
 [node name="Sprite" type="AnimatedSprite2D" parent="AteMerly"]
 
@@ -66,6 +69,7 @@ position = Vector2(400, 400)
 script = ExtResource("2_npcbase")
 NpcId = "kuya_jojo"
 DisplayName = "Kuya Jojo"
+InteractMode = "tawad"
 
 [node name="Sprite" type="AnimatedSprite2D" parent="KuyaJojo"]
 
@@ -80,6 +84,7 @@ position = Vector2(500, 200)
 script = ExtResource("2_npcbase")
 NpcId = "kapitan_rody"
 DisplayName = "Kapitan Rody"
+InteractMode = "task"
 
 [node name="Sprite" type="AnimatedSprite2D" parent="KapitanRody"]
 
@@ -114,7 +119,7 @@ script = ExtResource("9_taskmanager")
 position = Vector2(320, 120)
 script = ExtResource("4_interactable")
 ObjectId = "simbahan"
-InteractAction = "clothesline"
+InteractAction = "show_text"
 VocabWord = "simbahan"
 InteractTextTagalog = "Ang simbahan ng bayan."
 InteractTextEnglish = "The town church."

@@ -12,28 +12,28 @@ public partial class AudioManager : Node
     {
         _musicPlayer = new AudioStreamPlayer();
         _musicPlayer.Name = "MusicPlayer";
-        _musicPlayer.Bus = "Music";
+        _musicPlayer.Bus = ResolveBus("Music");
         AddChild(_musicPlayer);
 
         _sfxPlayer = new AudioStreamPlayer();
         _sfxPlayer.Name = "SfxPlayer";
-        _sfxPlayer.Bus = "SFX";
+        _sfxPlayer.Bus = ResolveBus("SFX");
         AddChild(_sfxPlayer);
 
         _ambientPlayer = new AudioStreamPlayer();
         _ambientPlayer.Name = "AmbientPlayer";
-        _ambientPlayer.Bus = "Ambient";
+        _ambientPlayer.Bus = ResolveBus("Ambient");
         AddChild(_ambientPlayer);
     }
 
     public void PlayMusic(string path)
     {
+        if (!ResourceLoader.Exists(path))
+            return;
+
         var stream = GD.Load<AudioStream>(path);
         if (stream is null)
-        {
-            GD.PrintErr($"AudioManager: Could not load music at '{path}'");
             return;
-        }
 
         _musicPlayer.Stream = stream;
         _musicPlayer.Play();
@@ -41,12 +41,12 @@ public partial class AudioManager : Node
 
     public void PlaySfx(string path)
     {
+        if (!ResourceLoader.Exists(path))
+            return;
+
         var stream = GD.Load<AudioStream>(path);
         if (stream is null)
-        {
-            GD.PrintErr($"AudioManager: Could not load SFX at '{path}'");
             return;
-        }
 
         _sfxPlayer.Stream = stream;
         _sfxPlayer.Play();
@@ -54,12 +54,12 @@ public partial class AudioManager : Node
 
     public void PlayAmbient(string path)
     {
+        if (!ResourceLoader.Exists(path))
+            return;
+
         var stream = GD.Load<AudioStream>(path);
         if (stream is null)
-        {
-            GD.PrintErr($"AudioManager: Could not load ambient at '{path}'");
             return;
-        }
 
         _ambientPlayer.Stream = stream;
         _ambientPlayer.Play();
@@ -82,7 +82,7 @@ public partial class AudioManager : Node
         tween.TweenCallback(Callable.From(() => _musicPlayer.Stop()));
     }
 
-    public void CrossfadeMusic(string newPath, float duration)
+    public void CrossfadeMusic(string newPath, float duration = 1.0f)
     {
         float halfDuration = duration / 2.0f;
 
@@ -94,6 +94,11 @@ public partial class AudioManager : Node
             _musicPlayer.VolumeDb = -80.0f;
         }));
         tween.TweenProperty(_musicPlayer, "volume_db", 0.0f, halfDuration);
+    }
+
+    public void CrossfadeMusic(string newPath)
+    {
+        CrossfadeMusic(newPath, 1.0f);
     }
 
     public void SetMusicVolume(float db)
@@ -109,5 +114,10 @@ public partial class AudioManager : Node
     public void SetAmbientVolume(float db)
     {
         _ambientPlayer.VolumeDb = db;
+    }
+
+    private static string ResolveBus(string preferredBus)
+    {
+        return AudioServer.GetBusIndex(preferredBus) >= 0 ? preferredBus : "Master";
     }
 }

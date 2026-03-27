@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dalampasigan_zone"]
+[gd_scene load_steps=13 format=3 uid="uid://dalampasigan_zone"]
 
+[ext_resource type="Script" path="res://scripts/World/ZoneSceneController.cs" id="8_zonecontroller"]
 [ext_resource type="Script" path="res://scripts/Player/Player.cs" id="1_player"]
 [ext_resource type="Script" path="res://scripts/NPC/NPCBase.cs" id="2_npcbase"]
 [ext_resource type="Script" path="res://scripts/NPC/NPCSchedule.cs" id="3_npcschedule"]
@@ -24,6 +25,7 @@ size = Vector2(14, 14)
 size = Vector2(16, 48)
 
 [node name="Dalampasigan" type="Node2D"]
+script = ExtResource("8_zonecontroller")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(1, 1, 1, 1)
@@ -106,7 +108,7 @@ shape = SubResource("RectangleShape2D_object")
 position = Vector2(280, 280)
 script = ExtResource("4_interactable")
 ObjectId = "bangka"
-InteractAction = "clothesline"
+InteractAction = "start_fishing"
 VocabWord = "bangka"
 InteractTextTagalog = "Sumakay sa bangka para mangisda?"
 InteractTextEnglish = "Ride the boat to go fishing?"

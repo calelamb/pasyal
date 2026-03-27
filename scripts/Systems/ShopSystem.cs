@@ -20,7 +20,7 @@ public partial class ShopSystem : Node
     [Signal]
     public delegate void ItemSoldEventHandler(string itemId);
 
-    [Export] public string[] AvailableItems { get; set; } = Array.Empty<string>();
+    [Export] public string[] AvailableItems { get; set; } = new[] { "yelo", "kape", "pandesal", "skyflakes", "c2" };
 
     private Dictionary<string, ShopItemData> _allItems = new();
     private bool _isOpen;
@@ -42,6 +42,11 @@ public partial class ShopSystem : Node
     {
         _isOpen = false;
         EmitSignal(SignalName.ShopClosed);
+    }
+
+    public void SetAvailableItems(string[] items)
+    {
+        AvailableItems = items;
     }
 
     public bool BuyItem(string itemId)
@@ -155,7 +160,9 @@ public partial class ShopSystem : Node
     public class ShopItemData
     {
         public string Id { get; set; } = "";
+        [System.Text.Json.Serialization.JsonPropertyName("tagalog")]
         public string TagalogName { get; set; } = "";
+        [System.Text.Json.Serialization.JsonPropertyName("english")]
         public string EnglishName { get; set; } = "";
         public int Price { get; set; }
         public string Description { get; set; } = "";

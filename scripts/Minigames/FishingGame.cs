@@ -2,6 +2,8 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.Text.Json;
+using System.Text.Json.Serialization;
+using Pasyal.Systems;
 
 namespace Pasyal.Minigames;
 
@@ -42,6 +44,7 @@ public partial class FishingGame : Node2D
     private ColorRect _targetZone = null!;
     private Label _resultLabel = null!;
     private RichTextLabel _fishNameLabel = null!;
+    private Button _returnButton = null!;
 
     private RandomNumberGenerator _rng = new();
 
@@ -53,12 +56,16 @@ public partial class FishingGame : Node2D
         _targetZone = GetNode<ColorRect>("TargetZone");
         _resultLabel = GetNode<Label>("ResultLabel");
         _fishNameLabel = GetNode<RichTextLabel>("FishNameLabel");
+        _returnButton = GetNode<Button>("ReturnButton");
 
         _rng.Randomize();
         LoadFishData();
         ResetUI();
         _state = FishingState.Idle;
         _resultLabel.Text = "Press interact to cast!";
+        _resultLabel.Visible = true;
+        _returnButton.Visible = true;
+        _returnButton.Pressed += ReturnToZone;
     }
 
     public override void _Process(double delta)
@@ -140,8 +147,8 @@ public partial class FishingGame : Node2D
             tween.TweenProperty(_bobber, "position:y", _bobber.Position.Y + 8f, 0.15);
             tween.TweenProperty(_bobber, "position:y", _bobber.Position.Y + 4f, 0.15);
 
-            var audioManager = GetNode<Node>("/root/AudioManager");
-            audioManager.Call("PlaySfx", "res://audio/sfx/bite.wav");
+            var audioManager = GetNode<AudioManager>("/root/AudioManager");
+            audioManager.PlaySfx("res://assets/audio/sfx/bite.ogg");
         }
     }
 
@@ -254,17 +261,22 @@ public partial class FishingGame : Node2D
         if (fish is null) return;
 
         _fishNameLabel.Visible = true;
-        _fishNameLabel.Text = $"[center]{fish.TagalogName}\n[i]{fish.EnglishName}[/i][/center]";
+        _fishNameLabel.Text = $"[center]{fish.Tagalog}\n[i]{fish.English}[/i][/center]";
         _resultLabel.Text = "Nahuli mo! / You caught it!";
 
-        var inventoryManager = GetNode<Node>("/root/InventoryManager");
-        inventoryManager.Call("AddItem", _selectedFishId);
+        var inventoryManager = GetNode<InventoryManager>("/root/InventoryManager");
+        bool addedToInventory = inventoryManager.AddItem(_selectedFishId);
+        if (!addedToInventory)
+        {
+            _resultLabel.Text = "Nahuli mo, pero puno ang bag! / You caught it, but your bag is full!";
+            return;
+        }
 
-        var vocabManager = GetNode<Node>("/root/VocabManager");
-        vocabManager.Call("DiscoverWord", fish.TagalogName);
+        var vocabManager = GetNode<VocabManager>("/root/VocabManager");
+        vocabManager.DiscoverWord(fish.Tagalog);
 
-        var audioManager = GetNode<Node>("/root/AudioManager");
-        audioManager.Call("PlaySfx", "res://audio/sfx/catch_success.wav");
+        var audioManager = GetNode<AudioManager>("/root/AudioManager");
+        audioManager.PlaySfx("res://assets/audio/sfx/catch_success.ogg");
     }
 
     private void ShowFailResult()
@@ -282,19 +294,20 @@ public partial class FishingGame : Node2D
         _targetZone.Visible = false;
         _fishNameLabel.Visible = false;
         _fishNameLabel.Text = "";
-        _resultLabel.Text = "";
+        _resultLabel.Visible = true;
     }
 
     public void ReturnToZone()
     {
-        GetTree().ChangeSceneToFile("res://scenes/zones/Dalampasigan.tscn");
+        var zoneManager = GetNode<ZoneManager>("/root/ZoneManager");
+        zoneManager.TransitionToZone("Dalampasigan", new Vector2(280, 248));
     }
 
     // --- Fish data loading and selection ---
 
     private void LoadFishData()
     {
-        var file = FileAccess.Open("res://data/items/fish.json", FileAccess.ModeFlags.Read);
+        var file = FileAccess.Open("res://data/fish/fish.json", FileAccess.ModeFlags.Read);
         if (file is null)
         {
             GD.PrintErr("FishingGame: Could not load fish.json");
@@ -311,13 +324,13 @@ public partial class FishingGame : Node2D
 
         if (fishList is null) return;
 
-        var timeManager = GetNode<Node>("/root/TimeManager");
-        string currentPeriod = (string)timeManager.Get("CurrentPeriod");
+        var timeManager = GetNode<TimeManager>("/root/TimeManager");
+        string currentPeriod = timeManager.CurrentPeriod;
 
         _fishPool.Clear();
         foreach (var fish in fishList)
         {
-            if (fish.TimePeriods is null || fish.TimePeriods.Contains(currentPeriod))
+            if (string.IsNullOrEmpty(fish.Time) || string.Equals(fish.Time, currentPeriod, StringComparison.OrdinalIgnoreCase))
             {
                 _fishPool.Add(fish);
             }
@@ -357,10 +370,13 @@ public partial class FishingGame : Node2D
     private class FishData
     {
         public string Id { get; set; } = "";
-        public string TagalogName { get; set; } = "";
-        public string EnglishName { get; set; } = "";
+        [JsonPropertyName("tagalog")]
+        public string Tagalog { get; set; } = "";
+        [JsonPropertyName("english")]
+        public string English { get; set; } = "";
         public string Rarity { get; set; } = "common";
         public float CatchDifficulty { get; set; } = 1f;
-        public List<string>? TimePeriods { get; set; }
+        [JsonPropertyName("time")]
+        public string Time { get; set; } = "";
     }
 }

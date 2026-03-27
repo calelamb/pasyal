@@ -1,4 +1,5 @@
 using Godot;
+using Pasyal.Systems;
 
 namespace Pasyal.NPC;
 
@@ -10,6 +11,8 @@ public partial class NPCBase : CharacterBody2D
 {
     [Export] public string NpcId { get; set; } = "";
     [Export] public string DisplayName { get; set; } = "";
+    [Export(PropertyHint.Enum, "dialogue,shop,tawad,task,trike")]
+    public string InteractMode { get; set; } = "dialogue";
 
     private AnimatedSprite2D _sprite = null!;
     private Vector2I _facingDirection = Vector2I.Down;
@@ -45,12 +48,22 @@ public partial class NPCBase : CharacterBody2D
     {
         FacePlayer();
 
-        var playerData = GetNode<Node>("/root/PlayerData");
-        playerData.Call("AddVisit", NpcId);
+        var playerData = GetNode<PlayerData>("/root/PlayerData");
+        playerData.AddVisit(NpcId);
 
-        var dialogueManager = GetNode<Node>("/root/DialogueManager");
-        string dialogueId = dialogueManager.Call("GetBestDialogue", NpcId).AsString();
-        dialogueManager.Call("StartDialogue", NpcId, dialogueId);
+        var dialogueManager = GetNode<DialogueManager>("/root/DialogueManager");
+        dialogueManager.DialogueEnded -= OnDialogueEnded;
+        dialogueManager.DialogueEnded += OnDialogueEnded;
+
+        string dialogueId = dialogueManager.GetBestDialogue(NpcId);
+        if (!string.IsNullOrEmpty(dialogueId))
+        {
+            dialogueManager.StartDialogue(NpcId, dialogueId);
+        }
+        else
+        {
+            OnDialogueEnded();
+        }
     }
 
     /// <summary>
@@ -94,5 +107,17 @@ public partial class NPCBase : CharacterBody2D
             dir = toPlayer.Y > 0 ? Vector2I.Down : Vector2I.Up;
 
         FaceDirection(dir);
+    }
+
+    private void OnDialogueEnded()
+    {
+        var dialogueManager = GetNode<DialogueManager>("/root/DialogueManager");
+        dialogueManager.DialogueEnded -= OnDialogueEnded;
+
+        var currentScene = GetTree().CurrentScene;
+        if (currentScene?.HasMethod("HandleNpcPostDialogue") == true)
+        {
+            currentScene.CallDeferred("HandleNpcPostDialogue", NpcId, InteractMode);
+        }
     }
 }

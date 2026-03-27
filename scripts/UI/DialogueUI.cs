@@ -9,8 +9,9 @@ public partial class DialogueUI : Control
 {
     [Export] public float TypewriterSpeed = 30f;
 
-    private PanelContainer _panel = null!;
-    private RichTextLabel _tagalogLabel = null!;
+    private Control _panel = null!;
+    private RichTextLabel? _tagalogRichLabel;
+    private Label? _tagalogPlainLabel;
     private Label _englishLabel = null!;
     private Label _speakerLabel = null!;
     private VBoxContainer _choicesContainer = null!;
@@ -23,11 +24,17 @@ public partial class DialogueUI : Control
     private string _fullBbcodeText = "";
     private int _totalVisibleChars;
     private float _visibleCharProgress;
+    private bool _showingSystemMessage;
+    private float _systemMessageTimer;
 
     public override void _Ready()
     {
-        _panel = GetNode<PanelContainer>("Panel");
-        _tagalogLabel = GetNode<RichTextLabel>("Panel/MarginContainer/VBoxContainer/TagalogLabel");
+        _panel = GetNode<Control>("Panel");
+        _tagalogRichLabel = GetNodeOrNull<RichTextLabel>("Panel/MarginContainer/VBoxContainer/TagalogLabel");
+        if (_tagalogRichLabel is null)
+        {
+            _tagalogPlainLabel = GetNodeOrNull<Label>("Panel/MarginContainer/VBoxContainer/TagalogLabel");
+        }
         _englishLabel = GetNode<Label>("Panel/MarginContainer/VBoxContainer/EnglishLabel");
         _speakerLabel = GetNode<Label>("Panel/MarginContainer/VBoxContainer/SpeakerLabel");
         _choicesContainer = GetNode<VBoxContainer>("ChoicesContainer");
@@ -54,6 +61,16 @@ public partial class DialogueUI : Control
 
     public override void _Process(double delta)
     {
+        if (_showingSystemMessage)
+        {
+            _systemMessageTimer -= (float)delta;
+            if (_systemMessageTimer <= 0f)
+            {
+                Hide();
+                _showingSystemMessage = false;
+            }
+        }
+
         if (!_isTypewriting)
             return;
 
@@ -66,17 +83,28 @@ public partial class DialogueUI : Control
         }
         else
         {
-            _tagalogLabel.VisibleCharacters = charsToShow;
+            SetVisibleCharacters(charsToShow);
         }
     }
 
     public override void _UnhandledInput(InputEvent @event)
     {
-        if (!Visible || !_dialogueManager.IsActive)
+        if (!Visible)
             return;
 
         if (@event.IsActionPressed("interact"))
         {
+            if (_showingSystemMessage)
+            {
+                Hide();
+                _showingSystemMessage = false;
+                GetViewport().SetInputAsHandled();
+                return;
+            }
+
+            if (!_dialogueManager.IsActive)
+                return;
+
             if (_isTypewriting)
             {
                 CompleteTypewriter();
@@ -92,6 +120,7 @@ public partial class DialogueUI : Control
 
     private void OnDialogueStarted()
     {
+        _showingSystemMessage = false;
         Show();
         _panel.Show();
         ClearChoices();
@@ -126,14 +155,14 @@ public partial class DialogueUI : Control
         }
 
         _speakerLabel.Text = FormatSpeakerName(speaker);
-        _englishLabel.Text = english;
+        _englishLabel.Text = SettingsMenu.ShowEnglish ? english : "";
+        _englishLabel.Visible = SettingsMenu.ShowEnglish && !string.IsNullOrEmpty(english);
 
         _fullBbcodeText = ApplyVocabHighlights(tagalog, vocabWords);
-        _tagalogLabel.BbcodeEnabled = true;
-        _tagalogLabel.Text = _fullBbcodeText;
+        SetTagalogText(_fullBbcodeText, tagalog, true);
 
-        _totalVisibleChars = _tagalogLabel.GetTotalCharacterCount();
-        _tagalogLabel.VisibleCharacters = 0;
+        _totalVisibleChars = GetTotalVisibleCharacters();
+        SetVisibleCharacters(0);
         _visibleCharProgress = 0f;
         _isTypewriting = true;
 
@@ -189,7 +218,7 @@ public partial class DialogueUI : Control
     private void CompleteTypewriter()
     {
         _isTypewriting = false;
-        _tagalogLabel.VisibleCharacters = -1;
+        SetVisibleCharacters(-1);
     }
 
     private string ApplyVocabHighlights(string text, List<string> vocabWords)
@@ -230,6 +259,60 @@ public partial class DialogueUI : Control
         else
         {
             _portrait.Texture = null;
+        }
+    }
+
+    public void ShowSystemMessage(string tagalog, string english)
+    {
+        _showingSystemMessage = true;
+        _systemMessageTimer = 2.25f;
+        _isTypewriting = false;
+
+        ClearChoices();
+        _speakerLabel.Text = "";
+        _portrait.Texture = null;
+        _englishLabel.Text = SettingsMenu.ShowEnglish ? english : "";
+        _englishLabel.Visible = SettingsMenu.ShowEnglish && !string.IsNullOrEmpty(english);
+
+        SetTagalogText(tagalog, tagalog, false);
+        SetVisibleCharacters(-1);
+
+        Show();
+        _panel.Show();
+    }
+
+    private void SetTagalogText(string richText, string plainText, bool useRichText)
+    {
+        if (_tagalogRichLabel is not null)
+        {
+            _tagalogRichLabel.BbcodeEnabled = true;
+            _tagalogRichLabel.Text = useRichText ? richText : plainText;
+        }
+
+        if (_tagalogPlainLabel is not null)
+        {
+            _tagalogPlainLabel.Text = plainText;
+        }
+    }
+
+    private int GetTotalVisibleCharacters()
+    {
+        if (_tagalogRichLabel is not null)
+            return _tagalogRichLabel.GetTotalCharacterCount();
+
+        return _tagalogPlainLabel?.Text.Length ?? 0;
+    }
+
+    private void SetVisibleCharacters(int count)
+    {
+        if (_tagalogRichLabel is not null)
+        {
+            _tagalogRichLabel.VisibleCharacters = count;
+        }
+
+        if (_tagalogPlainLabel is not null)
+        {
+            _tagalogPlainLabel.VisibleCharacters = count;
         }
     }
 }
