@@ -1,93 +1,86 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Gamepad2, MessageSquare, Fish, HandCoins, BookOpen, Clock, Footprints } from 'lucide-react';
+import { Footprints, MessageSquare, Fish } from 'lucide-react';
 import { siteContent } from '../data/content';
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
+const iconMap = {
+  Footprints,
+  MessageSquare,
+  Fish,
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 35 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.12, duration: 0.5 },
+    transition: {
+      delay: i * 0.1,
+      duration: 0.45,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
   }),
-};
-
-const stagger = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-};
-
-const iconMap = {
-  Gamepad2,
-  MessageSquare,
-  Fish,
-  HandCoins,
-  BookOpen,
-  Clock,
-  Footprints,
 };
 
 export default function HowToPlay() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
+  const { sectionTitle, sectionTitleAccent, sectionTitleEn, features } =
+    siteContent.howToPlay;
 
   return (
-    <section id="paano" className="py-20 px-4 bg-gradient-to-br from-flag-gold-50 to-amber-50">
-      <div className="text-center mb-14">
-        <h2 className="font-pixel text-lg text-flag-blue-500 tracking-wide">
-          Paano Maglaro
-        </h2>
-        <p className="text-gray-400 text-sm mt-1">How to Play</p>
-      </div>
+    <section id="paano" className="bg-white py-20 px-4">
+      <div className="max-w-5xl mx-auto">
+        {/* Title */}
+        <div className="text-center mb-14">
+          <h2 className="text-3xl font-black text-nes-dark">
+            <span>{sectionTitle}</span>{' '}
+            <span className="text-nes-red italic">{sectionTitleAccent}</span>
+          </h2>
+          <p className="text-sm text-nes-dark/50 mt-2">{sectionTitleEn}</p>
+        </div>
 
-      <motion.div
-        ref={ref}
-        variants={stagger}
-        initial="hidden"
-        animate={inView ? 'visible' : 'hidden'}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
-      >
-        {siteContent.howToPlay.features.map((feature, i) => {
-          const IconComponent = iconMap[feature.icon] || Gamepad2;
-
-          return (
-            <motion.div
-              key={i}
-              custom={i}
-              variants={fadeInUp}
-              whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="bg-white p-6 rounded-lg shadow-pixel border-b-4 border-flag-blue-500 hover:shadow-pixel-lg transition-all duration-300 group"
-            >
-              {/* Icon */}
+        {/* Feature cards */}
+        <motion.div
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+        >
+          {features.map((feature, i) => {
+            const Icon = iconMap[feature.icon] || Footprints;
+            return (
               <motion.div
-                whileHover={{ y: -2 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 15 }}
-                className="inline-block"
+                key={i}
+                custom={i}
+                variants={cardVariants}
+                whileHover={{
+                  y: -2,
+                  boxShadow: 'none',
+                  transition: { duration: 0.15 },
+                }}
+                className="bg-nes-cream nes-border shadow-nes p-6 border-b-4 border-b-nes-red"
               >
-                <IconComponent
-                  size={32}
-                  className="text-flag-blue-500 group-hover:text-flag-red-500 transition-colors duration-300"
-                  strokeWidth={1.5}
-                />
-              </motion.div>
-
-              {/* Title */}
-              <h3 className="font-pixel text-xs tracking-wide mt-3">
-                {feature.title}
-              </h3>
-              {feature.titleEn && (
-                <p className="text-xs text-gray-400 mt-0.5">
-                  {feature.titleEn}
+                <Icon size={40} className="text-nes-dark mb-4" strokeWidth={1.5} />
+                <h3 className="pixel-text text-xl text-nes-dark mb-1">
+                  {feature.title}
+                </h3>
+                <p className="text-xs text-nes-dark/50 mb-3">{feature.titleEn}</p>
+                <p className="text-sm text-nes-dark/70 leading-relaxed">
+                  {feature.desc}
                 </p>
-              )}
-
-              {/* Description */}
-              <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
-          );
-        })}
-      </motion.div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
     </section>
   );
 }

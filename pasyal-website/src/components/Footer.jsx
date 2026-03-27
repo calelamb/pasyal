@@ -1,53 +1,45 @@
-import { motion } from 'framer-motion';
 import { Github } from 'lucide-react';
 import { siteContent } from '../data/content';
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
 export default function Footer() {
-  const { tagline, taglineEn, github } = siteContent.footer;
+  const { copyright, tagline, github } = siteContent.footer;
 
   return (
-    <footer className="bg-gray-950 text-white py-12 px-4">
-      <div className="border-t border-white/10 max-w-4xl mx-auto pt-10">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          className="flex flex-col items-center text-center gap-4"
+    <footer className="bg-nes-dark text-white py-12 px-4 border-t-4 border-nes-yellow">
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-4">
+        {/* Logo */}
+        <span className="text-nes-yellow font-bold text-xl tracking-wider">
+          PASYAL
+        </span>
+
+        {/* Tagline */}
+        <p className="text-white/50 text-sm">{tagline}</p>
+
+        {/* GitHub */}
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="inline-flex items-center justify-center w-10 h-10 nes-border bg-white/10 text-white/60 hover:text-nes-yellow hover:bg-white/20 transition-colors duration-150"
         >
-          {/* Logo with glow */}
-          <span
-            className="font-pixel text-sm text-flag-gold-500"
-            style={{ textShadow: '0 0 12px rgba(252, 209, 22, 0.35)' }}
-          >
-            PASYAL
-          </span>
+          <Github size={18} />
+        </a>
 
-          {/* Tagline */}
-          <p className="text-white/60 text-sm italic max-w-md">{tagline}</p>
-          <p className="text-white/35 text-xs max-w-md">{taglineEn}</p>
+        {/* Tech stack badges */}
+        <div className="flex flex-wrap justify-center gap-2 mt-2">
+          {siteContent.credits.tech.map((t) => (
+            <span
+              key={t.label}
+              className="nes-border text-xs px-2 py-1 text-white/60"
+            >
+              {t.label}
+            </span>
+          ))}
+        </div>
 
-          {/* GitHub */}
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="mt-2 inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/15 text-white/50 hover:text-flag-gold-500 hover:border-flag-gold-500/40 transition-colors duration-200"
-          >
-            <Github size={18} />
-          </a>
-
-          {/* Copyright */}
-          <p className="text-white/40 text-xs mt-4">
-            &copy; 2026 Gawa ni Cale Lamb
-          </p>
-        </motion.div>
+        {/* Copyright */}
+        <p className="text-white/30 text-xs mt-4">{copyright}</p>
       </div>
     </footer>
   );

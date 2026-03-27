@@ -1,127 +1,145 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Home, Store, Waves, Bike, Mountain, Lock } from 'lucide-react';
-import { siteContent, zonePixelArts } from '../data/content';
-import PixelArt from './PixelArt';
+import { Lock } from 'lucide-react';
+import { siteContent } from '../data/content';
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.12, duration: 0.5 },
+    transition: {
+      delay: i * 0.1,
+      duration: 0.45,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
   }),
-};
-
-const stagger = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-};
-
-const iconMap = {
-  Home,
-  Store,
-  Waves,
-  Bike,
-  Mountain,
 };
 
 export default function Zones() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
 
   return (
-    <section id="mga-lugar" className="py-20 px-4 bg-flag-blue-900 text-white">
-      <div className="text-center mb-14">
-        <h2 className="font-pixel text-lg text-flag-gold-500 tracking-wide">
-          Mga Lugar
-        </h2>
-        <p className="text-white/50 text-sm mt-1">The Zones</p>
-      </div>
+    <section id="mga-lugar" className="bg-nes-cream py-20 px-4">
+      {/* Red stripe */}
+      <div className="h-2 bg-nes-red -mt-20 mb-20" />
 
-      <motion.div
-        ref={ref}
-        variants={stagger}
-        initial="hidden"
-        animate={inView ? 'visible' : 'hidden'}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
-      >
-        {(siteContent.zones.list || []).map((zone, i) => {
-          const IconComponent = iconMap[zone.icon] || Home;
+      <div className="max-w-5xl mx-auto">
+        {/* Title */}
+        <div className="text-center mb-14">
+          <h2 className="pixel-text text-2xl text-nes-dark mb-2">
+            {siteContent.zones.sectionTitle}
+          </h2>
+          <div className="bg-nes-red h-1 w-20 mx-auto mb-2" />
+          <p className="text-sm text-nes-dark/50">
+            {siteContent.zones.sectionTitleEn}
+          </p>
+        </div>
 
-          return (
+        {/* Zone cards grid */}
+        <motion.div
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          {siteContent.zones.list.map((zone, i) => (
             <motion.div
               key={zone.id}
               custom={i}
-              variants={fadeInUp}
-              whileHover={{ y: -4 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="relative bg-white/10 backdrop-blur rounded-lg overflow-hidden hover:bg-white/15 transition-colors duration-300 group"
+              variants={cardVariants}
+              whileHover={{
+                y: -2,
+                boxShadow: 'none',
+                transition: { duration: 0.15 },
+              }}
+              className={`relative bg-white nes-border shadow-nes overflow-hidden ${
+                zone.locked ? 'grayscale' : ''
+              }`}
             >
-              {/* Pixel Art Banner */}
-              <div className="w-full overflow-hidden h-32 flex items-center justify-center bg-black/20">
-                <div className="transform scale-[1.2] opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                  {zonePixelArts[zone.id] && (
-                    <PixelArt grid={zonePixelArts[zone.id]} cellSize={5} />
-                  )}
-                </div>
-              </div>
+              {/* Colored header bar */}
+              <div className="h-3" style={{ backgroundColor: zone.color }} />
 
-              {/* Colored Accent Bar */}
+              {/* Image area placeholder */}
               <div
-                className="h-1"
-                style={{ backgroundColor: zone.color }}
-              />
+                className="h-[200px] flex items-center justify-center relative"
+                style={{
+                  background: `linear-gradient(135deg, ${zone.color}33, ${zone.color}11)`,
+                }}
+              >
+                <span
+                  className="pixel-text text-3xl text-center px-4"
+                  style={{ color: zone.color, opacity: 0.3 }}
+                >
+                  {zone.name}
+                </span>
+              </div>
 
               {/* Content */}
               <div className="p-5">
-                <div className="flex items-center gap-2 mb-1">
-                  <IconComponent
-                    size={16}
-                    style={{ color: zone.color }}
-                    className="flex-shrink-0"
-                  />
-                  <span className="font-pixel text-xs tracking-wide">
-                    {zone.name}
-                  </span>
-                </div>
-                <p className="text-white/50 text-xs mb-3">{zone.nameEn}</p>
-
-                <p className="text-sm text-white/80 leading-relaxed mb-4">
-                  {zone.description}
+                <h3 className="pixel-text text-sm text-nes-dark mb-1">
+                  {zone.name}
+                </h3>
+                <p className="text-xs text-nes-dark/50 mb-3">{zone.nameEn}</p>
+                <p className="text-sm text-nes-dark/70 leading-relaxed mb-4">
+                  {zone.desc}
                 </p>
 
-                {zone.features && zone.features.length > 0 && (
-                  <ul className="space-y-1.5 mb-4">
-                    {zone.features.map((feature, fi) => (
-                      <li key={fi} className="flex items-center gap-2 text-xs text-white/70">
-                        <span
-                          className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                          style={{ backgroundColor: zone.color }}
-                        />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                {/* Features */}
+                <ul className="space-y-1.5 mb-4">
+                  {zone.features.map((feature, fi) => (
+                    <li
+                      key={fi}
+                      className="flex items-center gap-2 text-xs text-nes-dark/60"
+                    >
+                      <span
+                        className="w-2 h-2 flex-shrink-0"
+                        style={{
+                          backgroundColor: zone.color,
+                          border: '2px solid #0a0a0a',
+                        }}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
 
-                {zone.size && (
-                  <span className="text-xs text-white/40">{zone.size}</span>
-                )}
+                {/* Progress bar */}
+                <div className="nes-border h-4 bg-nes-cream overflow-hidden">
+                  <div
+                    className="h-full transition-all duration-500"
+                    style={{
+                      width: zone.progress,
+                      backgroundColor: zone.color,
+                    }}
+                  />
+                </div>
+                <p className="text-xs text-nes-dark/40 mt-1 text-right">
+                  {zone.progress}
+                </p>
               </div>
 
-              {/* Locked Overlay */}
+              {/* Locked overlay */}
               {zone.locked && (
-                <div className="absolute inset-0 bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center gap-2 z-10">
-                  <Lock size={28} className="text-white/60" />
-                  <span className="font-pixel text-xs text-white/70 tracking-wider">
-                    Abangan!
+                <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-3 z-10">
+                  <Lock size={32} className="text-white/60" />
+                  <span className="pixel-text text-xs text-white/80 tracking-wider">
+                    SARADO — V2
                   </span>
                 </div>
               )}
             </motion.div>
-          );
-        })}
-      </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }

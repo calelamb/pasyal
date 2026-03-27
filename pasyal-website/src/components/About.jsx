@@ -2,20 +2,6 @@ import { motion } from 'framer-motion';
 import { Compass, MessageCircle, Heart, Users } from 'lucide-react';
 import { siteContent } from '../data/content';
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.5 },
-  }),
-};
-
-const stagger = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
-};
-
 const iconMap = {
   Compass,
   MessageCircle,
@@ -23,15 +9,26 @@ const iconMap = {
   Users,
 };
 
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.4 },
+  }),
+};
+
 export default function About() {
-  const { sectionTitle, sectionTitleEn, intro, introEn, pillars, comparable } =
+  const { sectionTitle, sectionTitleEn, intro, introEn, pillars, comparables } =
     siteContent.about;
 
   return (
-    <section
-      id="tungkol"
-      className="py-20 px-4 bg-gradient-to-br from-flag-gold-50 to-orange-50"
-    >
+    <section id="tungkol" className="bg-white py-20 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Section heading */}
         <motion.div
@@ -41,20 +38,21 @@ export default function About() {
           variants={fadeInUp}
           className="text-center mb-14"
         >
-          <h2 className="font-pixel text-lg text-flag-blue-500 mb-2">
+          <h2 className="pixel-text text-2xl text-nes-dark mb-2">
             {sectionTitle}
           </h2>
-          <p className="text-sm text-flag-blue-400 mb-6">{sectionTitleEn}</p>
+          <div className="bg-nes-blue h-1 w-20 mx-auto mb-2" />
+          <p className="text-sm text-nes-dark/50 mb-8">{sectionTitleEn}</p>
 
-          <p className="text-gray-700 text-base leading-relaxed max-w-2xl mx-auto mb-3">
+          <p className="text-nes-dark text-base leading-relaxed max-w-3xl mx-auto mb-3">
             {intro}
           </p>
-          <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto italic">
+          <p className="text-nes-dark/40 text-sm leading-relaxed max-w-3xl mx-auto italic">
             {introEn}
           </p>
         </motion.div>
 
-        {/* Design pillar cards */}
+        {/* Pillar cards */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -63,22 +61,25 @@ export default function About() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14"
         >
           {pillars.map((pillar, i) => {
-            const Icon = iconMap[pillar.icon] || Coffee;
+            const Icon = iconMap[pillar.icon] || Compass;
             return (
               <motion.div
                 key={pillar.title}
                 custom={i}
                 variants={fadeInUp}
-                className="bg-white p-6 rounded-lg shadow-pixel border-t-4 border-flag-gold-500 hover:shadow-lg transition-shadow duration-300"
+                className="bg-nes-cream nes-border shadow-nes p-6 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-150"
               >
-                <div className="mb-4 inline-flex items-center justify-center w-10 h-10 rounded-full bg-flag-gold-100 text-flag-gold-600">
-                  <Icon size={20} />
+                <div className="bg-nes-yellow w-12 h-12 flex items-center justify-center nes-border mb-4">
+                  <Icon size={20} className="text-nes-dark" />
                 </div>
-                <h3 className="font-pixel text-xs text-gray-800 mb-2 leading-relaxed">
+                <h3 className="pixel-text text-xs text-nes-dark mb-1">
                   {pillar.title}
                 </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {pillar.description}
+                <p className="text-xs text-nes-dark/50 mb-2 italic">
+                  {pillar.titleTl}
+                </p>
+                <p className="text-sm text-nes-dark/70 leading-relaxed">
+                  {pillar.desc}
                 </p>
               </motion.div>
             );
@@ -93,14 +94,14 @@ export default function About() {
           variants={fadeInUp}
           className="text-center"
         >
-          <p className="text-sm text-gray-500 mb-3 font-medium">
-            {comparable.label}
+          <p className="text-xs text-nes-dark/40 uppercase font-bold mb-3 tracking-wider">
+            Kung gusto mo ang...
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2">
-            {comparable.games.map((game) => (
+            {comparables.map((game) => (
               <span
                 key={game}
-                className="bg-flag-blue-100 text-flag-blue-700 px-3 py-1 rounded-full text-sm select-none"
+                className="nes-border bg-white px-3 py-1 text-xs font-bold uppercase text-nes-dark"
               >
                 {game}
               </span>
