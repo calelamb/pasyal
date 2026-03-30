@@ -1,4 +1,5 @@
 using Godot;
+using Pasyal.Systems;
 
 namespace Pasyal.UI;
 
@@ -20,7 +21,7 @@ public partial class PauseMenu : Control
     private Button _settingsButton = null!;
     private Button _saveQuitButton = null!;
 
-    private Node _saveManager = null!;
+    private SaveManager _saveManager = null!;
 
     private bool _isPaused;
 
@@ -35,7 +36,7 @@ public partial class PauseMenu : Control
         _settingsButton = GetNode<Button>("Panel/MarginContainer/VBoxContainer/SettingsButton");
         _saveQuitButton = GetNode<Button>("Panel/MarginContainer/VBoxContainer/SaveQuitButton");
 
-        _saveManager = GetNode("/root/SaveManager");
+        _saveManager = GetNode<SaveManager>("/root/SaveManager");
 
         _resumeButton.Text = "Ituloy";
         _journalButton.Text = "Salitaan";
@@ -106,7 +107,7 @@ public partial class PauseMenu : Control
 
     private void OnSaveQuitPressed()
     {
-        _saveManager.Call("SaveGame");
+        _saveManager.SaveGame();
         GetTree().Paused = false;
         GetTree().Quit();
     }

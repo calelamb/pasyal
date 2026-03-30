@@ -1,4 +1,5 @@
 using Godot;
+using Pasyal.Systems;
 
 namespace Pasyal.UI;
 
@@ -9,8 +10,8 @@ public partial class TitleScreen : Control
     private Button _startButton = null!;
     private Button _settingsButton = null!;
 
-    private Node _saveManager = null!;
-    private Node _zoneManager = null!;
+    private SaveManager _saveManager = null!;
+    private ZoneManager _zoneManager = null!;
 
     [Export]
     public PackedScene? SettingsMenuScene { get; set; }
@@ -22,8 +23,8 @@ public partial class TitleScreen : Control
         _startButton = GetNode<Button>("CenterContainer/VBoxContainer/StartButton");
         _settingsButton = GetNode<Button>("CenterContainer/VBoxContainer/SettingsButton");
 
-        _saveManager = GetNode("/root/SaveManager");
-        _zoneManager = GetNode("/root/ZoneManager");
+        _saveManager = GetNode<SaveManager>("/root/SaveManager");
+        _zoneManager = GetNode<ZoneManager>("/root/ZoneManager");
 
         _titleLabel.Text = "PASYAL";
         _taglineLabel.Text = "Tara, magpasyal tayo.";
@@ -37,19 +38,16 @@ public partial class TitleScreen : Control
 
     private void OnStartPressed()
     {
-        bool hasSave = (bool)_saveManager.Call("HasSave");
-
-        if (hasSave)
+        if (_saveManager.HasSave())
         {
-            bool loaded = (bool)_saveManager.Call("LoadGame");
-            if (!loaded)
+            if (!_saveManager.LoadGame())
             {
-                _zoneManager.Call("TransitionToZone", "BahayKubo", new Vector2(128, 160));
+                _zoneManager.TransitionToZone("BahayKubo", new Vector2(128, 160));
             }
         }
         else
         {
-            _zoneManager.Call("TransitionToZone", "BahayKubo", new Vector2(128, 160));
+            _zoneManager.TransitionToZone("BahayKubo", new Vector2(128, 160));
         }
     }
 

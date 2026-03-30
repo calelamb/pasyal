@@ -1,4 +1,5 @@
 using Godot;
+using Pasyal.Systems;
 
 namespace Pasyal.World;
 
@@ -24,9 +25,43 @@ public partial class InteractableObject : StaticBody2D
 
     private bool _musicPlaying;
 
+    private static readonly System.Collections.Generic.Dictionary<string, Color> ActionColors = new()
+    {
+        { "sleep", new Color(0.4f, 0.3f, 0.6f) },       // purple - bed
+        { "shake_tree", new Color(0.2f, 0.6f, 0.2f) },   // green - tree
+        { "rest", new Color(0.6f, 0.5f, 0.3f) },         // tan - hammock
+        { "bonfire_story", new Color(0.8f, 0.4f, 0.1f) }, // orange - fire
+        { "toggle_music", new Color(0.5f, 0.5f, 0.5f) },  // gray - radio
+        { "learn_animal", new Color(0.7f, 0.6f, 0.4f) },  // brown - animal
+        { "show_text", new Color(0.5f, 0.4f, 0.3f) },     // brown - sign/object
+        { "start_fishing", new Color(0.2f, 0.4f, 0.7f) }, // blue - boat
+    };
+
     public override void _Ready()
     {
         AddToGroup("interactable");
+
+        // Create visible placeholder so objects aren't invisible
+        var sprite = GetNodeOrNull<Sprite2D>("Sprite2D");
+        if (sprite is not null && sprite.Texture is null)
+        {
+            var color = ActionColors.TryGetValue(InteractAction, out var c) ? c : new Color(0.5f, 0.4f, 0.3f);
+            var rect = new ColorRect();
+            rect.Size = new Vector2(16, 16);
+            rect.Position = new Vector2(-8, -16);
+            rect.Color = color;
+            AddChild(rect);
+
+            // Add a small label so player knows what the object is
+            var label = new Label();
+            label.Text = string.IsNullOrEmpty(VocabWord) ? ObjectId : VocabWord;
+            label.HorizontalAlignment = HorizontalAlignment.Center;
+            label.Position = new Vector2(-20, -26);
+            label.Size = new Vector2(40, 10);
+            label.AddThemeFontSizeOverride("font_size", 6);
+            label.AddThemeColorOverride("font_color", new Color(1, 1, 1, 0.8f));
+            AddChild(label);
+        }
     }
 
     /// <summary>
@@ -68,11 +103,11 @@ public partial class InteractableObject : StaticBody2D
 
     private void HandleSleep()
     {
-        var timeManager = GetNode<Node>("/root/TimeManager");
-        timeManager.Call("SetTime", "umaga");
+        var timeManager = GetNode<TimeManager>("/root/TimeManager");
+        timeManager.SetTime("umaga");
 
-        var saveManager = GetNode<Node>("/root/SaveManager");
-        saveManager.Call("SaveGame");
+        var saveManager = GetNode<SaveManager>("/root/SaveManager");
+        saveManager.SaveGame();
 
         EmitSignal(SignalName.ObjectInteracted,
             "Tulog... Magandang umaga!",
@@ -83,8 +118,8 @@ public partial class InteractableObject : StaticBody2D
     {
         if (!string.IsNullOrEmpty(ItemReward))
         {
-            var inventoryManager = GetNode<Node>("/root/InventoryManager");
-            inventoryManager.Call("AddItem", ItemReward);
+            var inventoryManager = GetNode<InventoryManager>("/root/InventoryManager");
+            inventoryManager.AddItem(ItemReward);
         }
 
         // Play a quick shake animation via tween.
@@ -106,8 +141,8 @@ public partial class InteractableObject : StaticBody2D
 
     private void HandleRest()
     {
-        var timeManager = GetNode<Node>("/root/TimeManager");
-        timeManager.Call("AdvanceTime");
+        var timeManager = GetNode<TimeManager>("/root/TimeManager");
+        timeManager.AdvanceTime();
 
         EmitSignal(SignalName.ObjectInteracted,
             "Pahinga muna...",
@@ -116,8 +151,8 @@ public partial class InteractableObject : StaticBody2D
 
     private void HandleBonfireStory()
     {
-        var timeManager = GetNode<Node>("/root/TimeManager");
-        string period = timeManager.Get("CurrentPeriod").AsString();
+        var timeManager = GetNode<TimeManager>("/root/TimeManager");
+        string period = timeManager.CurrentPeriod;
 
         if (period.ToLower() != "gabi")
         {
@@ -155,8 +190,8 @@ public partial class InteractableObject : StaticBody2D
     {
         if (!string.IsNullOrEmpty(VocabWord))
         {
-            var vocabManager = GetNode<Node>("/root/VocabManager");
-            vocabManager.Call("DiscoverWord", VocabWord);
+            var vocabManager = GetNode<VocabManager>("/root/VocabManager");
+            vocabManager.DiscoverWord(VocabWord);
         }
 
         EmitSignal(SignalName.ObjectInteracted,

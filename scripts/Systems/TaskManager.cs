@@ -24,18 +24,16 @@ public partial class TaskManager : Node
 
     public List<TaskData> GetAvailableTasks()
     {
-        var playerData = GetNode<Node>("/root/PlayerData");
+        var playerData = GetNode<PlayerData>("/root/PlayerData");
         var available = new List<TaskData>();
 
         foreach (var task in _allTasks)
         {
-            // Skip completed tasks
-            if ((bool)playerData.Call("IsTaskCompleted", task.Id))
+            if (playerData.IsTaskCompleted(task.Id))
                 continue;
 
-            // Skip if prerequisite not met
             if (!string.IsNullOrEmpty(task.RequiredPreviousTask)
-                && !(bool)playerData.Call("IsTaskCompleted", task.RequiredPreviousTask))
+                && !playerData.IsTaskCompleted(task.RequiredPreviousTask))
                 continue;
 
             available.Add(task);
@@ -77,16 +75,15 @@ public partial class TaskManager : Node
             return false;
         }
 
-        // Check prerequisites
-        var playerData = GetNode<Node>("/root/PlayerData");
-        if ((bool)playerData.Call("IsTaskCompleted", taskId))
+        var playerData = GetNode<PlayerData>("/root/PlayerData");
+        if (playerData.IsTaskCompleted(taskId))
         {
             GD.Print($"TaskManager: Task '{taskId}' already completed");
             return false;
         }
 
         if (!string.IsNullOrEmpty(task.RequiredPreviousTask)
-            && !(bool)playerData.Call("IsTaskCompleted", task.RequiredPreviousTask))
+            && !playerData.IsTaskCompleted(task.RequiredPreviousTask))
         {
             GD.Print($"TaskManager: Prerequisite '{task.RequiredPreviousTask}' not met");
             return false;
@@ -121,17 +118,15 @@ public partial class TaskManager : Node
         if (task is null || task.TargetNpcId != npcId)
             return false;
 
-        // Remove delivery item from inventory
         if (!string.IsNullOrEmpty(task.ItemId))
         {
-            var inventoryManager = GetNode<Node>("/root/InventoryManager");
-            inventoryManager.Call("RemoveItem", task.ItemId);
+            var inventoryManager = GetNode<InventoryManager>("/root/InventoryManager");
+            inventoryManager.RemoveItem(task.ItemId);
         }
 
-        // Give reward
-        var playerData = GetNode<Node>("/root/PlayerData");
-        playerData.Call("AddPesos", task.RewardPesos);
-        playerData.Call("CompleteTask", task.Id);
+        var playerData = GetNode<PlayerData>("/root/PlayerData");
+        playerData.AddPesos(task.RewardPesos);
+        playerData.CompleteTask(task.Id);
 
         string completedTaskId = _activeTaskId;
         _activeTaskId = "";

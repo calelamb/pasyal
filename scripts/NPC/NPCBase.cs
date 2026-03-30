@@ -26,14 +26,33 @@ public partial class NPCBase : CharacterBody2D
         {
             // Create a visible placeholder colored by NPC id hash
             var rect = new ColorRect();
-            rect.Size = new Vector2(16, 32);
-            rect.Position = new Vector2(-8, -32);
-            // Derive a color from NpcId so different NPCs look distinct
+            rect.Size = new Vector2(14, 24);
+            rect.Position = new Vector2(-7, -24);
             uint hash = (uint)(NpcId ?? "npc").GetHashCode();
             float h = (hash % 360) / 360f;
             rect.Color = Color.FromHsv(h, 0.6f, 0.8f);
             AddChild(rect);
+
+            // "Head" circle approximation
+            var head = new ColorRect();
+            head.Size = new Vector2(10, 10);
+            head.Position = new Vector2(-5, -34);
+            head.Color = Color.FromHsv(h, 0.4f, 0.9f);
+            AddChild(head);
         }
+
+        // Name label above NPC
+        var nameLabel = new Label();
+        nameLabel.Text = DisplayName;
+        nameLabel.HorizontalAlignment = HorizontalAlignment.Center;
+        nameLabel.Position = new Vector2(-24, -42);
+        nameLabel.Size = new Vector2(48, 10);
+        nameLabel.AddThemeFontSizeOverride("font_size", 6);
+        nameLabel.AddThemeColorOverride("font_color", new Color(1, 1, 1, 0.9f));
+        nameLabel.AddThemeColorOverride("font_shadow_color", new Color(0, 0, 0, 0.6f));
+        nameLabel.AddThemeConstantOverride("shadow_offset_x", 1);
+        nameLabel.AddThemeConstantOverride("shadow_offset_y", 1);
+        AddChild(nameLabel);
 
         if (_sprite.SpriteFrames != null && _sprite.SpriteFrames.HasAnimation("idle_down"))
         {

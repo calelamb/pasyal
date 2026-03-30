@@ -27,6 +27,7 @@ size = Vector2(16, 48)
 
 [node name="BahayKubo" type="Node2D"]
 script = ExtResource("9_zonecontroller")
+ZoneSize = Vector2(480, 400)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(1, 1, 1, 1)
@@ -175,16 +176,15 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("7_dialogueui")
 
-[node name="Panel" type="Panel" parent="DialogueUI"]
+[node name="Panel" type="PanelContainer" parent="DialogueUI"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -120.0
+offset_top = -52.0
 grow_horizontal = 2
 grow_vertical = 0
-visible = false
 
 [node name="MarginContainer" type="MarginContainer" parent="DialogueUI/Panel"]
 layout_mode = 1
@@ -200,8 +200,10 @@ layout_mode = 2
 [node name="SpeakerLabel" type="Label" parent="DialogueUI/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="TagalogLabel" type="Label" parent="DialogueUI/Panel/MarginContainer/VBoxContainer"]
+[node name="TagalogLabel" type="RichTextLabel" parent="DialogueUI/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+bbcode_enabled = true
+fit_content = true
 
 [node name="EnglishLabel" type="Label" parent="DialogueUI/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -212,8 +214,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -240.0
-offset_bottom = -130.0
+offset_top = -110.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 0
 visible = false
@@ -223,10 +225,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = -200.0
-offset_right = 72.0
-offset_bottom = -128.0
+offset_left = 4.0
+offset_top = -84.0
+offset_right = 36.0
+offset_bottom = -56.0
 visible = false
 
 [node name="VocabNotification" type="Control" parent="."]

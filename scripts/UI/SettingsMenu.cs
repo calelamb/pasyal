@@ -1,4 +1,5 @@
 using Godot;
+using Pasyal.Systems;
 
 namespace Pasyal.UI;
 
@@ -12,20 +13,20 @@ public partial class SettingsMenu : Control
     private HSlider _ambientSlider = null!;
     private Button _backButton = null!;
 
-    private Node _audioManager = null!;
+    private AudioManager _audioManager = null!;
 
     public override void _Ready()
     {
         ProcessMode = ProcessModeEnum.Always;
         GetTree().Paused = true;
 
-        _englishToggle = GetNode<CheckButton>("EnglishToggle");
-        _musicSlider = GetNode<HSlider>("MusicSlider");
-        _sfxSlider = GetNode<HSlider>("SfxSlider");
-        _ambientSlider = GetNode<HSlider>("AmbientSlider");
-        _backButton = GetNode<Button>("BackButton");
+        _englishToggle = GetNode<CheckButton>("Panel/MarginContainer/VBoxContainer/EnglishToggle");
+        _musicSlider = GetNode<HSlider>("Panel/MarginContainer/VBoxContainer/MusicSlider");
+        _sfxSlider = GetNode<HSlider>("Panel/MarginContainer/VBoxContainer/SfxSlider");
+        _ambientSlider = GetNode<HSlider>("Panel/MarginContainer/VBoxContainer/AmbientSlider");
+        _backButton = GetNode<Button>("Panel/MarginContainer/VBoxContainer/BackButton");
 
-        _audioManager = GetNode("/root/AudioManager");
+        _audioManager = GetNode<AudioManager>("/root/AudioManager");
 
         _englishToggle.Text = "Ipakita ang English";
         _englishToggle.ButtonPressed = ShowEnglish;
@@ -59,19 +60,19 @@ public partial class SettingsMenu : Control
     private void OnMusicChanged(double value)
     {
         float db = LinearToDb((float)value / 100.0f);
-        _audioManager.Call("SetMusicVolume", db);
+        _audioManager.SetMusicVolume(db);
     }
 
     private void OnSfxChanged(double value)
     {
         float db = LinearToDb((float)value / 100.0f);
-        _audioManager.Call("SetSfxVolume", db);
+        _audioManager.SetSfxVolume(db);
     }
 
     private void OnAmbientChanged(double value)
     {
         float db = LinearToDb((float)value / 100.0f);
-        _audioManager.Call("SetAmbientVolume", db);
+        _audioManager.SetAmbientVolume(db);
     }
 
     private static float LinearToDb(float linear)

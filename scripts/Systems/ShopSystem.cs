@@ -63,30 +63,27 @@ public partial class ShopSystem : Node
             return false;
         }
 
-        var playerData = GetNode<Node>("/root/PlayerData");
-        int pesos = (int)playerData.Get("Pesos");
-
-        if (pesos < item.Price)
+        var playerData = GetNode<PlayerData>("/root/PlayerData");
+        if (playerData.Pesos < item.Price)
         {
             GD.Print("ShopSystem: Not enough pesos");
             return false;
         }
 
-        var inventoryManager = GetNode<Node>("/root/InventoryManager");
-        if ((bool)inventoryManager.Call("IsFull"))
+        var inventoryManager = GetNode<InventoryManager>("/root/InventoryManager");
+        if (inventoryManager.IsFull())
         {
             GD.Print("ShopSystem: Inventory is full");
             return false;
         }
 
-        playerData.Call("SpendPesos", item.Price);
-        inventoryManager.Call("AddItem", itemId);
+        playerData.SpendPesos(item.Price);
+        inventoryManager.AddItem(itemId);
 
-        // Discover transactional vocab
-        var vocabManager = GetNode<Node>("/root/VocabManager");
+        var vocabManager = GetNode<VocabManager>("/root/VocabManager");
         foreach (string word in TransactionVocab)
         {
-            vocabManager.Call("DiscoverWord", word);
+            vocabManager.DiscoverWord(word);
         }
 
         EmitSignal(SignalName.ItemPurchased, itemId);
@@ -95,8 +92,8 @@ public partial class ShopSystem : Node
 
     public bool SellItem(string itemId)
     {
-        var inventoryManager = GetNode<Node>("/root/InventoryManager");
-        if (!(bool)inventoryManager.Call("HasItem", itemId))
+        var inventoryManager = GetNode<InventoryManager>("/root/InventoryManager");
+        if (!inventoryManager.HasItem(itemId))
         {
             GD.Print($"ShopSystem: Player doesn't have item '{itemId}'");
             return false;
@@ -109,10 +106,10 @@ public partial class ShopSystem : Node
         }
 
         int sellPrice = item.Price / 2;
-        inventoryManager.Call("RemoveItem", itemId);
+        inventoryManager.RemoveItem(itemId);
 
-        var playerData = GetNode<Node>("/root/PlayerData");
-        playerData.Call("AddPesos", sellPrice);
+        var playerData = GetNode<PlayerData>("/root/PlayerData");
+        playerData.AddPesos(sellPrice);
 
         EmitSignal(SignalName.ItemSold, itemId);
         return true;
