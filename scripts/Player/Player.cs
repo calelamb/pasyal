@@ -3,202 +3,113 @@ using System;
 
 namespace Pasyal;
 
-public partial class Player : CharacterBody2D
+public partial class Player : CharacterBody3D
 {
     [Signal]
     public delegate void InteractedWithEventHandler(Node target);
 
-    [Export] public int TileSize { get; set; } = 16;
-    [Export] public float WalkSpeed { get; set; } = 3.0f;
-    [Export] public float RunSpeed { get; set; } = 5.0f;
-    [Export] public Vector2 ZoneBoundsMin { get; set; } = new(-10000, -10000);
-    [Export] public Vector2 ZoneBoundsMax { get; set; } = new(10000, 10000);
-    [Export] public float CameraSmoothSpeed { get; set; } = 5.0f;
+    [Export] public float WalkSpeed { get; set; } = 5.0f;
+    [Export] public float RunSpeed { get; set; } = 8.0f;
+    [Export] public float JumpVelocity { get; set; } = 4.5f;
+    [Export] public float MouseSensitivity { get; set; } = 0.002f;
 
-    private AnimatedSprite2D _sprite = null!;
-    private Camera2D _camera = null!;
-    private RayCast2D _interactRay = null!;
+    public float Gravity { get; set; } = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
 
-    private Vector2I _facingDirection = Vector2I.Down;
-    private Vector2 _startPosition;
-    private Vector2 _targetPosition;
-    private bool _isMoving;
-    private float _moveLerp;
-
-    public Vector2I FacingDirection => _facingDirection;
+    private Camera3D _camera = null!;
+    private RayCast3D _interactRay = null!;
 
     public override void _Ready()
     {
         AddToGroup("player");
 
-        _sprite = GetNode<AnimatedSprite2D>("Sprite");
-        _camera = GetNode<Camera2D>("Camera");
-        _interactRay = GetNode<RayCast2D>("InteractRay");
+        _camera = GetNodeOrNull<Camera3D>("Camera3D");
+        _interactRay = GetNodeOrNull<RayCast3D>("Camera3D/InteractRay");
 
-        _targetPosition = GlobalPosition;
-        _startPosition = GlobalPosition;
-        _isMoving = false;
-        _moveLerp = 1.0f;
-
-        if (_sprite.SpriteFrames == null)
-        {
-            // Create a visible placeholder so the player isn't invisible
-            var rect = new ColorRect();
-            rect.Size = new Vector2(16, 32);
-            rect.Position = new Vector2(-8, -32);
-            rect.Color = new Color(0.2f, 0.4f, 0.9f); // Blue player
-            AddChild(rect);
-        }
-
-        UpdateAnimation();
-    }
-
-    public override void _PhysicsProcess(double delta)
-    {
-        if (IsDialogueActive())
-        {
-            return;
-        }
-
-        if (_isMoving)
-        {
-            ProcessMovement(delta);
-        }
-        else
-        {
-            HandleInput();
-        }
-
-        UpdateCameraClamp(delta);
+        Input.MouseMode = Input.MouseModeEnum.Captured;
     }
 
     public override void _UnhandledInput(InputEvent @event)
     {
-        if (@event.IsActionPressed("interact") && !IsDialogueActive())
+        if (IsDialogueActive())
         {
-            TryInteract();
-        }
-    }
-
-    private void HandleInput()
-    {
-        var direction = Vector2I.Zero;
-
-        if (Input.IsActionPressed("move_up"))
-        {
-            direction = Vector2I.Up;
-        }
-        else if (Input.IsActionPressed("move_down"))
-        {
-            direction = Vector2I.Down;
-        }
-        else if (Input.IsActionPressed("move_left"))
-        {
-            direction = Vector2I.Left;
-        }
-        else if (Input.IsActionPressed("move_right"))
-        {
-            direction = Vector2I.Right;
-        }
-
-        if (direction != Vector2I.Zero)
-        {
-            _facingDirection = direction;
-            UpdateInteractRay();
-
-            if (CanMoveInDirection(direction))
-            {
-                StartMove(direction);
-            }
-            else
-            {
-                UpdateAnimation();
-            }
-        }
-        else
-        {
-            UpdateAnimation();
-        }
-    }
-
-    private void StartMove(Vector2I direction)
-    {
-        _startPosition = GlobalPosition;
-        _targetPosition = GlobalPosition + (Vector2)direction * TileSize;
-        _isMoving = true;
-        _moveLerp = 0.0f;
-        UpdateAnimation();
-    }
-
-    private void ProcessMovement(double delta)
-    {
-        float speed = Input.IsActionPressed("run") ? RunSpeed : WalkSpeed;
-        float pixelsPerSecond = speed * TileSize;
-        float distance = _startPosition.DistanceTo(_targetPosition);
-
-        if (distance <= 0.0f)
-        {
-            FinishMove();
+            Input.MouseMode = Input.MouseModeEnum.Visible;
             return;
         }
 
-        _moveLerp += (float)(pixelsPerSecond * delta) / distance;
+        Input.MouseMode = Input.MouseModeEnum.Captured;
 
-        if (_moveLerp >= 1.0f)
+        if (@event is InputEventMouseMotion mouseMotion && _camera != null)
         {
-            FinishMove();
+            RotateY(-mouseMotion.Relative.X * MouseSensitivity);
+            _camera.RotateX(-mouseMotion.Relative.Y * MouseSensitivity);
+            
+            var rotation = _camera.Rotation;
+            rotation.X = Mathf.Clamp(rotation.X, -Mathf.Pi / 2, Mathf.Pi / 2);
+            _camera.Rotation = rotation;
+        }
+
+        if (@event.IsActionPressed("interact"))
+        {
+            TryInteract();
+        }
+        
+        // Escape to free mouse (temporary feature)
+        if (@event is InputEventKey keyEvent && keyEvent.Pressed && keyEvent.Keycode == Key.Escape)
+        {
+            Input.MouseMode = Input.MouseModeEnum.Visible;
+        }
+    }
+
+    public override void _PhysicsProcess(double delta)
+    {
+        if (IsDialogueActive()) return;
+
+        Vector3 velocity = Velocity;
+
+        // Add the gravity.
+        if (!IsOnFloor())
+        {
+            velocity.Y -= Gravity * (float)delta;
+        }
+
+        // Handle Jump (fallback to standard ui_accept which is Space usually, or custom "jump" if defined in InputMap)
+        if ((Input.IsActionJustPressed("ui_accept") || Input.IsActionJustPressed("jump")) && IsOnFloor())
+        {
+            velocity.Y = JumpVelocity;
+        }
+
+        // Get the input direction and handle the movement/deceleration.
+        Vector2 inputDir = Input.GetVector("move_left", "move_right", "move_up", "move_down");
+        Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+
+        float speed = Input.IsActionPressed("run") ? RunSpeed : WalkSpeed;
+
+        if (direction != Vector3.Zero)
+        {
+            velocity.X = direction.X * speed;
+            velocity.Z = direction.Z * speed;
         }
         else
         {
-            GlobalPosition = _startPosition.Lerp(_targetPosition, _moveLerp);
+            velocity.X = Mathf.MoveToward(Velocity.X, 0, speed);
+            velocity.Z = Mathf.MoveToward(Velocity.Z, 0, speed);
         }
-    }
 
-    private void FinishMove()
-    {
-        GlobalPosition = _targetPosition;
-        _moveLerp = 1.0f;
-        _isMoving = false;
-
-        // Allow immediate chaining into the next step
-        HandleInput();
-    }
-
-    private bool CanMoveInDirection(Vector2I direction)
-    {
-        var spaceState = GetWorld2D().DirectSpaceState;
-        var to = GlobalPosition + (Vector2)direction * TileSize;
-
-        var shapeSize = new Vector2(10, 6); // Slightly under 12x8
-        var shape = new RectangleShape2D { Size = shapeSize };
-
-        var query = new PhysicsShapeQueryParameters2D
-        {
-            Shape = shape,
-            Transform = new Transform2D(0, to),
-            Exclude = new Godot.Collections.Array<Rid> { GetRid() },
-            CollideWithBodies = true
-        };
-
-        var result = spaceState.IntersectShape(query);
-        return result.Count == 0;
+        Velocity = velocity;
+        MoveAndSlide();
     }
 
     private void TryInteract()
     {
+        if (_interactRay == null) return;
+
         _interactRay.ForceRaycastUpdate();
 
-        if (!_interactRay.IsColliding())
-        {
-            return;
-        }
+        if (!_interactRay.IsColliding()) return;
 
         var collider = _interactRay.GetCollider();
 
-        if (collider is not Node target)
-        {
-            return;
-        }
+        if (collider is not Node target) return;
 
         if (target.IsInGroup("interactable") || target.HasMethod("Interact"))
         {
@@ -209,44 +120,6 @@ public partial class Player : CharacterBody2D
 
             EmitSignal(SignalName.InteractedWith, target);
         }
-    }
-
-    private void UpdateInteractRay()
-    {
-        _interactRay.TargetPosition = (Vector2)_facingDirection * TileSize;
-    }
-
-    private void UpdateAnimation()
-    {
-        string directionSuffix = _facingDirection switch
-        {
-            { X: 0, Y: -1 } => "up",
-            { X: 0, Y: 1 } => "down",
-            { X: -1, Y: 0 } => "left",
-            { X: 1, Y: 0 } => "right",
-            _ => "down"
-        };
-
-        string prefix = _isMoving ? "walk" : "idle";
-        string animationName = $"{prefix}_{directionSuffix}";
-
-        if (_sprite.SpriteFrames != null && _sprite.SpriteFrames.HasAnimation(animationName))
-        {
-            if (_sprite.Animation != animationName)
-                _sprite.Play(animationName);
-        }
-    }
-
-    private void UpdateCameraClamp(double delta)
-    {
-        var viewport = GetViewportRect().Size;
-        var halfViewport = viewport / (_camera.Zoom * 2.0f);
-
-        float clampedX = Mathf.Clamp(GlobalPosition.X, ZoneBoundsMin.X + halfViewport.X, ZoneBoundsMax.X - halfViewport.X);
-        float clampedY = Mathf.Clamp(GlobalPosition.Y, ZoneBoundsMin.Y + halfViewport.Y, ZoneBoundsMax.Y - halfViewport.Y);
-
-        var targetOffset = new Vector2(clampedX, clampedY) - GlobalPosition;
-        _camera.Offset = _camera.Offset.Lerp(targetOffset, (float)(CameraSmoothSpeed * delta));
     }
 
     private bool IsDialogueActive()
