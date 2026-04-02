@@ -464,11 +464,19 @@ public partial class ZoneSceneController : Node2D
 
     public void StartTawad()
     {
+        var player = GetNodeOrNull<Node2D>("Player");
+        if (player != null)
+            _zoneManager.StorePreviousState(Name, player.Position);
+            
         GetTree().ChangeSceneToFile("res://scenes/minigames/Tawad.tscn");
     }
 
     public void StartTrikeRide()
     {
+        var player = GetNodeOrNull<Node2D>("Player");
+        if (player != null)
+            _zoneManager.StorePreviousState(Name, player.Position);
+            
         GetTree().ChangeSceneToFile("res://scenes/minigames/TrikeRide.tscn");
     }
 

@@ -14,6 +14,12 @@ public partial class TimeManager : Node
     public override void _Ready()
     {
         _periodIndex = 0;
+
+        var timer = new Timer();
+        timer.WaitTime = 120.0f; // 2 minutes
+        timer.Autostart = true;
+        timer.Timeout += AdvanceTime;
+        AddChild(timer);
     }
 
     public void AdvanceTime()

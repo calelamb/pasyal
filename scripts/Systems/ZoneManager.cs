@@ -10,6 +10,9 @@ public partial class ZoneManager : Node
     private CanvasLayer _overlayLayer = null!;
     private string _currentZone = "";
     private Vector2 _pendingSpawnPosition;
+    
+    private string _previousZone = "";
+    private Vector2 _previousPosition;
 
     public string CurrentZone => _currentZone;
 
@@ -73,5 +76,19 @@ public partial class ZoneManager : Node
     public void SetCurrentZone(string zoneName)
     {
         _currentZone = zoneName;
+    }
+
+    public void StorePreviousState(string zone, Vector2 pos)
+    {
+        _previousZone = zone;
+        _previousPosition = pos;
+    }
+
+    public void RestorePreviousState()
+    {
+        if (string.IsNullOrEmpty(_previousZone))
+            _previousZone = "BahayKubo";
+            
+        TransitionToZone(_previousZone, _previousPosition);
     }
 }

@@ -50,6 +50,13 @@ public partial class FishingGame : Node2D
 
     public override void _Ready()
     {
+        // Add dynamic time tinting
+        var modulate = new CanvasModulate();
+        var timeManager = GetNode<TimeManager>("/root/TimeManager");
+        modulate.Color = timeManager.GetOverlayColor();
+        timeManager.TimeChanged += (period) => modulate.Color = timeManager.GetOverlayColor();
+        AddChild(modulate);
+
         _powerBar = GetNode<ProgressBar>("PowerBar");
         _bobber = GetNode<Sprite2D>("Bobber");
         _indicator = GetNode<ColorRect>("Indicator");
@@ -300,7 +307,7 @@ public partial class FishingGame : Node2D
     public void ReturnToZone()
     {
         var zoneManager = GetNode<ZoneManager>("/root/ZoneManager");
-        zoneManager.TransitionToZone("Dalampasigan", new Vector2(280, 248));
+        zoneManager.RestorePreviousState();
     }
 
     // --- Fish data loading and selection ---

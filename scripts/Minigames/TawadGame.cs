@@ -63,6 +63,13 @@ public partial class TawadGame : Node2D
 
     public override void _Ready()
     {
+        // Add dynamic time tinting
+        var modulate = new CanvasModulate();
+        var timeManager = GetNode<TimeManager>("/root/TimeManager");
+        modulate.Color = timeManager.GetOverlayColor();
+        timeManager.TimeChanged += (period) => modulate.Color = timeManager.GetOverlayColor();
+        AddChild(modulate);
+
         _vendorLabel = GetNode<RichTextLabel>("VendorLabel");
         _priceLabel = GetNode<Label>("PriceLabel");
         _choiceButton1 = GetNode<Button>("ChoicesPanel/ChoiceButton1");
@@ -408,6 +415,6 @@ public partial class TawadGame : Node2D
     private void ReturnToZone()
     {
         var zoneManager = GetNode<ZoneManager>("/root/ZoneManager");
-        zoneManager.TransitionToZone("Sentro", new Vector2(400, 368));
+        zoneManager.RestorePreviousState();
     }
 }

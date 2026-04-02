@@ -167,14 +167,20 @@ public partial class Player : CharacterBody2D
     private bool CanMoveInDirection(Vector2I direction)
     {
         var spaceState = GetWorld2D().DirectSpaceState;
-        var from = GlobalPosition;
-        var to = from + (Vector2)direction * TileSize;
+        var to = GlobalPosition + (Vector2)direction * TileSize;
 
-        var query = PhysicsRayQueryParameters2D.Create(from, to);
-        query.Exclude = new Godot.Collections.Array<Rid> { GetRid() };
-        query.CollideWithBodies = true;
+        var shapeSize = new Vector2(10, 6); // Slightly under 12x8
+        var shape = new RectangleShape2D { Size = shapeSize };
 
-        var result = spaceState.IntersectRay(query);
+        var query = new PhysicsShapeQueryParameters2D
+        {
+            Shape = shape,
+            Transform = new Transform2D(0, to),
+            Exclude = new Godot.Collections.Array<Rid> { GetRid() },
+            CollideWithBodies = true
+        };
+
+        var result = spaceState.IntersectShape(query);
         return result.Count == 0;
     }
 
